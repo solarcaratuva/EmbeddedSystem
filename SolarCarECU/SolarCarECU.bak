@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:SolarCarECU-cache
 EELAYER 26 0
 EELAYER END
 $Descr A2 23386 16535
@@ -14,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L teensy:Teensy3.6 U1
+L SolarCarECU-rescue:Teensy3.6-teensy U1
 U 1 1 5C5DC16B
 P 4000 12500
 F 0 "U1" H 4000 14887 60  0000 C CNN
@@ -111,9 +112,9 @@ F 3 "" H 10250 12250 50  0001 C CNN
 	1    10250 12250
 	1    0    0    -1  
 $EndComp
-Text GLabel 10850 11550 2    50   Input ~ 0
+Text GLabel 11550 11500 2    50   Input ~ 0
 CAN0_H
-Text GLabel 10850 11750 2    50   Input ~ 0
+Text GLabel 11550 11800 2    50   Input ~ 0
 CAN0_L
 $Comp
 L power:+3V3 #PWR?
@@ -496,9 +497,9 @@ F 3 "" H 10250 13900 50  0001 C CNN
 	1    10250 13900
 	1    0    0    -1  
 $EndComp
-Text GLabel 10850 13200 2    50   Input ~ 0
+Text GLabel 11500 13150 2    50   Input ~ 0
 CAN1_H
-Text GLabel 10850 13400 2    50   Input ~ 0
+Text GLabel 11500 13450 2    50   Input ~ 0
 CAN1_L
 $Comp
 L power:+3V3 #PWR?
@@ -677,25 +678,15 @@ Text Label 2750 14600 2    50   ~ 0
 LV_THROTTLE_CTRL
 Text Label 5050 14600 0    50   ~ 0
 LV_REGEN_CTRL
-Text Label 2650 11900 2    50   ~ 0
+Text Label 2500 11900 2    50   ~ 0
 LV_HAZARD_CTRL
-Wire Wire Line
-	2650 11900 3000 11900
-Wire Wire Line
-	2650 12000 3000 12000
-Wire Wire Line
-	2650 12100 3000 12100
-Wire Wire Line
-	2650 12200 3000 12200
-Wire Wire Line
-	2650 12300 3000 12300
-Text Label 2650 12000 2    50   ~ 0
+Text Label 2500 12000 2    50   ~ 0
 LV_HAZARD_LED
-Text Label 2650 12100 2    50   ~ 0
+Text Label 2500 12100 2    50   ~ 0
 LV_DOWN_CTRL
-Text Label 2650 12200 2    50   ~ 0
+Text Label 2500 12200 2    50   ~ 0
 LV_UP_CTRL
-Text Label 2650 12300 2    50   ~ 0
+Text Label 2500 12300 2    50   ~ 0
 LV_SEL_CTRL
 Text Label 5050 14300 0    50   ~ 0
 LV_BRAKE_CTRL
@@ -915,8 +906,6 @@ F 3 "" H 10400 8100 50  0001 C CNN
 	1    10400 8100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10400 8100 10400 8150
 $Comp
 L power:+12V #PWR?
 U 1 1 5CCA5DFB
@@ -956,10 +945,6 @@ Wire Wire Line
 	10850 6200 10750 6200
 Wire Wire Line
 	10750 9250 10900 9250
-Wire Wire Line
-	10750 13200 10850 13200
-Wire Wire Line
-	10750 13400 10850 13400
 Wire Wire Line
 	10750 6400 10850 6400
 Wire Wire Line
@@ -1251,7 +1236,7 @@ Text Label 5100 12300 0    50   ~ 0
 LV_BLINKERS
 Text Label 5100 12200 0    50   ~ 0
 LV_BRAKELIGHTS
-Text Label 5100 12100 0    50   ~ 0
+Text Label 5100 10600 0    50   ~ 0
 LV_HEADLIGHTS
 Wire Wire Line
 	5000 11500 6050 11500
@@ -1317,8 +1302,6 @@ LV_UP_CTRL
 Text Label 9750 3600 2    50   ~ 0
 LV_SEL_CTRL
 Wire Wire Line
-	9750 4000 9850 4000
-Wire Wire Line
 	9750 3800 9850 3800
 Wire Wire Line
 	9850 3600 9750 3600
@@ -1364,24 +1347,8 @@ Wire Wire Line
 	10750 9650 10900 9650
 Text Label 11450 3800 2    50   ~ 0
 KILL_SENSE
-Text Label 9000 8650 0    50   ~ 0
-LV_HEADLIGHTS
-Text Label 9000 8850 0    50   ~ 0
-LV_BRAKELIGHTS
-Text Label 9000 9050 0    50   ~ 0
-LV_BLINKERS
-Wire Wire Line
-	9000 9050 9850 9050
-Wire Wire Line
-	9850 8850 9000 8850
-Wire Wire Line
-	9000 8650 9850 8650
 Text Label 20450 3150 0    50   ~ 0
 HEADLIGHTS
-Text Label 12650 8550 0    50   ~ 0
-BRAKELIGHTS
-Text Label 12650 8750 0    50   ~ 0
-BLINKERS
 $Comp
 L Connector:Screw_Terminal_01x04 J?
 U 1 1 5D6FB742
@@ -1394,17 +1361,6 @@ F 3 "~" H 21450 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:QM6015D Q?
-U 1 1 5D71A3B9
-P 11750 8650
-F 0 "Q?" V 11955 8696 50  0000 L CNN
-F 1 "QM6015D" V 11650 8700 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TO-252-2" H 11950 8575 50  0001 L CIN
-F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 11750 8650 50  0001 L CNN
-	1    11750 8650
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5D79350F
 P 20450 3450
@@ -1415,81 +1371,6 @@ F 3 "" H 20450 3450 50  0001 C CNN
 	1    20450 3450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Transistor_FET:QM6015D Q?
-U 1 1 5D867609
-P 11200 8450
-F 0 "Q?" V 11405 8496 50  0000 L CNN
-F 1 "QM6015D" V 11100 8500 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TO-252-2" H 11400 8375 50  0001 L CIN
-F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 11200 8450 50  0001 L CNN
-	1    11200 8450
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	12500 8750 12650 8750
-$Comp
-L Transistor_FET:QM6015D Q?
-U 1 1 5D719E65
-P 12300 8850
-F 0 "Q?" V 12505 8896 50  0000 L CNN
-F 1 "QM6015D" V 12200 8900 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TO-252-2" H 12500 8775 50  0001 L CIN
-F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 12300 8850 50  0001 L CNN
-	1    12300 8850
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	10750 9050 12300 9050
-Wire Wire Line
-	10750 8650 11200 8650
-Wire Wire Line
-	10750 8850 11750 8850
-Wire Wire Line
-	10400 8150 10850 8150
-Wire Wire Line
-	10850 8150 10850 8350
-Wire Wire Line
-	10850 8350 11000 8350
-Connection ~ 10400 8150
-Wire Wire Line
-	10400 8150 10400 8250
-Wire Wire Line
-	11450 8150 11450 8550
-Wire Wire Line
-	11450 8550 11550 8550
-Connection ~ 10850 8150
-Wire Wire Line
-	11450 8150 12000 8150
-Wire Wire Line
-	12000 8750 12100 8750
-Connection ~ 11450 8150
-$Comp
-L Device:C C?
-U 1 1 5DB94B3F
-P 10850 7800
-F 0 "C?" H 10965 7846 50  0000 L CNN
-F 1 "0.47u" H 10965 7755 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 10888 7650 50  0001 C CNN
-F 3 "~" H 10850 7800 50  0001 C CNN
-	1    10850 7800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5DB94CEB
-P 10300 7600
-F 0 "#PWR?" H 10300 7350 50  0001 C CNN
-F 1 "GND" H 10305 7427 50  0000 C CNN
-F 2 "" H 10300 7600 50  0001 C CNN
-F 3 "" H 10300 7600 50  0001 C CNN
-	1    10300 7600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10850 7500 10850 7650
-Wire Wire Line
-	10850 7950 10850 8150
 $Comp
 L Device:C C?
 U 1 1 5DBDAD8F
@@ -1521,10 +1402,6 @@ Wire Wire Line
 	9450 8250 9450 8150
 Wire Wire Line
 	9450 8150 9600 8150
-Wire Wire Line
-	12650 8350 11400 8350
-Wire Wire Line
-	11950 8550 12650 8550
 Text Label 20400 7150 0    50   ~ 0
 HAZARD_CTRL
 Text Label 20400 7350 0    50   ~ 0
@@ -1541,8 +1418,6 @@ Text Label 20450 3250 0    50   ~ 0
 BRAKELIGHTS
 Text Label 20450 3350 0    50   ~ 0
 BLINKERS
-Text Label 12650 8350 0    50   ~ 0
-HEADLIGHTS
 Wire Wire Line
 	20450 3250 21250 3250
 Wire Wire Line
@@ -1634,10 +1509,6 @@ Wire Wire Line
 	2500 10600 3000 10600
 Text Label 2500 10600 2    50   ~ 0
 UART_TX
-Wire Wire Line
-	10850 11750 10750 11750
-Wire Wire Line
-	10750 11550 10850 11550
 $Comp
 L Device:R R?
 U 1 1 5ED592E0
@@ -2816,46 +2687,6 @@ Wire Wire Line
 Connection ~ 10200 5100
 Wire Wire Line
 	10200 5100 10200 5200
-Wire Wire Line
-	10850 8150 11450 8150
-$Comp
-L Device:C C?
-U 1 1 610ED38B
-P 11450 7800
-F 0 "C?" H 11565 7846 50  0000 L CNN
-F 1 "4.7u" H 11565 7755 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 11488 7650 50  0001 C CNN
-F 3 "~" H 11450 7800 50  0001 C CNN
-	1    11450 7800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11450 7950 11450 8150
-Wire Wire Line
-	11450 7650 11450 7500
-Wire Wire Line
-	10850 7500 11450 7500
-$Comp
-L Device:C C?
-U 1 1 6118A4A8
-P 12000 7800
-F 0 "C?" H 12115 7846 50  0000 L CNN
-F 1 "47u" H 12115 7755 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 12038 7650 50  0001 C CNN
-F 3 "~" H 12000 7800 50  0001 C CNN
-	1    12000 7800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11450 7500 12000 7500
-Connection ~ 11450 7500
-Wire Wire Line
-	12000 7500 12000 7650
-Wire Wire Line
-	12000 7950 12000 8150
-Connection ~ 12000 8150
-Wire Wire Line
-	12000 8150 12000 8750
 $Comp
 L Device:C C?
 U 1 1 612287E9
@@ -2932,7 +2763,7 @@ U 1 1 614E32A1
 P 21450 8850
 F 0 "J?" H 21530 8842 50  0000 L CNN
 F 1 "Screw_Terminal_01x04" H 21530 8751 50  0000 L CNN
-F 2 "" H 21450 8850 50  0001 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-4_P5.00mm" H 21450 8850 50  0001 C CNN
 F 3 "~" H 21450 8850 50  0001 C CNN
 	1    21450 8850
 	1    0    0    -1  
@@ -2943,7 +2774,7 @@ U 1 1 614E35C8
 P 21450 9400
 F 0 "J?" H 21530 9392 50  0000 L CNN
 F 1 "Screw_Terminal_01x04" H 21530 9301 50  0000 L CNN
-F 2 "" H 21450 9400 50  0001 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-4_P5.00mm" H 21450 9400 50  0001 C CNN
 F 3 "~" H 21450 9400 50  0001 C CNN
 	1    21450 9400
 	1    0    0    -1  
@@ -3027,7 +2858,7 @@ U 1 1 61B5191D
 P 21450 10900
 F 0 "J?" H 21530 10892 50  0000 L CNN
 F 1 "Screw_Terminal_01x10" H 21530 10801 50  0000 L CNN
-F 2 "" H 21450 10900 50  0001 C CNN
+F 2 "Connectors_Phoenix:PhoenixContact_GMSTB-GF_10x7.62mm_Angled_ThreadedFlange_MountHole" H 21450 10900 50  0001 C CNN
 F 3 "~" H 21450 10900 50  0001 C CNN
 	1    21450 10900
 	1    0    0    -1  
@@ -3099,11 +2930,6 @@ F 3 "" H 20400 5750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	20400 5750 21250 5750
-Wire Wire Line
-	10850 7500 10300 7500
-Wire Wire Line
-	10300 7500 10300 7600
-Connection ~ 10850 7500
 $Comp
 L Connector:USB_B_Micro J?
 U 1 1 61DD04CF
@@ -3155,4 +2981,439 @@ Text Notes 22300 15900 0    50   ~ 0
 V0.0 (alpha)
 Text Notes 19850 15900 0    50   ~ 0
 2/9/2019\n
+Wire Wire Line
+	9600 4000 9600 4500
+Wire Wire Line
+	9600 4500 10300 4500
+Wire Wire Line
+	9600 4000 9850 4000
+Connection ~ 10300 4500
+$Comp
+L Device:R R?
+U 1 1 5C6D04F3
+P 11200 13300
+F 0 "R?" H 11270 13346 50  0000 L CNN
+F 1 "120" H 11270 13255 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 11130 13300 50  0001 C CNN
+F 3 "~" H 11200 13300 50  0001 C CNN
+	1    11200 13300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11500 13150 11200 13150
+Wire Wire Line
+	10900 13150 10900 13200
+Wire Wire Line
+	10750 13200 10900 13200
+Connection ~ 11200 13150
+Wire Wire Line
+	11200 13150 10900 13150
+Wire Wire Line
+	10900 13400 10900 13450
+Wire Wire Line
+	10900 13450 11200 13450
+Wire Wire Line
+	10750 13400 10900 13400
+Connection ~ 11200 13450
+Wire Wire Line
+	11200 13450 11500 13450
+$Comp
+L Device:R R?
+U 1 1 5C74990B
+P 11250 11650
+F 0 "R?" H 11320 11696 50  0000 L CNN
+F 1 "120" H 11320 11605 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 11180 11650 50  0001 C CNN
+F 3 "~" H 11250 11650 50  0001 C CNN
+	1    11250 11650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11550 11500 11250 11500
+Wire Wire Line
+	10950 11500 10950 11550
+Connection ~ 11250 11500
+Wire Wire Line
+	11250 11500 10950 11500
+Wire Wire Line
+	10950 11750 10950 11800
+Wire Wire Line
+	10950 11800 11250 11800
+Connection ~ 11250 11800
+Wire Wire Line
+	11250 11800 11550 11800
+Wire Wire Line
+	10750 11750 10950 11750
+Wire Wire Line
+	10750 11550 10950 11550
+$Comp
+L Driver_FET:EL7202CN U?
+U 1 1 5C78DD62
+P 5350 8600
+F 0 "U?" H 5350 9178 50  0000 C CNN
+F 1 "EL7202CN" H 5350 9087 50  0000 C CNN
+F 2 "" H 5350 8300 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/el72/el7202-12-22.pdf" H 5350 8300 50  0001 C CNN
+	1    5350 8600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C78E0D0
+P 5350 9150
+F 0 "#PWR?" H 5350 8900 50  0001 C CNN
+F 1 "GND" H 5355 8977 50  0000 C CNN
+F 2 "" H 5350 9150 50  0001 C CNN
+F 3 "" H 5350 9150 50  0001 C CNN
+	1    5350 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:QM6015D Q?
+U 1 1 5C78E978
+P 6250 8050
+F 0 "Q?" V 6455 8096 50  0000 L CNN
+F 1 "QM6015D" V 6150 8100 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 6450 7975 50  0001 L CIN
+F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 6250 8050 50  0001 L CNN
+	1    6250 8050
+	0    1    -1   0   
+$EndComp
+$Comp
+L Transistor_FET:QM6015D Q?
+U 1 1 5C907AA4
+P 6700 8500
+F 0 "Q?" V 6905 8546 50  0000 L CNN
+F 1 "QM6015D" V 6600 8550 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 6900 8425 50  0001 L CIN
+F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 6700 8500 50  0001 L CNN
+	1    6700 8500
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5350 8200 5350 7950
+Connection ~ 5350 7950
+Wire Wire Line
+	4150 7300 4150 7450
+$Comp
+L power:GND #PWR?
+U 1 1 5C9C7A14
+P 4150 7450
+F 0 "#PWR?" H 4150 7200 50  0001 C CNN
+F 1 "GND" H 4155 7277 50  0000 C CNN
+F 2 "" H 4150 7450 50  0001 C CNN
+F 3 "" H 4150 7450 50  0001 C CNN
+	1    4150 7450
+	1    0    0    -1  
+$EndComp
+Text Label 4250 8700 0    50   ~ 0
+LV_BLINKERS
+Text Label 4250 8500 0    50   ~ 0
+LV_BRAKELIGHTS
+Wire Wire Line
+	4250 8500 4950 8500
+Wire Wire Line
+	4250 8700 4950 8700
+Wire Wire Line
+	6250 8250 6250 8500
+Wire Wire Line
+	5750 8700 6700 8700
+Wire Wire Line
+	6500 8400 5800 8400
+Wire Wire Line
+	5800 8400 5800 7950
+Connection ~ 5800 7950
+Text Label 7300 6100 0    50   ~ 0
+HEADLIGHTS
+Text Label 7300 7950 0    50   ~ 0
+BRAKELIGHTS
+Text Label 7300 8400 0    50   ~ 0
+BLINKERS
+Wire Wire Line
+	6900 8400 7300 8400
+Wire Wire Line
+	5350 9000 5350 9150
+$Comp
+L Device:C C?
+U 1 1 5CD7616E
+P 4900 7600
+F 0 "C?" H 5015 7646 50  0000 L CNN
+F 1 "0.47u" H 5015 7555 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4938 7450 50  0001 C CNN
+F 3 "~" H 4900 7600 50  0001 C CNN
+	1    4900 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 7300 4900 7450
+Wire Wire Line
+	4900 7750 4900 7950
+$Comp
+L Device:C C?
+U 1 1 5CD76177
+P 5350 7600
+F 0 "C?" H 5465 7646 50  0000 L CNN
+F 1 "4.7u" H 5465 7555 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5388 7450 50  0001 C CNN
+F 3 "~" H 5350 7600 50  0001 C CNN
+	1    5350 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 7750 5350 7950
+Wire Wire Line
+	5350 7450 5350 7300
+$Comp
+L Device:C C?
+U 1 1 5CD76181
+P 5800 7600
+F 0 "C?" H 5915 7646 50  0000 L CNN
+F 1 "47u" H 5915 7555 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5838 7450 50  0001 C CNN
+F 3 "~" H 5800 7600 50  0001 C CNN
+	1    5800 7600
+	1    0    0    -1  
+$EndComp
+Connection ~ 5350 7300
+Wire Wire Line
+	5800 7300 5800 7450
+Wire Wire Line
+	5800 7750 5800 7950
+Wire Wire Line
+	4150 7300 4900 7300
+Wire Wire Line
+	4900 7950 5350 7950
+Wire Wire Line
+	4900 7300 5350 7300
+Connection ~ 4900 7300
+Wire Wire Line
+	5350 7300 5800 7300
+Wire Wire Line
+	5350 7950 5800 7950
+Wire Wire Line
+	5750 8500 6250 8500
+Wire Wire Line
+	5800 7950 6050 7950
+Wire Wire Line
+	7300 7950 6450 7950
+$Comp
+L Driver_FET:EL7202CN U?
+U 1 1 5D0CF265
+P 5350 6300
+F 0 "U?" H 5350 6878 50  0000 C CNN
+F 1 "EL7202CN" H 5350 6787 50  0000 C CNN
+F 2 "" H 5350 6000 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/el72/el7202-12-22.pdf" H 5350 6000 50  0001 C CNN
+	1    5350 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D0CF26C
+P 5350 6850
+F 0 "#PWR?" H 5350 6600 50  0001 C CNN
+F 1 "GND" H 5355 6677 50  0000 C CNN
+F 2 "" H 5350 6850 50  0001 C CNN
+F 3 "" H 5350 6850 50  0001 C CNN
+	1    5350 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:QM6015D Q?
+U 1 1 5D0CF272
+P 6250 5750
+F 0 "Q?" V 6455 5796 50  0000 L CNN
+F 1 "QM6015D" V 6150 5800 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 6450 5675 50  0001 L CIN
+F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 6250 5750 50  0001 L CNN
+	1    6250 5750
+	0    1    -1   0   
+$EndComp
+$Comp
+L Transistor_FET:QM6015D Q?
+U 1 1 5D0CF279
+P 6700 6200
+F 0 "Q?" V 6905 6246 50  0000 L CNN
+F 1 "QM6015D" V 6600 6250 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 6900 6125 50  0001 L CIN
+F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 6700 6200 50  0001 L CNN
+	1    6700 6200
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5350 5900 5350 5650
+Connection ~ 5350 5650
+Wire Wire Line
+	4150 5000 4150 5150
+$Comp
+L power:GND #PWR?
+U 1 1 5D0CF283
+P 4150 5150
+F 0 "#PWR?" H 4150 4900 50  0001 C CNN
+F 1 "GND" H 4155 4977 50  0000 C CNN
+F 2 "" H 4150 5150 50  0001 C CNN
+F 3 "" H 4150 5150 50  0001 C CNN
+	1    4150 5150
+	1    0    0    -1  
+$EndComp
+Text Label 4250 6400 0    50   ~ 0
+LV_HEADLIGHTS
+Wire Wire Line
+	4250 6200 4950 6200
+Wire Wire Line
+	4250 6400 4950 6400
+Wire Wire Line
+	6250 5950 6250 6200
+Wire Wire Line
+	5750 6400 6700 6400
+Wire Wire Line
+	6500 6100 5800 6100
+Wire Wire Line
+	5800 6100 5800 5650
+Connection ~ 5800 5650
+Wire Wire Line
+	6900 6100 7300 6100
+Wire Wire Line
+	5350 6700 5350 6850
+$Comp
+L Device:C C?
+U 1 1 5D0CF296
+P 4900 5300
+F 0 "C?" H 5015 5346 50  0000 L CNN
+F 1 "0.47u" H 5015 5255 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4938 5150 50  0001 C CNN
+F 3 "~" H 4900 5300 50  0001 C CNN
+	1    4900 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 5000 4900 5150
+Wire Wire Line
+	4900 5450 4900 5650
+$Comp
+L Device:C C?
+U 1 1 5D0CF29F
+P 5350 5300
+F 0 "C?" H 5465 5346 50  0000 L CNN
+F 1 "4.7u" H 5465 5255 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5388 5150 50  0001 C CNN
+F 3 "~" H 5350 5300 50  0001 C CNN
+	1    5350 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 5450 5350 5650
+Wire Wire Line
+	5350 5150 5350 5000
+$Comp
+L Device:C C?
+U 1 1 5D0CF2A8
+P 5800 5300
+F 0 "C?" H 5915 5346 50  0000 L CNN
+F 1 "47u" H 5915 5255 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5838 5150 50  0001 C CNN
+F 3 "~" H 5800 5300 50  0001 C CNN
+	1    5800 5300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5350 5000
+Wire Wire Line
+	5800 5000 5800 5150
+Wire Wire Line
+	5800 5450 5800 5650
+Wire Wire Line
+	4150 5000 4900 5000
+Wire Wire Line
+	4900 5650 5350 5650
+Wire Wire Line
+	4900 5000 5350 5000
+Connection ~ 4900 5000
+Wire Wire Line
+	5350 5000 5800 5000
+Wire Wire Line
+	5350 5650 5800 5650
+Wire Wire Line
+	5750 6200 6250 6200
+Wire Wire Line
+	5800 5650 6050 5650
+Wire Wire Line
+	7300 5650 6450 5650
+Text Label 7300 5650 0    50   ~ 0
+HORN
+Text Label 4250 6200 0    50   ~ 0
+LV_HORN
+Wire Wire Line
+	10400 8100 10400 8150
+$Comp
+L power:GND #PWR?
+U 1 1 5D246BBF
+P 11150 8250
+F 0 "#PWR?" H 11150 8000 50  0001 C CNN
+F 1 "GND" H 11155 8077 50  0000 C CNN
+F 2 "" H 11150 8250 50  0001 C CNN
+F 3 "" H 11150 8250 50  0001 C CNN
+	1    11150 8250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D246BC5
+P 10900 8150
+F 0 "C?" V 10648 8150 50  0000 C CNN
+F 1 "4.7u" V 10739 8150 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 10938 8000 50  0001 C CNN
+F 3 "~" H 10900 8150 50  0001 C CNN
+	1    10900 8150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11050 8150 11150 8150
+Wire Wire Line
+	11150 8150 11150 8250
+Wire Wire Line
+	10750 8150 10400 8150
+Connection ~ 10400 8150
+Wire Wire Line
+	10400 8150 10400 8250
+$Comp
+L power:GND #PWR?
+U 1 1 5D2D9904
+P 8650 9200
+F 0 "#PWR?" H 8650 8950 50  0001 C CNN
+F 1 "GND" H 8655 9027 50  0000 C CNN
+F 2 "" H 8650 9200 50  0001 C CNN
+F 3 "" H 8650 9200 50  0001 C CNN
+	1    8650 9200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 9200 8650 9050
+Wire Wire Line
+	8650 9050 9850 9050
+Wire Wire Line
+	9850 8850 8650 8850
+Wire Wire Line
+	8650 8850 8650 9050
+Connection ~ 8650 9050
+Wire Wire Line
+	9850 8650 8650 8650
+Wire Wire Line
+	8650 8650 8650 8850
+Connection ~ 8650 8850
+Text Label 5100 10500 0    50   ~ 0
+LV_HORN
+Wire Wire Line
+	5100 10600 5000 10600
+Wire Wire Line
+	2500 11900 3000 11900
+Wire Wire Line
+	2500 12000 3000 12000
+Wire Wire Line
+	2500 12100 3000 12100
+Wire Wire Line
+	2500 12200 3000 12200
+Wire Wire Line
+	2500 12300 3000 12300
+Wire Wire Line
+	5000 10500 5100 10500
 $EndSCHEMATC

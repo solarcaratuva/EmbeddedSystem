@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name SolarCarECU-rescue)(type Legacy)(uri ${KIPRJMOD}/SolarCarECU-rescue.lib)(options "")(descr ""))
+)
