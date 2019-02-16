@@ -26,7 +26,7 @@ F 3 "" H 4000 12500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C5DC279
 P 2150 13050
 F 0 "#PWR?" H 2150 12800 50  0001 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 2150 13050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C5DC2B9
 P 5450 12950
 F 0 "#PWR?" H 5450 12700 50  0001 C CNN
@@ -50,7 +50,7 @@ $EndComp
 Wire Wire Line
 	5000 12800 5450 12800
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 5C5DC865
 P 6000 13900
 F 0 "#PWR?" H 6000 13650 50  0001 C CNN
@@ -67,7 +67,7 @@ DAC_1
 Wire Wire Line
 	2750 14000 3000 14000
 $Comp
-L power:+3V3 #PWR?
+L SolarCarECU-rescue:+3V3-power #PWR?
 U 1 1 5C5E61B5
 P 6050 11450
 F 0 "#PWR?" H 6050 11300 50  0001 C CNN
@@ -80,7 +80,7 @@ $EndComp
 Wire Wire Line
 	3000 14100 2750 14100
 $Comp
-L Interface_CAN_LIN:MCP2562-E-P U?
+L SolarCarECU-rescue:MCP2562-E-P-Interface_CAN_LIN U?
 U 1 1 5C5E3276
 P 10250 11650
 F 0 "U?" H 9900 12000 50  0000 C CNN
@@ -91,7 +91,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 10250 11650 5
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5C5E351C
 P 10250 11200
 F 0 "#PWR?" H 10250 11050 50  0001 C CNN
@@ -102,7 +102,7 @@ F 3 "" H 10250 11200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C5E366D
 P 10250 12250
 F 0 "#PWR?" H 10250 12000 50  0001 C CNN
@@ -117,7 +117,7 @@ CAN0_H
 Text GLabel 11550 11800 2    50   Input ~ 0
 CAN0_L
 $Comp
-L power:+3V3 #PWR?
+L SolarCarECU-rescue:+3V3-power #PWR?
 U 1 1 5C5ED272
 P 8950 11650
 F 0 "#PWR?" H 8950 11500 50  0001 C CNN
@@ -130,7 +130,7 @@ $EndComp
 Wire Wire Line
 	8950 11650 8950 11750
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5C5F2FAE
 P 8950 12000
 F 0 "C?" H 9065 12046 50  0000 L CNN
@@ -141,7 +141,7 @@ F 3 "~" H 8950 12000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C5F30F8
 P 8950 12250
 F 0 "#PWR?" H 8950 12000 50  0001 C CNN
@@ -157,7 +157,7 @@ Wire Wire Line
 	8950 12150 8950 12250
 Connection ~ 8950 11750
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5C616A5C
 P 8400 12000
 F 0 "C?" H 8515 12046 50  0000 L CNN
@@ -168,7 +168,7 @@ F 3 "~" H 8400 12000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C616A63
 P 8400 12250
 F 0 "#PWR?" H 8400 12000 50  0001 C CNN
@@ -183,7 +183,7 @@ Wire Wire Line
 Wire Wire Line
 	10250 11200 10250 11250
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5C62B927
 P 8400 11650
 F 0 "#PWR?" H 8400 11500 50  0001 C CNN
@@ -198,7 +198,7 @@ Wire Wire Line
 Wire Wire Line
 	8950 11750 9750 11750
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5C634D73
 P 9450 12050
 F 0 "R?" H 9520 12096 50  0000 L CNN
@@ -213,7 +213,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 11850 9450 11900
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C6380E3
 P 9450 12250
 F 0 "#PWR?" H 9450 12000 50  0001 C CNN
@@ -236,7 +236,7 @@ CAN1_TX
 Text Label 2750 13400 2    50   ~ 0
 CAN1_RX
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5C6832B5
 P 2750 10800
 F 0 "R?" V 2800 10950 50  0000 C CNN
@@ -247,7 +247,7 @@ F 3 "~" H 2750 10800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5C68ACDB
 P 2750 10900
 F 0 "R?" V 2800 11050 50  0000 C CNN
@@ -262,7 +262,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 10900 2900 10900
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5C692F5B
 P 2750 12400
 F 0 "R?" V 2800 12550 50  0000 C CNN
@@ -273,7 +273,7 @@ F 3 "~" H 2750 12400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5C692F62
 P 2750 12500
 F 0 "R?" V 2800 12650 50  0000 C CNN
@@ -300,7 +300,7 @@ CAN0_TX
 Text Label 2500 10900 2    50   ~ 0
 CAN0_RX
 $Comp
-L power:+3V3 #PWR?
+L SolarCarECU-rescue:+3V3-power #PWR?
 U 1 1 5C6C1368
 P 2150 11750
 F 0 "#PWR?" H 2150 11600 50  0001 C CNN
@@ -313,7 +313,7 @@ $EndComp
 Wire Wire Line
 	2150 11750 2150 11800
 $Comp
-L power:+3V3 #PWR?
+L SolarCarECU-rescue:+3V3-power #PWR?
 U 1 1 5C6C5A23
 P 2150 12850
 F 0 "#PWR?" H 2150 12700 50  0001 C CNN
@@ -326,7 +326,7 @@ $EndComp
 Wire Wire Line
 	2150 12850 2150 12900
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C6CA23C
 P 1800 14250
 F 0 "#PWR?" H 1800 14000 50  0001 C CNN
@@ -341,7 +341,7 @@ Wire Wire Line
 Wire Wire Line
 	2150 13050 2150 13000
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C6CECD7
 P 1450 10450
 F 0 "#PWR?" H 1450 10200 50  0001 C CNN
@@ -356,7 +356,7 @@ Wire Wire Line
 Wire Wire Line
 	2150 11800 3000 11800
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C6E5842
 P 6050 11700
 F 0 "#PWR?" H 6050 11450 50  0001 C CNN
@@ -377,7 +377,7 @@ USB_D+
 Text Label 5050 13100 0    50   ~ 0
 USB_D-
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5C6F8F01
 P 3400 4200
 F 0 "#PWR?" H 3400 4050 50  0001 C CNN
@@ -396,7 +396,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 4600 2700 4600
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C707E77
 P 2150 5000
 F 0 "#PWR?" H 2150 4750 50  0001 C CNN
@@ -429,7 +429,7 @@ Wire Wire Line
 	5450 12950 5450 12900
 Connection ~ 5450 12900
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5C734E15
 P 6000 13050
 F 0 "#PWR?" H 6000 12900 50  0001 C CNN
@@ -442,7 +442,7 @@ $EndComp
 Wire Wire Line
 	6000 13200 6000 13050
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5C73B0C8
 P 6000 13650
 F 0 "#PWR?" H 6000 13500 50  0001 C CNN
@@ -465,7 +465,7 @@ Wire Wire Line
 Wire Wire Line
 	9650 11550 9750 11550
 $Comp
-L Interface_CAN_LIN:MCP2562-E-P U?
+L SolarCarECU-rescue:MCP2562-E-P-Interface_CAN_LIN U?
 U 1 1 5C7851F1
 P 10250 13300
 F 0 "U?" H 9900 13650 50  0000 C CNN
@@ -476,7 +476,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 10250 13300 5
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5C7851F8
 P 10250 12850
 F 0 "#PWR?" H 10250 12700 50  0001 C CNN
@@ -487,7 +487,7 @@ F 3 "" H 10250 12850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C7851FE
 P 10250 13900
 F 0 "#PWR?" H 10250 13650 50  0001 C CNN
@@ -502,7 +502,7 @@ CAN1_H
 Text GLabel 11500 13450 2    50   Input ~ 0
 CAN1_L
 $Comp
-L power:+3V3 #PWR?
+L SolarCarECU-rescue:+3V3-power #PWR?
 U 1 1 5C785217
 P 8950 13300
 F 0 "#PWR?" H 8950 13150 50  0001 C CNN
@@ -515,7 +515,7 @@ $EndComp
 Wire Wire Line
 	8950 13300 8950 13400
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5C78521E
 P 8950 13650
 F 0 "C?" H 9065 13696 50  0000 L CNN
@@ -526,7 +526,7 @@ F 3 "~" H 8950 13650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C785225
 P 8950 13900
 F 0 "#PWR?" H 8950 13650 50  0001 C CNN
@@ -542,7 +542,7 @@ Wire Wire Line
 	8950 13800 8950 13900
 Connection ~ 8950 13400
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5C78522E
 P 8400 13650
 F 0 "C?" H 8515 13696 50  0000 L CNN
@@ -553,7 +553,7 @@ F 3 "~" H 8400 13650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C785235
 P 8400 13900
 F 0 "#PWR?" H 8400 13650 50  0001 C CNN
@@ -568,7 +568,7 @@ Wire Wire Line
 Wire Wire Line
 	10250 12850 10250 12900
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5C78523D
 P 8400 13300
 F 0 "#PWR?" H 8400 13150 50  0001 C CNN
@@ -583,7 +583,7 @@ Wire Wire Line
 Wire Wire Line
 	8950 13400 9750 13400
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5C785245
 P 9450 13700
 F 0 "R?" H 9520 13746 50  0000 L CNN
@@ -598,7 +598,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 13500 9450 13550
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C78524E
 P 9450 13900
 F 0 "#PWR?" H 9450 13650 50  0001 C CNN
@@ -739,7 +739,7 @@ MOTOR_L_METER
 Text Label 20400 4300 0    50   ~ 0
 MOTOR_L_ECO_EN
 $Comp
-L Connector:Screw_Terminal_01x08 J?
+L SolarCarECU-rescue:Screw_Terminal_01x08-Connector J?
 U 1 1 5CAFCEA5
 P 21450 4300
 F 0 "J?" H 21530 4292 50  0000 L CNN
@@ -750,7 +750,7 @@ F 3 "~" H 21450 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x08 J?
+L SolarCarECU-rescue:Screw_Terminal_01x08-Connector J?
 U 1 1 5CAFCF49
 P 21450 5350
 F 0 "J?" H 21530 5342 50  0000 L CNN
@@ -789,7 +789,7 @@ Wire Wire Line
 Wire Wire Line
 	20400 5650 21250 5650
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 5CC073AE
 P 20400 4700
 F 0 "#PWR?" H 20400 4450 50  0001 C CNN
@@ -800,7 +800,7 @@ F 3 "" H 20400 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4504 U?
+L SolarCarECU-rescue:4504-4xxx U?
 U 1 1 5CC1567F
 P 10300 9150
 F 0 "U?" H 10000 10000 50  0000 C CNN
@@ -811,7 +811,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/cd4504b.pdf" H 9650 8800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4504 U?
+L SolarCarECU-rescue:4504-4xxx U?
 U 1 1 5CC22D1D
 P 10300 6100
 F 0 "U?" H 10000 6950 50  0000 C CNN
@@ -822,7 +822,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/cd4504b.pdf" H 9650 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5CC22ECA
 P 9650 10300
 F 0 "#PWR?" H 9650 10050 50  0001 C CNN
@@ -833,7 +833,7 @@ F 3 "" H 9650 10300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5CC22FCC
 P 9650 7200
 F 0 "#PWR?" H 9650 6950 50  0001 C CNN
@@ -866,7 +866,7 @@ Connection ~ 9650 7100
 Wire Wire Line
 	9650 7100 9650 7200
 $Comp
-L power:+3V3 #PWR?
+L SolarCarECU-rescue:+3V3-power #PWR?
 U 1 1 5CC78E2A
 P 10200 8100
 F 0 "#PWR?" H 10200 7950 50  0001 C CNN
@@ -879,7 +879,7 @@ $EndComp
 Wire Wire Line
 	10200 8100 10200 8150
 $Comp
-L power:+3V3 #PWR?
+L SolarCarECU-rescue:+3V3-power #PWR?
 U 1 1 5CC87C69
 P 10200 5050
 F 0 "#PWR?" H 10200 4900 50  0001 C CNN
@@ -892,7 +892,7 @@ $EndComp
 Wire Wire Line
 	10200 5050 10200 5100
 $Comp
-L power:+12V #PWR?
+L SolarCarECU-rescue:+12V-power #PWR?
 U 1 1 5CC96DA1
 P 10400 8100
 F 0 "#PWR?" H 10400 7950 50  0001 C CNN
@@ -903,7 +903,7 @@ F 3 "" H 10400 8100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
+L SolarCarECU-rescue:+12V-power #PWR?
 U 1 1 5CCA5DFB
 P 10400 5050
 F 0 "#PWR?" H 10400 4900 50  0001 C CNN
@@ -946,7 +946,7 @@ Wire Wire Line
 Wire Wire Line
 	10750 6600 10850 6600
 $Comp
-L Connector:Screw_Terminal_01x02 J?
+L SolarCarECU-rescue:Screw_Terminal_01x02-Connector J?
 U 1 1 5CE84CDE
 P 2100 2650
 F 0 "J?" H 2020 2325 50  0000 C CNN
@@ -957,7 +957,7 @@ F 3 "~" H 2100 2650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Regulator_Linear:L7805 U?
+L SolarCarECU-rescue:L7805-Regulator_Linear U?
 U 1 1 5CE85049
 P 6500 2550
 F 0 "U?" H 6500 2792 50  0000 C CNN
@@ -968,7 +968,7 @@ F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:QM6015D Q?
+L SolarCarECU-rescue:QM6015D-Transistor_FET Q?
 U 1 1 5CEA1F94
 P 3200 2650
 F 0 "Q?" V 3543 2650 50  0000 C CNN
@@ -979,7 +979,7 @@ F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 3200 2650 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_Zener D?
+L SolarCarECU-rescue:D_Zener-Device D?
 U 1 1 5CEC2C1C
 P 3650 2750
 F 0 "D?" V 3604 2829 50  0000 L CNN
@@ -992,7 +992,7 @@ $EndComp
 Wire Wire Line
 	2300 2650 2450 2650
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5CF0032A
 P 2450 3450
 F 0 "#PWR?" H 2450 3200 50  0001 C CNN
@@ -1003,7 +1003,7 @@ F 3 "" H 2450 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5CF30EAF
 P 5950 2850
 F 0 "C?" H 6065 2896 50  0000 L CNN
@@ -1018,7 +1018,7 @@ Wire Wire Line
 Wire Wire Line
 	5950 2550 6200 2550
 $Comp
-L Device:CP C?
+L SolarCarECU-rescue:CP-Device C?
 U 1 1 5CF96F79
 P 7200 2850
 F 0 "C?" H 7318 2896 50  0000 L CNN
@@ -1033,7 +1033,7 @@ Wire Wire Line
 Wire Wire Line
 	7200 2550 7200 2700
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5CFF3868
 P 7200 2350
 F 0 "#PWR?" H 7200 2200 50  0001 C CNN
@@ -1056,7 +1056,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 2550 3000 2550
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5D0750F4
 P 3650 3150
 F 0 "R?" H 3720 3196 50  0000 L CNN
@@ -1110,7 +1110,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 3000 5350 2950
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5D19AE1F
 P 4700 2750
 F 0 "R?" H 4770 2796 50  0000 L CNN
@@ -1133,7 +1133,7 @@ Connection ~ 5350 2950
 Wire Wire Line
 	5350 2950 5350 2850
 $Comp
-L Transistor_BJT:PZT2222A Q?
+L SolarCarECU-rescue:PZT2222A-Transistor_BJT Q?
 U 1 1 5D1C0CBA
 P 5350 2650
 F 0 "Q?" V 5678 2650 50  0000 C CNN
@@ -1144,7 +1144,7 @@ F 3 "http://www.fairchildsemi.com/ds/PN/PN2222A.pdf" H 5350 2650 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:CP C?
+L SolarCarECU-rescue:CP-Device C?
 U 1 1 5D1C1081
 P 5350 3150
 F 0 "C?" H 5468 3196 50  0000 L CNN
@@ -1155,7 +1155,7 @@ F 3 "~" H 5350 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
+L SolarCarECU-rescue:+12V-power #PWR?
 U 1 1 5D1C1470
 P 4200 2400
 F 0 "#PWR?" H 4200 2250 50  0001 C CNN
@@ -1171,7 +1171,7 @@ Connection ~ 4200 2550
 Wire Wire Line
 	4200 2550 4700 2550
 $Comp
-L Device:CP C?
+L SolarCarECU-rescue:CP-Device C?
 U 1 1 5D1D4AAE
 P 4200 3150
 F 0 "C?" H 4318 3196 50  0000 L CNN
@@ -1239,7 +1239,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 11600 6050 11600
 $Comp
-L 4xxx:4504 U?
+L SolarCarECU-rescue:4504-4xxx U?
 U 1 1 5D3D5BE3
 P 10300 3500
 F 0 "U?" H 10000 4350 50  0000 C CNN
@@ -1268,7 +1268,7 @@ Wire Wire Line
 Wire Wire Line
 	11450 3800 10750 3800
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5D4903C6
 P 11000 5200
 F 0 "#PWR?" H 11000 4950 50  0001 C CNN
@@ -1310,7 +1310,7 @@ Wire Wire Line
 Wire Wire Line
 	10750 4000 11450 4000
 $Comp
-L power:+12V #PWR?
+L SolarCarECU-rescue:+12V-power #PWR?
 U 1 1 5D5DAC7B
 P 10400 2350
 F 0 "#PWR?" H 10400 2200 50  0001 C CNN
@@ -1323,7 +1323,7 @@ $EndComp
 Wire Wire Line
 	10400 2350 10400 2500
 $Comp
-L power:+3V3 #PWR?
+L SolarCarECU-rescue:+3V3-power #PWR?
 U 1 1 5D5F4218
 P 10200 2350
 F 0 "#PWR?" H 10200 2200 50  0001 C CNN
@@ -1346,7 +1346,7 @@ KILL_SENSE
 Text Label 20450 3150 0    50   ~ 0
 HEADLIGHTS
 $Comp
-L Connector:Screw_Terminal_01x04 J?
+L SolarCarECU-rescue:Screw_Terminal_01x04-Connector J?
 U 1 1 5D6FB742
 P 21450 3250
 F 0 "J?" H 21530 3242 50  0000 L CNN
@@ -1357,7 +1357,7 @@ F 3 "~" H 21450 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5D79350F
 P 20450 3450
 F 0 "#PWR?" H 20450 3200 50  0001 C CNN
@@ -1368,7 +1368,7 @@ F 3 "" H 20450 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5DBDAD8F
 P 9750 8150
 F 0 "C?" V 9498 8150 50  0000 C CNN
@@ -1384,7 +1384,7 @@ Connection ~ 10200 8150
 Wire Wire Line
 	10200 8150 10200 8250
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5DBFE38F
 P 9450 8250
 F 0 "#PWR?" H 9450 8000 50  0001 C CNN
@@ -1453,7 +1453,7 @@ Wire Wire Line
 Wire Wire Line
 	20400 6750 21250 6750
 $Comp
-L Connector:Screw_Terminal_01x14 J?
+L SolarCarECU-rescue:Screw_Terminal_01x14-Connector J?
 U 1 1 5E7BA93C
 P 21450 6950
 F 0 "J?" H 21530 6942 50  0000 L CNN
@@ -1464,7 +1464,7 @@ F 3 "~" H 21450 6950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5E844CE9
 P 21100 6250
 F 0 "#PWR?" H 21100 6100 50  0001 C CNN
@@ -1479,7 +1479,7 @@ Wire Wire Line
 Wire Wire Line
 	21100 6350 21250 6350
 $Comp
-L power:+12V #PWR?
+L SolarCarECU-rescue:+12V-power #PWR?
 U 1 1 5E88AB82
 P 20800 6250
 F 0 "#PWR?" H 20800 6100 50  0001 C CNN
@@ -1506,7 +1506,7 @@ Wire Wire Line
 Text Label 2500 10600 2    50   ~ 0
 UART_TX
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5ED592E0
 P 14600 13200
 F 0 "R?" H 14670 13246 50  0000 L CNN
@@ -1517,7 +1517,7 @@ F 3 "~" H 14600 13200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5ED59376
 P 15300 13200
 F 0 "R?" H 15370 13246 50  0000 L CNN
@@ -1528,7 +1528,7 @@ F 3 "~" H 15300 13200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5ED593EC
 P 16000 13200
 F 0 "R?" H 16070 13246 50  0000 L CNN
@@ -1539,7 +1539,7 @@ F 3 "~" H 16000 13200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5ED59468
 P 16650 13200
 F 0 "R?" H 16720 13246 50  0000 L CNN
@@ -1550,7 +1550,7 @@ F 3 "~" H 16650 13200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5ED595D9
 P 14600 12200
 F 0 "R?" H 14670 12246 50  0000 L CNN
@@ -1561,7 +1561,7 @@ F 3 "~" H 14600 12200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5ED595E0
 P 15300 12200
 F 0 "R?" H 15370 12246 50  0000 L CNN
@@ -1572,7 +1572,7 @@ F 3 "~" H 15300 12200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5ED595E7
 P 16000 12200
 F 0 "R?" H 16070 12246 50  0000 L CNN
@@ -1583,7 +1583,7 @@ F 3 "~" H 16000 12200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5ED595EE
 P 16650 12200
 F 0 "R?" H 16720 12246 50  0000 L CNN
@@ -1610,7 +1610,7 @@ LV_THROTTLE_CTRL
 Text Label 14400 12750 2    50   ~ 0
 LV_REGEN_CTRL
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5EE63934
 P 17300 13200
 F 0 "R?" H 17370 13246 50  0000 L CNN
@@ -1621,7 +1621,7 @@ F 3 "~" H 17300 13200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5EE63942
 P 17300 12200
 F 0 "R?" H 17370 12246 50  0000 L CNN
@@ -1685,7 +1685,7 @@ Wire Wire Line
 Wire Wire Line
 	14600 12350 14600 12850
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5F16A2A5
 P 14900 13200
 F 0 "C?" H 15015 13246 50  0000 L CNN
@@ -1696,7 +1696,7 @@ F 3 "~" H 14900 13200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5F1B914E
 P 15600 13200
 F 0 "C?" H 15715 13246 50  0000 L CNN
@@ -1707,7 +1707,7 @@ F 3 "~" H 15600 13200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5F208D80
 P 16300 13200
 F 0 "C?" H 16415 13246 50  0000 L CNN
@@ -1718,7 +1718,7 @@ F 3 "~" H 16300 13200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5F28BEAA
 P 16950 13200
 F 0 "C?" H 17065 13246 50  0000 L CNN
@@ -1737,7 +1737,7 @@ Wire Wire Line
 Wire Wire Line
 	16950 13350 16950 13500
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5F344BF9
 P 17650 13200
 F 0 "C?" H 17765 13246 50  0000 L CNN
@@ -1786,7 +1786,7 @@ Wire Wire Line
 Wire Wire Line
 	14400 11550 17300 11550
 $Comp
-L Amplifier_Operational:LM324A U?
+L SolarCarECU-rescue:LM324A-Amplifier_Operational U?
 U 1 1 5F546448
 P 16500 3600
 F 0 "U?" H 16700 3850 50  0000 C CNN
@@ -1797,7 +1797,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 16550 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM324A U?
+L SolarCarECU-rescue:LM324A-Amplifier_Operational U?
 U 3 1 5F546C66
 P 16500 7400
 F 0 "U?" H 16500 7767 50  0000 C CNN
@@ -1808,7 +1808,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 16550 7600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM324A U?
+L SolarCarECU-rescue:LM324A-Amplifier_Operational U?
 U 5 1 5F546E1F
 P 16500 3600
 F 0 "U?" H 16458 3646 50  0001 L CNN
@@ -1819,7 +1819,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 16550 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5F54744B
 P 16950 3850
 F 0 "R?" H 17020 3896 50  0000 L CNN
@@ -1837,7 +1837,7 @@ Wire Wire Line
 Wire Wire Line
 	16950 4000 16950 4100
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5F5BE1A7
 P 16950 4350
 F 0 "R?" H 17020 4396 50  0000 L CNN
@@ -1848,7 +1848,7 @@ F 3 "~" H 16950 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5F5FB1E5
 P 15600 3800
 F 0 "C?" H 15715 3846 50  0000 L CNN
@@ -1861,7 +1861,7 @@ $EndComp
 Wire Wire Line
 	16800 3600 16950 3600
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5F5FB59C
 P 15850 3500
 F 0 "R?" V 15643 3500 50  0000 C CNN
@@ -1876,7 +1876,7 @@ Wire Wire Line
 Wire Wire Line
 	15600 3950 15600 4100
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5F736000
 P 15350 3500
 F 0 "R?" V 15143 3500 50  0000 C CNN
@@ -1887,7 +1887,7 @@ F 3 "~" H 15350 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5F7560BC
 P 14850 3500
 F 0 "R?" V 14643 3500 50  0000 C CNN
@@ -1898,7 +1898,7 @@ F 3 "~" H 14850 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5F7B6B75
 P 16100 3050
 F 0 "C?" H 16215 3096 50  0000 L CNN
@@ -1919,7 +1919,7 @@ Wire Wire Line
 	15500 3500 15600 3500
 Connection ~ 15600 3500
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5F776321
 P 15100 3050
 F 0 "C?" H 14985 3004 50  0000 R CNN
@@ -1951,7 +1951,7 @@ Wire Wire Line
 Wire Wire Line
 	16100 4100 16950 4100
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5FC6B5DD
 P 16400 3900
 F 0 "#PWR?" H 16400 3650 50  0001 C CNN
@@ -1962,7 +1962,7 @@ F 3 "" H 16400 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 5FC6B976
 P 16400 2850
 F 0 "#PWR?" H 16400 2700 50  0001 C CNN
@@ -1975,7 +1975,7 @@ $EndComp
 Wire Wire Line
 	16950 4500 16950 4650
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 6005806B
 P 16700 3050
 F 0 "C?" H 16815 3096 50  0000 L CNN
@@ -1995,7 +1995,7 @@ Wire Wire Line
 Wire Wire Line
 	16400 2850 16400 3250
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 6021D677
 P 16950 5750
 F 0 "R?" H 17020 5796 50  0000 L CNN
@@ -2013,7 +2013,7 @@ Wire Wire Line
 Wire Wire Line
 	16950 5900 16950 6000
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 6021D682
 P 16950 6250
 F 0 "R?" H 17020 6296 50  0000 L CNN
@@ -2024,7 +2024,7 @@ F 3 "~" H 16950 6250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 6021D689
 P 15600 5700
 F 0 "C?" H 15715 5746 50  0000 L CNN
@@ -2037,7 +2037,7 @@ $EndComp
 Wire Wire Line
 	16800 5500 16950 5500
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 6021D691
 P 15850 5400
 F 0 "R?" V 15643 5400 50  0000 C CNN
@@ -2052,7 +2052,7 @@ Wire Wire Line
 Wire Wire Line
 	15600 5850 15600 6000
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 6021D69A
 P 15350 5400
 F 0 "R?" V 15143 5400 50  0000 C CNN
@@ -2063,7 +2063,7 @@ F 3 "~" H 15350 5400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 6021D6A1
 P 14850 5400
 F 0 "R?" V 14643 5400 50  0000 C CNN
@@ -2074,7 +2074,7 @@ F 3 "~" H 14850 5400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 6021D6AE
 P 16100 4950
 F 0 "C?" H 16215 4996 50  0000 L CNN
@@ -2095,7 +2095,7 @@ Wire Wire Line
 	15500 5400 15600 5400
 Connection ~ 15600 5400
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 6021D6C1
 P 15100 4950
 F 0 "C?" H 14985 4904 50  0000 R CNN
@@ -2129,7 +2129,7 @@ Wire Wire Line
 Wire Wire Line
 	16950 6400 16950 6550
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60269EFC
 P 16950 7650
 F 0 "R?" H 17020 7696 50  0000 L CNN
@@ -2147,7 +2147,7 @@ Wire Wire Line
 Wire Wire Line
 	16950 7800 16950 7900
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60269F07
 P 16950 8150
 F 0 "R?" H 17020 8196 50  0000 L CNN
@@ -2158,7 +2158,7 @@ F 3 "~" H 16950 8150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 60269F0E
 P 15600 7600
 F 0 "C?" H 15715 7646 50  0000 L CNN
@@ -2171,7 +2171,7 @@ $EndComp
 Wire Wire Line
 	16800 7400 16950 7400
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60269F16
 P 15850 7300
 F 0 "R?" V 15643 7300 50  0000 C CNN
@@ -2186,7 +2186,7 @@ Wire Wire Line
 Wire Wire Line
 	15600 7750 15600 7900
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60269F1F
 P 15350 7300
 F 0 "R?" V 15143 7300 50  0000 C CNN
@@ -2197,7 +2197,7 @@ F 3 "~" H 15350 7300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60269F26
 P 14850 7300
 F 0 "R?" V 14643 7300 50  0000 C CNN
@@ -2208,7 +2208,7 @@ F 3 "~" H 14850 7300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 60269F33
 P 16100 6850
 F 0 "C?" H 16215 6896 50  0000 L CNN
@@ -2229,7 +2229,7 @@ Wire Wire Line
 	15500 7300 15600 7300
 Connection ~ 15600 7300
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 60269F46
 P 15100 6850
 F 0 "C?" H 14985 6804 50  0000 R CNN
@@ -2263,7 +2263,7 @@ Wire Wire Line
 Wire Wire Line
 	16950 8300 16950 8450
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60295C06
 P 16950 9550
 F 0 "R?" H 17020 9596 50  0000 L CNN
@@ -2281,7 +2281,7 @@ Wire Wire Line
 Wire Wire Line
 	16950 9700 16950 9800
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60295C11
 P 16950 10050
 F 0 "R?" H 17020 10096 50  0000 L CNN
@@ -2292,7 +2292,7 @@ F 3 "~" H 16950 10050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 60295C18
 P 15600 9500
 F 0 "C?" H 15715 9546 50  0000 L CNN
@@ -2305,7 +2305,7 @@ $EndComp
 Wire Wire Line
 	16800 9300 16950 9300
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60295C20
 P 15850 9200
 F 0 "R?" V 15643 9200 50  0000 C CNN
@@ -2320,7 +2320,7 @@ Wire Wire Line
 Wire Wire Line
 	15600 9650 15600 9800
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60295C29
 P 15350 9200
 F 0 "R?" V 15143 9200 50  0000 C CNN
@@ -2331,7 +2331,7 @@ F 3 "~" H 15350 9200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 60295C30
 P 14850 9200
 F 0 "R?" V 14643 9200 50  0000 C CNN
@@ -2342,7 +2342,7 @@ F 3 "~" H 14850 9200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 60295C3D
 P 16100 8750
 F 0 "C?" H 16215 8796 50  0000 L CNN
@@ -2363,7 +2363,7 @@ Wire Wire Line
 	15500 9200 15600 9200
 Connection ~ 15600 9200
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 60295C50
 P 15100 8750
 F 0 "C?" H 14985 8704 50  0000 R CNN
@@ -2397,7 +2397,7 @@ Wire Wire Line
 Wire Wire Line
 	16950 10200 16950 10350
 $Comp
-L Amplifier_Operational:LM324A U?
+L SolarCarECU-rescue:LM324A-Amplifier_Operational U?
 U 4 1 602F7370
 P 16500 9300
 F 0 "U?" H 16500 9667 50  0000 C CNN
@@ -2408,7 +2408,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 16550 9500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM324A U?
+L SolarCarECU-rescue:LM324A-Amplifier_Operational U?
 U 2 1 5F546B9C
 P 16500 5500
 F 0 "U?" H 16500 5867 50  0000 C CNN
@@ -2497,7 +2497,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 13500 3000 13500
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 60CB1405
 P 14400 4750
 F 0 "#PWR?" H 14400 4500 50  0001 C CNN
@@ -2508,7 +2508,7 @@ F 3 "" H 14400 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 60CB18EE
 P 14400 6650
 F 0 "#PWR?" H 14400 6400 50  0001 C CNN
@@ -2519,7 +2519,7 @@ F 3 "" H 14400 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 60CB1A5D
 P 14400 8550
 F 0 "#PWR?" H 14400 8300 50  0001 C CNN
@@ -2530,7 +2530,7 @@ F 3 "" H 14400 8550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 60CB1B1A
 P 16950 10350
 F 0 "#PWR?" H 16950 10100 50  0001 C CNN
@@ -2541,7 +2541,7 @@ F 3 "" H 16950 10350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 60CB1BD7
 P 14400 2600
 F 0 "#PWR?" H 14400 2350 50  0001 C CNN
@@ -2580,7 +2580,7 @@ Wire Wire Line
 Wire Wire Line
 	14400 8450 14400 8550
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 60E560BB
 P 14350 13600
 F 0 "#PWR?" H 14350 13350 50  0001 C CNN
@@ -2622,7 +2622,7 @@ Connection ~ 17300 13500
 Wire Wire Line
 	17300 13500 17650 13500
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 60F1FBD2
 P 9750 5100
 F 0 "C?" V 9498 5100 50  0000 C CNN
@@ -2633,7 +2633,7 @@ F 3 "~" H 9750 5100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 60F1FBD9
 P 9450 5200
 F 0 "#PWR?" H 9450 4950 50  0001 C CNN
@@ -2648,7 +2648,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 5100 9600 5100
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 60F51E57
 P 9750 2500
 F 0 "C?" V 9498 2500 50  0000 C CNN
@@ -2659,7 +2659,7 @@ F 3 "~" H 9750 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 60F51E5E
 P 9450 2600
 F 0 "#PWR?" H 9450 2350 50  0001 C CNN
@@ -2684,7 +2684,7 @@ Connection ~ 10200 5100
 Wire Wire Line
 	10200 5100 10200 5200
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 612287E9
 P 10750 5100
 F 0 "C?" V 10498 5100 50  0000 C CNN
@@ -2704,7 +2704,7 @@ Wire Wire Line
 Wire Wire Line
 	11000 5100 11000 5200
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 61294BE1
 P 11000 4600
 F 0 "#PWR?" H 11000 4350 50  0001 C CNN
@@ -2715,7 +2715,7 @@ F 3 "" H 11000 4600 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 61294DDE
 P 11050 2600
 F 0 "#PWR?" H 11050 2350 50  0001 C CNN
@@ -2726,7 +2726,7 @@ F 3 "" H 11050 2600 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 61294DE4
 P 10800 2500
 F 0 "C?" V 10548 2500 50  0000 C CNN
@@ -2754,7 +2754,7 @@ CAN0_H
 Text GLabel 21100 8950 0    50   Input ~ 0
 CAN0_L
 $Comp
-L Connector:Screw_Terminal_01x04 J?
+L SolarCarECU-rescue:Screw_Terminal_01x04-Connector J?
 U 1 1 614E32A1
 P 21450 8850
 F 0 "J?" H 21530 8842 50  0000 L CNN
@@ -2765,7 +2765,7 @@ F 3 "~" H 21450 8850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x04 J?
+L SolarCarECU-rescue:Screw_Terminal_01x04-Connector J?
 U 1 1 614E35C8
 P 21450 9400
 F 0 "J?" H 21530 9392 50  0000 L CNN
@@ -2784,7 +2784,7 @@ Wire Wire Line
 Wire Wire Line
 	21100 8850 21250 8850
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 6168AF3B
 P 20650 11550
 F 0 "#PWR?" H 20650 11300 50  0001 C CNN
@@ -2795,7 +2795,7 @@ F 3 "" H 20650 11550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
+L SolarCarECU-rescue:+12V-power #PWR?
 U 1 1 616F73C1
 P 20550 8650
 F 0 "#PWR?" H 20550 8500 50  0001 C CNN
@@ -2849,7 +2849,7 @@ Wire Wire Line
 Wire Wire Line
 	21150 11200 21250 11200
 $Comp
-L Connector:Screw_Terminal_01x10 J?
+L SolarCarECU-rescue:Screw_Terminal_01x10-Connector J?
 U 1 1 61B5191D
 P 21450 10900
 F 0 "J?" H 21530 10892 50  0000 L CNN
@@ -2873,7 +2873,7 @@ Wire Wire Line
 Wire Wire Line
 	20350 10800 21250 10800
 $Comp
-L power:+5V #PWR?
+L SolarCarECU-rescue:+5V-power #PWR?
 U 1 1 61C003E8
 P 20350 10700
 F 0 "#PWR?" H 20350 10550 50  0001 C CNN
@@ -2884,7 +2884,7 @@ F 3 "" H 20350 10700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 61C01343
 P 20650 9750
 F 0 "#PWR?" H 20650 9500 50  0001 C CNN
@@ -2899,7 +2899,7 @@ Wire Wire Line
 Wire Wire Line
 	20550 8750 20550 9300
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 61C3B6A5
 P 20200 7650
 F 0 "#PWR?" H 20200 7400 50  0001 C CNN
@@ -2914,7 +2914,7 @@ Wire Wire Line
 Wire Wire Line
 	20400 4700 21250 4700
 $Comp
-L power:GNDA #PWR?
+L SolarCarECU-rescue:GNDA-power #PWR?
 U 1 1 61D5C3B6
 P 20400 5750
 F 0 "#PWR?" H 20400 5500 50  0001 C CNN
@@ -2927,7 +2927,7 @@ $EndComp
 Wire Wire Line
 	20400 5750 21250 5750
 $Comp
-L Connector:USB_B_Micro J?
+L SolarCarECU-rescue:USB_B_Micro-Connector J?
 U 1 1 61DD04CF
 P 2200 4500
 F 0 "J?" H 2255 4967 50  0000 C CNN
@@ -2938,7 +2938,7 @@ F 3 "~" H 2350 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D_Schottky D?
+L SolarCarECU-rescue:D_Schottky-Device D?
 U 1 1 61EEC623
 P 3000 4300
 F 0 "D?" H 3000 4084 50  0000 C CNN
@@ -2951,7 +2951,7 @@ $EndComp
 Wire Wire Line
 	2850 4300 2500 4300
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 62009115
 P 2850 4700
 F 0 "R?" V 2900 4850 50  0000 C CNN
@@ -2985,7 +2985,7 @@ Wire Wire Line
 	9600 4000 9850 4000
 Connection ~ 10300 4500
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5C6D04F3
 P 11200 13300
 F 0 "R?" H 11270 13346 50  0000 L CNN
@@ -3014,7 +3014,7 @@ Connection ~ 11200 13450
 Wire Wire Line
 	11200 13450 11500 13450
 $Comp
-L Device:R R?
+L SolarCarECU-rescue:R-Device R?
 U 1 1 5C74990B
 P 11250 11650
 F 0 "R?" H 11320 11696 50  0000 L CNN
@@ -3043,7 +3043,7 @@ Wire Wire Line
 Wire Wire Line
 	10750 11550 10950 11550
 $Comp
-L Driver_FET:EL7202CN U?
+L SolarCarECU-rescue:EL7202CN-Driver_FET U?
 U 1 1 5C78DD62
 P 5350 8600
 F 0 "U?" H 5350 9178 50  0000 C CNN
@@ -3054,7 +3054,7 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/el72/el7202-12-22.pd
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C78E0D0
 P 5350 9150
 F 0 "#PWR?" H 5350 8900 50  0001 C CNN
@@ -3065,7 +3065,7 @@ F 3 "" H 5350 9150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:QM6015D Q?
+L SolarCarECU-rescue:QM6015D-Transistor_FET Q?
 U 1 1 5C78E978
 P 6250 8050
 F 0 "Q?" V 6455 8096 50  0000 L CNN
@@ -3076,7 +3076,7 @@ F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 6250 8050 50  0001 L CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Transistor_FET:QM6015D Q?
+L SolarCarECU-rescue:QM6015D-Transistor_FET Q?
 U 1 1 5C907AA4
 P 6700 8500
 F 0 "Q?" V 6905 8546 50  0000 L CNN
@@ -3092,7 +3092,7 @@ Connection ~ 5350 7950
 Wire Wire Line
 	4150 7300 4150 7450
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5C9C7A14
 P 4150 7450
 F 0 "#PWR?" H 4150 7200 50  0001 C CNN
@@ -3130,7 +3130,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 9000 5350 9150
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5CD7616E
 P 4900 7600
 F 0 "C?" H 5015 7646 50  0000 L CNN
@@ -3145,7 +3145,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 7750 4900 7950
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5CD76177
 P 5350 7600
 F 0 "C?" H 5465 7646 50  0000 L CNN
@@ -3160,7 +3160,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 7450 5350 7300
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5CD76181
 P 5800 7600
 F 0 "C?" H 5915 7646 50  0000 L CNN
@@ -3193,7 +3193,7 @@ Wire Wire Line
 Wire Wire Line
 	7300 7950 6450 7950
 $Comp
-L Driver_FET:EL7202CN U?
+L SolarCarECU-rescue:EL7202CN-Driver_FET U?
 U 1 1 5D0CF265
 P 5350 6300
 F 0 "U?" H 5350 6878 50  0000 C CNN
@@ -3204,7 +3204,7 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/el72/el7202-12-22.pd
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5D0CF26C
 P 5350 6850
 F 0 "#PWR?" H 5350 6600 50  0001 C CNN
@@ -3215,7 +3215,7 @@ F 3 "" H 5350 6850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:QM6015D Q?
+L SolarCarECU-rescue:QM6015D-Transistor_FET Q?
 U 1 1 5D0CF272
 P 6250 5750
 F 0 "Q?" V 6455 5796 50  0000 L CNN
@@ -3226,7 +3226,7 @@ F 3 "http://www.jaolen.com/images/pdf/QM6015D.pdf" V 6250 5750 50  0001 L CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Transistor_FET:QM6015D Q?
+L SolarCarECU-rescue:QM6015D-Transistor_FET Q?
 U 1 1 5D0CF279
 P 6700 6200
 F 0 "Q?" V 6905 6246 50  0000 L CNN
@@ -3242,7 +3242,7 @@ Connection ~ 5350 5650
 Wire Wire Line
 	4150 5000 4150 5150
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5D0CF283
 P 4150 5150
 F 0 "#PWR?" H 4150 4900 50  0001 C CNN
@@ -3272,7 +3272,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 6700 5350 6850
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5D0CF296
 P 4900 5300
 F 0 "C?" H 5015 5346 50  0000 L CNN
@@ -3287,7 +3287,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 5450 4900 5650
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5D0CF29F
 P 5350 5300
 F 0 "C?" H 5465 5346 50  0000 L CNN
@@ -3302,7 +3302,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 5150 5350 5000
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5D0CF2A8
 P 5800 5300
 F 0 "C?" H 5915 5346 50  0000 L CNN
@@ -3341,7 +3341,7 @@ LV_HORN
 Wire Wire Line
 	10400 8100 10400 8150
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5D246BBF
 P 11150 8250
 F 0 "#PWR?" H 11150 8000 50  0001 C CNN
@@ -3352,7 +3352,7 @@ F 3 "" H 11150 8250 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L SolarCarECU-rescue:C-Device C?
 U 1 1 5D246BC5
 P 10900 8150
 F 0 "C?" V 10648 8150 50  0000 C CNN
@@ -3372,7 +3372,7 @@ Connection ~ 10400 8150
 Wire Wire Line
 	10400 8150 10400 8250
 $Comp
-L power:GND #PWR?
+L SolarCarECU-rescue:GND-power #PWR?
 U 1 1 5D2D9904
 P 8650 9200
 F 0 "#PWR?" H 8650 8950 50  0001 C CNN
