@@ -2613,7 +2613,7 @@
   )
 
   (module Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical (layer F.Cu) (tedit 5A19A420) (tstamp 5C824A76)
-    (at 102.87 100.33 180)
+    (at 95.25 100.33 180)
     (descr "Through hole straight socket strip, 1x08, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x08 2.54mm single row")
     (path /5CAFCEA5)
@@ -5062,7 +5062,7 @@
   )
 
   (module Package_SO:SOIC-16_3.9x9.9mm_P1.27mm (layer F.Cu) (tedit 5A02F2D3) (tstamp 5C824FBD)
-    (at 95.25 110.49)
+    (at 119.915001 25.595001)
     (descr "16-Lead Plastic Small Outline (SL) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
     (path /5D3D5BE3)
@@ -5132,7 +5132,7 @@
   )
 
   (module Package_SO:SOIC-16_3.9x9.9mm_P1.27mm (layer F.Cu) (tedit 5A02F2D3) (tstamp 5C824FE2)
-    (at 93.98 96.52)
+    (at 55.88 26.67)
     (descr "16-Lead Plastic Small Outline (SL) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
     (path /5CC22D1D)
@@ -5202,7 +5202,7 @@
   )
 
   (module Package_SO:SOIC-16_3.9x9.9mm_P1.27mm (layer F.Cu) (tedit 5A02F2D3) (tstamp 5C825007)
-    (at 107.95 110.49)
+    (at 40.64 91.44)
     (descr "16-Lead Plastic Small Outline (SL) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
     (path /5CC1567F)
@@ -5272,7 +5272,7 @@
   )
 
   (module Package_SO:SOIC-14_3.9x8.7mm_P1.27mm (layer F.Cu) (tedit 5A02F2D3) (tstamp 5C82502A)
-    (at 45.72 88.9)
+    (at 55.455001 106.295001)
     (descr "14-Lead Plastic Small Outline (SL) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
     (path /5F546448)

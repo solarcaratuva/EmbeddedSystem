@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name SolarCarECU-rescue)(type Legacy)(uri ${KIPRJMOD}/SolarCarECU-rescue.lib)(options "")(descr ""))
+  (lib (name SamacSys_Parts)(type Legacy)(uri ${KIPRJMOD}/PCBDesign.pretty/SamacSys_Parts.lib)(options "")(descr ""))
+  (lib (name teensy)(type Legacy)(uri ${KIPRJMOD}/teensy.pretty/teensy.lib)(options "")(descr ""))
 )
