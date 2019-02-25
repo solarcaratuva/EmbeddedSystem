@@ -3342,7 +3342,7 @@ Wire Wire Line
 	11000 4200 11000 4000
 Connection ~ 11000 4200
 $Comp
-L Connector:Screw_Terminal_01x14 J7
+L SolarCarECU-rescue:Screw_Terminal_01x14-Connector J7
 U 1 1 5CA6D055
 P 21400 9300
 F 0 "J7" H 21480 9292 50  0000 L CNN
