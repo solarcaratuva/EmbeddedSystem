@@ -962,7 +962,7 @@ U 1 1 5CE85049
 P 6500 2550
 F 0 "U4" H 6500 2792 50  0000 C CNN
 F 1 "L7805" H 6500 2701 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 6525 2400 50  0001 L CIN
+F 2 "PCBDesign:PT78NR112H" H 6525 2400 50  0001 L CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 6500 2500 50  0001 C CNN
 	1    6500 2550
 	1    0    0    -1  
@@ -984,7 +984,7 @@ U 1 1 5CEC2C1C
 P 3650 2750
 F 0 "D2" V 3604 2829 50  0000 L CNN
 F 1 "D_Zener" V 3695 2829 50  0000 L CNN
-F 2 "Diode_SMD:D_0603_1608Metric" H 3650 2750 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3650 2750 50  0001 C CNN
 F 3 "~" H 3650 2750 50  0001 C CNN
 	1    3650 2750
 	0    1    1    0   
@@ -1336,17 +1336,6 @@ Text Label 11450 3800 2    50   ~ 0
 KILL_SENSE
 Text Label 20450 3150 0    50   ~ 0
 HEADLIGHTS
-$Comp
-L SolarCarECU-rescue:Screw_Terminal_01x04-Connector J3
-U 1 1 5D6FB742
-P 21450 3250
-F 0 "J3" H 21530 3242 50  0000 L CNN
-F 1 "Screw_Terminal_01x04" H 21530 3151 50  0000 L CNN
-F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_4-G-5.08_1x04_P5.08mm_Vertical" H 21450 3250 50  0001 C CNN
-F 3 "~" H 21450 3250 50  0001 C CNN
-	1    21450 3250
-	1    0    0    -1  
-$EndComp
 $Comp
 L SolarCarECU-rescue:GND-power #PWR0141
 U 1 1 5D79350F
@@ -2867,7 +2856,7 @@ U 1 1 61EEC623
 P 3000 4300
 F 0 "D1" H 3000 4084 50  0000 C CNN
 F 1 "D_Schottky" H 3000 4175 50  0000 C CNN
-F 2 "Diode_SMD:D_0603_1608Metric" H 3000 4300 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3000 4300 50  0001 C CNN
 F 3 "~" H 3000 4300 50  0001 C CNN
 	1    3000 4300
 	-1   0    0    1   
@@ -3395,4 +3384,19 @@ Wire Wire Line
 	4200 2100 4200 2000
 Wire Wire Line
 	4700 2000 4700 2100
+$Comp
+L Connector:Screw_Terminal_01x05 J3
+U 1 1 5C84D545
+P 21450 3250
+F 0 "J3" H 21530 3292 50  0000 L CNN
+F 1 "Screw_Terminal_01x05" H 21530 3201 50  0000 L CNN
+F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_5-G-5.08_1x05_P5.08mm_Vertical" H 21450 3250 50  0001 C CNN
+F 3 "~" H 21450 3250 50  0001 C CNN
+	1    21450 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	21250 3050 20450 3050
+Text Label 20450 3050 0    50   ~ 0
+HORN
 $EndSCHEMATC

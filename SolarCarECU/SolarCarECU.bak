@@ -1337,17 +1337,6 @@ KILL_SENSE
 Text Label 20450 3150 0    50   ~ 0
 HEADLIGHTS
 $Comp
-L SolarCarECU-rescue:Screw_Terminal_01x04-Connector J3
-U 1 1 5D6FB742
-P 21450 3250
-F 0 "J3" H 21530 3242 50  0000 L CNN
-F 1 "Screw_Terminal_01x04" H 21530 3151 50  0000 L CNN
-F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_4-G-5.08_1x04_P5.08mm_Vertical" H 21450 3250 50  0001 C CNN
-F 3 "~" H 21450 3250 50  0001 C CNN
-	1    21450 3250
-	1    0    0    -1  
-$EndComp
-$Comp
 L SolarCarECU-rescue:GND-power #PWR0141
 U 1 1 5D79350F
 P 20450 3450
@@ -3395,4 +3384,19 @@ Wire Wire Line
 	4200 2100 4200 2000
 Wire Wire Line
 	4700 2000 4700 2100
+$Comp
+L Connector:Screw_Terminal_01x05 J3
+U 1 1 5C84D545
+P 21450 3250
+F 0 "J3" H 21530 3292 50  0000 L CNN
+F 1 "Screw_Terminal_01x05" H 21530 3201 50  0000 L CNN
+F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_5-G-5.08_1x05_P5.08mm_Vertical" H 21450 3250 50  0001 C CNN
+F 3 "~" H 21450 3250 50  0001 C CNN
+	1    21450 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	21250 3050 20450 3050
+Text Label 20450 3050 0    50   ~ 0
+HORN
 $EndSCHEMATC
