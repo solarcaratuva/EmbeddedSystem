@@ -14,6 +14,7 @@ Not all pins are 12V or even 5V compatible. Certain pins connect directly to the
 
 ### User interface input (control)
 These pins are used for allowing the driver to command the vehicle. All but the UART pins are 12V logic. To reduce the number of pins required on the MCU, we chose to wire 3 way position switches such that the end contacts connect to the rails and the center contact floats with a resistor divider to ensure the voltage is approximately VCC/2 when the switch is in the middle position.
+
 |      signal     | voltage  | direction |                            description                               |
 |:---------------:|:--------:|:---------:|:--------------------------------------------------------------------:|
 | BRAKE_CTRL      | 0 - 12V  |  input    | brake potentiometer, used to implement regen                         |
@@ -32,6 +33,7 @@ These pins are used for allowing the driver to command the vehicle. All but the 
 
 ### Serial interface IO
 These pins are used for communicating with various peripherals, components, and subsystems within the car. CAN0 is reserved for the BMS, while CAN1 is used for all less critical systems. UART pins are for future use.
+
 |      signal     | voltage  | direction |                            description                               |
 |:---------------:|:--------:|:---------:|:--------------------------------------------------------------------:|
 | CAN0_H          | 0 - 5V   | CAN high  | connected to CAN0 peripheral on Teensy 3.6 through MCP2562           |
@@ -48,6 +50,7 @@ These pins are used for communicating with various peripherals, components, and 
 
 ### Serial interface IO
 These pins are capable of high currents (up to 5A distributed among the 4 outputs)
+
 |      signal     | voltage  | direction |                            description                               |
 |:---------------:|:--------:|:---------:|:--------------------------------------------------------------------:|
 | HORN            | 0 - 12V  |   output  | high power output for car horn (can only source current)             |
@@ -60,6 +63,7 @@ The motor can be interfaced via UART, CAN, and GPIO. As of now, we do not have a
 
 The table below holds true for both `MOTOR_R*` and `MOTOR_L*` signals.
 NOTE: all node names in the table below are preceded with `MOTOR_R_*` and `MOTOR_*`!
+
 |      signal     | voltage  | direction |                            description                               |
 |:---------------:|:--------:|:---------:|:--------------------------------------------------------------------:|
 | _REGEN_EN       | 0 - 12V  |   output  | enables regenerative braking on motor controller                     |
