@@ -62,7 +62,7 @@ These pins are capable of high currents (up to 5A distributed among the 4 output
 The motor can be interfaced via UART, CAN, and GPIO. As of now, we do not have any API or knowledge of how to interface the motor over UART, as it is not documented. However it is possible to decompile the android app and reverse engineer whatever the app implements. For now, we are using CAN to retrieve important parameters from the motor such as voltage, current, RPM, throttle, and error codes. The motor only outputs messages over CAN, and does not interpret them.
 
 The table below holds true for both `MOTOR_R*` and `MOTOR_L*` signals.
-NOTE: all node names in the table below are preceded with `MOTOR_R_*` and `MOTOR_*`!
+NOTE: all node names in the table below are preceded with `MOTOR_R*` and `MOTOR_L*`!
 
 |      signal     | voltage  | direction |                            description                               |
 |:---------------:|:--------:|:---------:|:--------------------------------------------------------------------:|
