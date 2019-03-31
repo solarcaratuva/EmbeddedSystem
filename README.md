@@ -22,6 +22,7 @@ These pins are used for allowing the driver to command the vehicle. All but the 
 | GEARSHIFT_CTRL  | 0 - 12V  |  input    | 3 way position switch. 12V = forward, 6V = neutral, 0V = reverse     |
 | TURNSIG_CTRL    | 0 - 12V  |  input    | 3 way position switch. 12V = forward, 6V = neutral, 0V = reverse     |
 | THROTTLE_CTRL   | 0 - 12V  |  input    | throttle potentiometer, the gas petal                                |
+| STEER_CTRL      | 0 - 12V  |  input    | potentiometer on steering wheel, may be used for differential throttle control |
 | HAZARD_CTRL     | 0 - 12V  |  input    | pushbutton used to activate hazard lights, toggles on changing edge  |
 | DOWN_CTRL       | 0 - 12V  |  input    | GUI navigation pushbutton                                            |
 | UP_CTRL         | 0 - 12V  |  input    | GUI navigation pushbutton                                            |
