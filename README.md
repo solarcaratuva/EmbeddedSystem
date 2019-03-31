@@ -49,7 +49,7 @@ These pins are used for communicating with various peripherals, components, and 
 | USB_D-          | 0 - 3.3V |  data(-)  | connected to teensy USB port D-                                      |
 
 
-### Serial interface IO
+### Lights and Horn
 These pins are capable of high currents (up to 5A distributed among the 4 outputs)
 
 |      signal     | voltage  | direction |                            description                               |
