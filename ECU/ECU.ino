@@ -2,7 +2,7 @@
 #include <kinetis_flexcan.h>
 #include <cstdlib>
 #include <string>
-#include "BMS.h"
+#include "CAN/BMS.h"
 #include "CAN/KLS.h"
 #include "UI.h"
 #include "lights.h"
