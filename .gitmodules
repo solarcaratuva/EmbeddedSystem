@@ -1,0 +1,6 @@
+[submodule "CAN"]
+	path = CAN
+	url = https://github.com/solarcaratuva/CAN
+[submodule "ECU/CAN"]
+	path = ECU/CAN
+	url = git@github.com:solarcaratuva/CAN.git
