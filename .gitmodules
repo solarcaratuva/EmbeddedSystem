@@ -1,3 +1,3 @@
-[submodule "ECU/CAN"]
-	path = ECU/CAN
+[submodule "ECU/KLS"]
+	path = ECU/KLS
 	url = git@github.com:solarcaratuva/CAN.git
