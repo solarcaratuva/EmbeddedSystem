@@ -702,8 +702,6 @@ Wire Wire Line
 	9800 2200 9700 2200
 Wire Wire Line
 	10700 2600 11400 2600
-Wire Wire Line
-	10700 3000 10950 3000
 $Comp
 L SolarCarECU-rescue:+12V-power-SolarCarECU-rescue #PWR0139
 U 1 1 5D5DAC7B
@@ -792,8 +790,6 @@ Text Label 20450 7350 0    50   ~ 0
 SEL_CTRL
 Text Label 20450 7450 0    50   ~ 0
 KILL_SENSE
-Text Label 20450 7550 0    50   ~ 0
-HAZARD_LED
 Text Label 20450 3450 0    50   ~ 0
 BRAKELIGHTS
 Wire Wire Line
@@ -2338,9 +2334,6 @@ Wire Wire Line
 	10350 6950 10350 7050
 Connection ~ 3350 3200
 Connection ~ 3450 2700
-Wire Wire Line
-	10950 3200 10950 3000
-Connection ~ 10950 3200
 Wire Wire Line
 	21100 8200 21250 8200
 Text Label 20450 3250 0    50   ~ 0
@@ -4275,4 +4268,18 @@ Wire Wire Line
 Connection ~ 3450 1400
 Wire Wire Line
 	3450 1400 4150 1400
+Text Label 11400 3000 2    50   ~ 0
+HORN_CTRL
+Text Label 9700 3000 2    50   ~ 0
+LV_HORN_CTRL
+Wire Wire Line
+	9700 3000 9800 3000
+Text Label 5450 14250 0    50   ~ 0
+LV_HORN_CTRL
+Wire Wire Line
+	5400 14250 5450 14250
+Wire Wire Line
+	10700 3000 11400 3000
+Text Label 20450 7550 0    50   ~ 0
+HORN_CTRL
 $EndSCHEMATC
