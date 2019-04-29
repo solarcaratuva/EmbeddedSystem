@@ -41,9 +41,10 @@
 /******************************************/
 /* pin definitions for high power devices */
 /******************************************/
-#define PIN_HORN 55         // binary output
-#define PIN_HEADLIGHTS 56   // binary output
-#define PIN_BRAKELIGHTS 41  // binary output
-#define PIN_BLINKERS 40     // binary output
+#define PIN_HORN 57           // binary output
+#define PIN_HEADLIGHTS 42     // binary output
+#define PIN_BRAKELIGHTS 56    // binary output
+#define PIN_RIGHT_BLINKERS 41 // binary output
+#define PIN_LEFT_BLINKERS 40  // binary output
 
 #endif  // __PINDEF_H__
