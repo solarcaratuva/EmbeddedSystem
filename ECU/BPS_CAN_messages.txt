@@ -1,6 +1,6 @@
-Message 1 (errors): length = 3 bytes, ID = 0x0, priority = highest, message rate = 24 ms
-Message 2 (batt. status): length = 7 bytes, ID = 0x01, priority = middle, message rate = 16 ms
-Message 3 (bps status: length = 7 bytes, ID = 0x02, priority = lowest, message rate = 8 ms
+Message 1 (errors): length = 3 bytes, ID = 0x01, priority = highest, message rate = 24 ms
+Message 2 (batt. status): length = 7 bytes, ID = 0x02, priority = middle, message rate = 16 ms
+Message 3 (bps status: length = 7 bytes, ID = 0x03, priority = lowest, message rate = 8 ms
 
 Message 1 Structure:
 Custom flag 1 (1 byte)
