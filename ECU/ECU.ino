@@ -2,7 +2,7 @@
 #include <kinetis_flexcan.h>
 #include <cstdlib>
 #include <string>
-#include "KLS/KLS.h"
+//#include "KLS/KLS.h"
 #include "UI.h"
 #include "lights.h"
 #include "pindef.h"
