@@ -46,5 +46,7 @@
 #define PIN_BRAKELIGHTS 56    // binary output
 #define PIN_RIGHT_BLINKERS 41 // binary output
 #define PIN_LEFT_BLINKERS 40  // binary output
+#define PIN_HEADLIGHT_CTRL 23 // binary input
+#define PIN_HORN_CTRL 22      // binary input
 
 #endif  // __PINDEF_H__
