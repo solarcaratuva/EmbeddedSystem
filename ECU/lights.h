@@ -2,12 +2,15 @@
 // TURN SIGNAL ENUMERATED TYPE
 enum turn_state_t { turn_off, left_turn, right_turn };
 turn_state_t turn_state = turn_off;
+
 // HAZARDS ENUMERATED TYPE
 enum hazards_state_t { hazards_off, hazards_on };
 hazards_state_t hazards_state = hazards_off;
+
 // HEADLIGHTS ENUMERATED TYPE
 enum headlights_state_t { headlights_off, headlights_on };
 headlights_state_t headlights_state = headlights_off; 
+
 // HORN ENUMERATED TYPE
 enum horn_state_t { horn_off, horn_on };
 horn_state_t horn_state = horn_off;
@@ -20,7 +23,10 @@ const int horn_pin = PIN_HORN;
 const int headlights_pin = PIN_HEADLIGHTS;
 const int brakelights_pin = PIN_BRAKELIGHTS;
 const int hazards_ctrl = PIN_HAZARD_CTRL;
-uint32_t interval = 500;
+const int horn_ctrl = PIN_HORN_CTRL;
+const int headlight_ctrl = PIN_HEADLIGHT_CTRL;
+
+uint32_t interval = 500;  // interval for blinking the lights
 
 void setup() {
     pinMode(left_blinker_pin, OUTPUT);
@@ -30,12 +36,19 @@ void setup() {
     pinMode(brakelights_pin, OUTPUT);
     pinMode(turn_sig_pin, INPUT);
     pinMode(hazards_ctrl, INPUT);
+    pinMode(horn_ctrl, INPUT);
+    pinMode(headlight_ctrl, INPUT);
     Serial.begin(9600);
 }
 byte c = 0;  
-byte d = 0; 
+byte d = 0;
+byte e = 0;
+byte f = 0;
+ 
 int turn_sig_state = LOW;
-int hazard_sig_state = LOW;
+int hazard_button_state = LOW;
+int horn_button_state = LOW;
+int headlight_button_state = LOW;
 
 int turn_signal() {
     static uint32_t previousMillis = 0;
@@ -124,7 +137,9 @@ int horn() {
 
 void loop() {
     turn_sig_state = analogRead(turn_sig_pin);
-    hazard_sig_state = digitalRead(hazards_ctrl);
+    hazard_button_state = digitalRead(hazards_ctrl);
+    horn_button_state = digitalRead(horn_ctrl);
+    headlight_button_state = digitalRead(headlight_ctrl);
     turn_signal();
     {
         c = turn_sig_state;
@@ -143,12 +158,36 @@ void loop() {
     hazards();
     {
         d = hazards_state;
-        switch (c) {
+        switch (d) {
             case (HIGH):
                 hazards_state = hazards_on;
                 break;
             default:
                 hazards_state = hazards_off;
                 break;
+        }
+    }
+    head_lights(); {
+        e = headlights_state;
+        switch (e) {
+            case(HIGH):
+                headlights_state = headlights_on;
+                break;
+            default:
+                headlights_state = headlights_off;
+                break;
+                
+        }
+    }
+    horn(); {
+        f = horn_state;
+        switch (f) {
+            case(HIGH):
+                horn_state = horn_on;
+                break;
+            default:
+                horn_state = horn_off;
+                break;
+        }
     }
 }
