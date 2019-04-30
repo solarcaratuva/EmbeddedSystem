@@ -1,6 +1,6 @@
-Message 1 (errors): length = 3 bytes, ID = 0x0, priority = highest, message rate = 24 ms
-Message 2 (batt. status): length = 7 bytes, ID = 0x01, priority = middle, message rate = 16 ms
-Message 3 (bps status: length = 7 bytes, ID = 0x02, priority = lowest, message rate = 8 ms
+Message 1 (errors): length = 3 bytes, ID = 0x01, priority = highest, message rate = 24 ms
+Message 2 (batt. status): length = 7 bytes, ID = 0x02, priority = middle, message rate = 16 ms
+Message 3 (bps status: length = 7 bytes, ID = 0x03, priority = lowest, message rate = 8 ms
 
 Message 1 Structure:
 Custom flag 1 (1 byte)
@@ -9,15 +9,15 @@ Custom flag 3 (1 byte)
 
 Message 2 Structure:
 pack current (2 bytes) (unit = 0.1 A)
-pack voltage (2 bytes) (unit = 1 V)
-pack state of charge (1 byte) (unit = 1%)
+pack voltage (2 bytes) (unit = 0.1 V)
+pack state of charge (1 byte) (unit = 0.5%)
 high temperature (1 byte) (unit = 1C)
 average temperature (1 byte) (unit = 1C) 
 
 Message 3 Structure:
 relay status (1 byte) 
-pack charge current limit (2 bytes) (unit = 0.1 A)
-pack discharge current limit (2 bytes) (unit=0.1 A)
+pack charge current limit (2 bytes) (unit = 1 A)
+pack discharge current limit (2 bytes) (unit=1 A)
 current limits status (2 bytes) 
 
 Custom flags are 8 bit error messages where each bit is a boolean corresponding to an error code.
@@ -31,4 +31,4 @@ Custom flag 3: P0A07,P0A08,P0A09,P0A0A,P0A0B,n/a,n/a,n/a
 Relay status is an 8 bit message where each bit is a boolean corresponding to a relay control pin or signal status.
 True (1) means that the relay pin is "on".
 LSB-->MSB
-discharge relay, charge relay, charger safety, malfunction indicator, multi-purpose input status, always-on signal status, is-ready signal status, is-charging signal status
+discharge relay, charge relay, charger safety, malfunction indicator, multi-purpose output status, always-on signal status, is-ready signal status, is-charging signal status
