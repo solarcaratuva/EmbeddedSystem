@@ -31,4 +31,4 @@ Custom flag 3: P0A07,P0A08,P0A09,P0A0A,P0A0B,n/a,n/a,n/a
 Relay status is an 8 bit message where each bit is a boolean corresponding to a relay control pin or signal status.
 True (1) means that the relay pin is "on".
 LSB-->MSB
-discharge relay, charge relay, charger safety, malfunction indicator, multi-purpose input status, always-on signal status, is-ready signal status, is-charging signal status
+discharge relay, charge relay, charger safety, malfunction indicator, multi-purpose output status, always-on signal status, is-ready signal status, is-charging signal status
