@@ -9,15 +9,15 @@ Custom flag 3 (1 byte)
 
 Message 2 Structure:
 pack current (2 bytes) (unit = 0.1 A)
-pack voltage (2 bytes) (unit = 1 V)
-pack state of charge (1 byte) (unit = 1%)
+pack voltage (2 bytes) (unit = 0.1 V)
+pack state of charge (1 byte) (unit = 0.5%)
 high temperature (1 byte) (unit = 1C)
 average temperature (1 byte) (unit = 1C) 
 
 Message 3 Structure:
 relay status (1 byte) 
-pack charge current limit (2 bytes) (unit = 0.1 A)
-pack discharge current limit (2 bytes) (unit=0.1 A)
+pack charge current limit (2 bytes) (unit = 1 A)
+pack discharge current limit (2 bytes) (unit=1 A)
 current limits status (2 bytes) 
 
 Custom flags are 8 bit error messages where each bit is a boolean corresponding to an error code.
