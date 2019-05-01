@@ -58,7 +58,10 @@ These pins are capable of high currents (up to 5A distributed among the 4 output
 | HEADLIGHTS      |    69    | 0 - 12V  |   output  | high power output for headlights (can only source current)           |
 | BRAKELIGHTS     |    85    | 0 - 12V  |   output  | high power output for brakelights (can only source current)          |
 | RIGHT_BLINKERS  |    68    | 0 - 12V  |   output  | high power output for right blinkers (can only source current)       |
-| LEFT_BLINKERS   |    67    | 0 - 12V  |   output  | higer power output for left blinkers (can only source current)       |
+| LEFT_BLINKERS   |    67    | 0 - 12V  |   output  | high power output for left blinkers (can only source current)        |
+| HORN_CTRL       |    49    | 0 - 12V  |   input   | high power input for horn (can only source current)                  |
+| HEADLIGHT_CTRL  |    50    | 0 - 12V  |   input   | high power input for headlights (can only source current)            |
+| BRAKE_CTRL      |    47    | 0 - 12v  |   input   | high poewr input for brakeligts (can only source current)            |
 
 ### Motor control
 The motor can be interfaced via UART, CAN, and GPIO. As of now, we do not have any API or knowledge of how to interface the motor over UART, as it is not documented. However it is possible to decompile the android app and reverse engineer whatever the app implements. For now, we are using CAN to retrieve important parameters from the motor such as voltage, current, RPM, throttle, and error codes. The motor only outputs messages over CAN, and does not interpret them.
