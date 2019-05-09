@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:SolarCarECU-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -4347,4 +4347,8 @@ Text Label 5450 14150 0    50   ~ 0
 LV_HEADLIGHT_CTRL
 Wire Wire Line
 	5400 14150 5450 14150
+Text Label 2900 11250 2    50   ~ 0
+LV_STROBE
+Wire Wire Line
+	2900 11250 3400 11250
 $EndSCHEMATC

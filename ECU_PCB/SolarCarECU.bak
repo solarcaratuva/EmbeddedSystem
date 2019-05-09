@@ -4280,10 +4280,10 @@ Connection ~ 20100 11950
 Wire Wire Line
 	20100 11950 20450 11950
 $Comp
-L SolarCarECU-rescue:C-Device-SolarCarECU-rescue C?
+L SolarCarECU-rescue:C-Device-SolarCarECU-rescue C44
 U 1 1 5CFA1D65
 P 20450 13000
-F 0 "C?" H 20565 13046 50  0000 L CNN
+F 0 "C44" H 20565 13046 50  0000 L CNN
 F 1 "1n" H 20565 12955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 20488 12850 50  0001 C CNN
 F 3 "~" H 20450 13000 50  0001 C CNN
@@ -4291,10 +4291,10 @@ F 3 "~" H 20450 13000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R63
 U 1 1 5CFA1D6B
 P 20100 11700
-F 0 "R?" H 20170 11746 50  0000 L CNN
+F 0 "R63" H 20170 11746 50  0000 L CNN
 F 1 "1M" H 20170 11655 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 20030 11700 50  0001 C CNN
 F 3 "~" H 20100 11700 50  0001 C CNN
@@ -4302,10 +4302,10 @@ F 3 "~" H 20100 11700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R64
 U 1 1 5CFA1D71
 P 20100 13000
-F 0 "R?" H 20170 13046 50  0000 L CNN
+F 0 "R64" H 20170 13046 50  0000 L CNN
 F 1 "330k" H 20170 12955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 20030 13000 50  0001 C CNN
 F 3 "~" H 20100 13000 50  0001 C CNN
