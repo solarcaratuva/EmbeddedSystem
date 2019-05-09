@@ -25,21 +25,8 @@ const int brakelights_pin = PIN_BRAKELIGHTS;
 const int hazards_ctrl = PIN_HAZARD_CTRL;
 const int horn_ctrl = PIN_HORN_CTRL;
 const int headlight_ctrl = PIN_HEADLIGHT_CTRL;
+uint32_t  interval = 500;  // interval for blinking the lights
 
-uint32_t interval = 500;  // interval for blinking the lights
-
-void setup() {
-    pinMode(left_blinker_pin, OUTPUT);
-    pinMode(right_blinker_pin, OUTPUT);
-    pinMode(horn_pin, OUTPUT);
-    pinMode(headlights_pin, OUTPUT);
-    pinMode(brakelights_pin, OUTPUT);
-    pinMode(turn_sig_pin, INPUT);
-    pinMode(hazards_ctrl, INPUT);
-    pinMode(horn_ctrl, INPUT);
-    pinMode(headlight_ctrl, INPUT);
-    Serial.begin(9600);
-}
 byte c = 0;  
 byte d = 0;
 byte e = 0;
@@ -110,6 +97,7 @@ int hazards() {
     }
     return 0;
 }
+
 int head_lights() {
     switch (headlights_state) {
         case(headlights_off):
@@ -122,6 +110,7 @@ int head_lights() {
             digitalWrite(headlights_pin, LOW);
     }
 }
+
 int horn() {
     switch (horn_state) {
         case(horn_off):
@@ -135,59 +124,4 @@ int horn() {
     }
 }
 
-void loop() {
-    turn_sig_state = analogRead(turn_sig_pin);
-    hazard_button_state = digitalRead(hazards_ctrl);
-    horn_button_state = digitalRead(horn_ctrl);
-    headlight_button_state = digitalRead(headlight_ctrl);
-    turn_signal();
-    {
-        c = turn_sig_state;
-        switch (c) {
-            case (0 - 100):
-                turn_state = left_turn;
-                break;
-            case (900 - 1000):
-                turn_state = right_turn;
-                break;
-            default:
-                turn_state = turn_off;
-                break;
-        }
-    }
-    hazards();
-    {
-        d = hazards_state;
-        switch (d) {
-            case (HIGH):
-                hazards_state = hazards_on;
-                break;
-            default:
-                hazards_state = hazards_off;
-                break;
-        }
-    }
-    head_lights(); {
-        e = headlights_state;
-        switch (e) {
-            case(HIGH):
-                headlights_state = headlights_on;
-                break;
-            default:
-                headlights_state = headlights_off;
-                break;
-                
-        }
-    }
-    horn(); {
-        f = horn_state;
-        switch (f) {
-            case(HIGH):
-                horn_state = horn_on;
-                break;
-            default:
-                horn_state = horn_off;
-                break;
-        }
-    }
-}
+
