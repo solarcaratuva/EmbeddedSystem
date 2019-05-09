@@ -55,11 +55,12 @@ These pins are capable of high currents (up to 5A distributed among the 4 output
 | HORN            |    57    | 0 - 12V  |   output  | high power output for car horn (can only source current)             |
 | HEADLIGHTS      |    42    | 0 - 12V  |   output  | high power output for headlights (can only source current)           |
 | BRAKELIGHTS     |    56    | 0 - 12V  |   output  | high power output for brakelights (can only source current)          |
+| STROBE          |    6     | 0 - 12V  |   output  | high power output for strobelight (can only source current)          |
 | RIGHT_BLINKERS  |    41    | 0 - 12V  |   output  | high power output for right blinkers (can only source current)       |
 | LEFT_BLINKERS   |    40    | 0 - 12V  |   output  | high power output for left blinkers (can only source current)        |
-| HORN_CTRL       |    22    | 0 - 12V  |   input   | high power input for horn (can only source current)                  |
-| HEADLIGHT_CTRL  |    23    | 0 - 12V  |   input   | high power input for headlights (can only source current)            |
-| BRAKE_CTRL      |    20    | 0 - 12v  |   input   | high poewr input for brakeligts (can only source current)            |
+| HORN_CTRL       |    22    | 0 - 12V  |   input   | high power input for horn                                            |
+| HEADLIGHT_CTRL  |    23    | 0 - 12V  |   input   | high power input for headlights                                      |
+| BRAKE_CTRL      |    20    | 0 - 12v  |   input   | analog input for brakes (used for regen)                             |
 
 ### Motor control
 The motor can be interfaced via UART, CAN, and GPIO. As of now, we do not have any API or knowledge of how to interface the motor over UART, as it is not documented. However it is possible to decompile the android app and reverse engineer whatever the app implements. For now, we are using CAN to retrieve important parameters from the motor such as voltage, current, RPM, throttle, and error codes. The motor only outputs messages over CAN, and does not interpret them.
