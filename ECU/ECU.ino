@@ -2,42 +2,42 @@
 #include <kinetis_flexcan.h>
 #include <cstdlib>
 #include <string>
-//#include "KLS/KLS.h"
+#include "KLS/KLS.h"
 #include "UI.h"
 #include "lights.h"
 #include "pindef.h"
 
 void setup() {
-  pinMode(PIN_HORN, OUTPUT);
-  pinMode(PIN_HEADLIGHTS, OUTPUT);
-  pinMode(PIN_BRAKELIGHTS, OUTPUT);
-  pinMode(PIN_STROBE_CTRL, OUTPUT);
-  pinMode(PIN_RIGHT_BLINKERS, OUTPUT);
-  pinMode(PIN_LEFT_BLINKERS, OUTPUT);
-  pinMode(PIN_TURNSIG_CTRL, INPUT);
-  pinMode(PIN_HAZARD_CTRL, INPUT);
-  pinMode(PIN_HORN_CTRL, INPUT);
-  pinMode(PIN_HEADLIGHT_CTRL, INPUT);
-  Serial.begin(9600);
+    pinMode(PIN_HORN, OUTPUT);
+    pinMode(PIN_HEADLIGHTS, OUTPUT);
+    pinMode(PIN_BRAKELIGHTS, OUTPUT);
+    pinMode(PIN_STROBE_CTRL, OUTPUT);
+    pinMode(PIN_RIGHT_BLINKERS, OUTPUT);
+    pinMode(PIN_LEFT_BLINKERS, OUTPUT);
+    pinMode(PIN_TURNSIG_CTRL, INPUT);
+    pinMode(PIN_HAZARD_CTRL, INPUT);
+    pinMode(PIN_HORN_CTRL, INPUT);
+    pinMode(PIN_HEADLIGHT_CTRL, INPUT);
+    Serial.begin(9600);
 }
 
 void loop() {
-  static uint8_t t;
-  
-  static uint8_t value = 0;
-  if(!t) value= map(analogRead(PIN_MOTOR_R_METER),400,600, 0,256);
-  Serial.println(analogRead(PIN_MOTOR_R_METER));
-  digitalWrite(PIN_HORN, value>t);
-  digitalWrite(PIN_HEADLIGHTS, value>t);
-  digitalWrite(PIN_BRAKELIGHTS, value>t);
-  digitalWrite(PIN_RIGHT_BLINKERS, value>t);
-  digitalWrite(PIN_LEFT_BLINKERS, value>t);
-  
-  delayMicroseconds(50);
-  t++;
+    static uint8_t t;
+
+    static uint8_t value = 0;
+    if (!t) value = map(analogRead(PIN_MOTOR_R_METER), 400, 600, 0, 256);
+    Serial.println(analogRead(PIN_MOTOR_R_METER));
+    digitalWrite(PIN_HORN, value > t);
+    digitalWrite(PIN_HEADLIGHTS, value > t);
+    digitalWrite(PIN_BRAKELIGHTS, value > t);
+    digitalWrite(PIN_RIGHT_BLINKERS, value > t);
+    digitalWrite(PIN_LEFT_BLINKERS, value > t);
+
+    delayMicroseconds(50);
+    t++;
 }
 
-//void loop() {
+// void loop() {
 //    turn_sig_state = analogRead(turn_sig_pin);
 //    hazard_button_state = digitalRead(hazards_ctrl);
 //    horn_button_state = digitalRead(horn_ctrl);
@@ -78,7 +78,7 @@ void loop() {
 //            default:
 //                headlights_state = headlights_off;
 //                break;
-//                
+//
 //        }
 //    }
 //    horn(); {
@@ -93,4 +93,3 @@ void loop() {
 //        }
 //    }
 //}
-

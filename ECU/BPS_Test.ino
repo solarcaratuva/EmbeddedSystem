@@ -5,16 +5,16 @@ static CAN_message_t msg;
 
 BPS bps;
 
-//void setup() {
+// void setup() {
 //  Serial.println("Still Initializing BPS CAN!");
 //  Can1.begin();
 //  Serial.begin(9600);
 //  Serial.println("Initialized BPS CAN!");
 //}
 
-//void loop() {
+// void loop() {
 //  //Serial.println("loop");
-//  
+//
 //  //bps.print();
 //  if (Can1.available())
 //  {
