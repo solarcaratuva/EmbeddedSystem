@@ -6,8 +6,8 @@
  * https://github.com/pawelsky/FlexCAN_Library
  */
 
-#ifndef bps_h
-#define bps_h
+#ifndef __BPS_H__
+#define __BPS_H__
 
 #include <FlexCAN.h>
 //#include <kinetis_flexcan.h>

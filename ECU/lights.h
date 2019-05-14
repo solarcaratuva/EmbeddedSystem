@@ -1,3 +1,6 @@
+#ifndef __LIGHTS_H__
+#define __LIGHTS_H__
+
 #include "pindef.h"
 // TURN SIGNAL ENUMERATED TYPE
 enum turn_state_t { turn_off, left_turn, right_turn };
@@ -123,3 +126,4 @@ int horn() {
             digitalWrite(horn_pin, LOW);
     }
 }
+#endif
