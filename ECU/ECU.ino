@@ -37,64 +37,42 @@ void loop() {
     delayMicroseconds(50);
     t++;*/
 
+    turn_sig_state = analogRead(turn_sig_pin);
+    hazard_button_state = digitalRead(hazards_ctrl);
+    headlight_button_state = digitalRead(headlight_ctrl);
+    horn_button_state = digitalRead(horn_ctrl);
+
+    switch (turn_sig_state) {
+        case 0 ... 255:
+            turn_state = left_turn;
+            break;
+        case 765 ... 1023:
+            turn_state = right_turn;
+            break;
+        default:
+            turn_state = turn_off;
+            break;
+    }
     Serial.println(turn_signal());
+
+    if (hazard_button_state == HIGH) {
+        hazards_state = hazards_on;
+    } else {
+        hazards_state = hazards_off;
+    }
     Serial.println(hazards());
+
+    if (headlight_button_state == HIGH) {
+        headlights_state = headlights_on;
+    } else {
+        headlights_state = headlights_off;
+    }
+    Serial.println(headlights());
+
+    if (horn_button_state == HIGH) {
+        horn_state = horn_on;
+    } else {
+        horn_state = horn_off;
+    }
     delay(500);
 }
-
-// void loop() {
-//    turn_sig_state = analogRead(turn_sig_pin);
-//    hazard_button_state = digitalRead(hazards_ctrl);
-//    horn_button_state = digitalRead(horn_ctrl);
-//    headlight_button_state = digitalRead(headlight_ctrl);
-//    turn_signal();
-//    {
-//        c = turn_sig_state;
-//        switch (c) {
-//            case (0 - 100):
-//                turn_state = left_turn;
-//                break;
-//            case (900 - 1000):
-//                turn_state = right_turn;
-//                break;
-//            default:
-//                turn_state = turn_off;
-//                break;
-//        }
-//    }
-//    hazards();
-//    {
-//        d = hazards_state;
-//        switch (d) {
-//            case (HIGH):
-//                hazards_state = hazards_on;
-//                break;
-//            default:
-//                hazards_state = hazards_off;
-//                break;
-//        }
-//    }
-//    head_lights(); {
-//        e = headlights_state;
-//        switch (e) {
-//            case(HIGH):
-//                headlights_state = headlights_on;
-//                break;
-//            default:
-//                headlights_state = headlights_off;
-//                break;
-//
-//        }
-//    }
-//    horn(); {
-//        f = horn_state;
-//        switch (f) {
-//            case(HIGH):
-//                horn_state = horn_on;
-//                break;
-//            default:
-//                horn_state = horn_off;
-//                break;
-//        }
-//    }
-//}
