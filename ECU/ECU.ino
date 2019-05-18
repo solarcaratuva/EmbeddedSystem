@@ -14,15 +14,56 @@ void setup() {
     pinMode(PIN_STROBE_CTRL, OUTPUT);
     pinMode(PIN_RIGHT_BLINKERS, OUTPUT);
     pinMode(PIN_LEFT_BLINKERS, OUTPUT);
+    pinMode(PIN_GEARSHIFT_CTRL, INPUT);
     pinMode(PIN_TURNSIG_CTRL, INPUT);
     pinMode(PIN_HAZARD_CTRL, INPUT);
     pinMode(PIN_HORN_CTRL, INPUT);
     pinMode(PIN_HEADLIGHT_CTRL, INPUT);
-    Serial.begin(9600);
+    Serial.begin(115200);
+}
+
+void toggle_blinker(bool left) {
+    if (left) {
+        if (digitalRead(PIN_LEFT_BLINKERS) == LOW) {
+            digitalWrite(PIN_LEFT_BLINKERS, HIGH);
+        } else {
+            digitalWrite(PIN_LEFT_BLINKERS, LOW);
+        }
+    } else {
+        if (digitalRead(PIN_RIGHT_BLINKERS) == LOW) {
+            digitalWrite(PIN_RIGHT_BLINKERS, HIGH);
+        } else {
+            digitalWrite(PIN_RIGHT_BLINKERS, LOW);
+        }
+    }
+}
+
+bool test_hazards() {
+    bool state = digitalRead(PIN_HAZARD_CTRL);
+    if (state == HIGH) {
+        toggle_blinker(true);
+        toggle_blinker(false);
+    }
+}
+
+char test_turn_signal() {
+    uint16_t state = analogRead(PIN_TURNSIG_CTRL);
+    switch (state) {
+        case 0 ... 255:
+            toggle_blinker(true);
+            return 'L';
+        case 765 ... 1023:
+            toggle_blinker(false);
+            return 'R';
+        default:
+            digitalWrite(PIN_LEFT_BLINKERS, LOW);
+            digitalWrite(PIN_RIGHT_BLINKERS, LOW);
+            return 'X';
+    }
 }
 
 void loop() {
-    static uint8_t t;
+    /*static uint8_t t;
 
     static uint8_t value = 0;
     if (!t) value = map(analogRead(PIN_MOTOR_R_METER), 400, 600, 0, 256);
@@ -34,7 +75,11 @@ void loop() {
     digitalWrite(PIN_LEFT_BLINKERS, value > t);
 
     delayMicroseconds(50);
-    t++;
+    t++;*/
+
+    Serial.println(test_turn_signal());
+    Serial.println(test_hazards());
+    delay(500);
 }
 
 // void loop() {
