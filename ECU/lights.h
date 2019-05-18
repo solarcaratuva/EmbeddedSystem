@@ -40,7 +40,7 @@ int hazard_button_state = LOW;
 int horn_button_state = LOW;
 int headlight_button_state = LOW;
 
-int turn_signal() {
+char turn_signal() {
     static uint32_t previousMillis = 0;
     uint32_t currentMillis = millis();
     static bool flash = false;
@@ -55,20 +55,20 @@ int turn_signal() {
             currentMillis = 0;
             previousMillis = 0;
             flash = false;
-            break;
+            return 'O';
         case (left_turn):
             digitalWrite(left_blinker_pin, flash);
             digitalWrite(right_blinker_pin, LOW);
-            break;
+            return 'L';
         case (right_turn):
+            digitalWrite(left_blinker_pin, LOW);
             digitalWrite(right_blinker_pin, flash);
-            digitalWrite(left_blinker_pin, LOW);
-            break;
+            return 'R';
         default:
-            digitalWrite(right_blinker_pin, LOW);
             digitalWrite(left_blinker_pin, LOW);
+            digitalWrite(right_blinker_pin, LOW);
+            return 'X';
     }
-    return 0;
 }
 
 int hazards() {
