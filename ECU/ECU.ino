@@ -1,78 +1,122 @@
 #include <FlexCAN.h>
 #include <kinetis_flexcan.h>
-#include <cstdlib>
-#include <string>
-#include "KLS/KLS.h"
+#include "KLS.h"
 #include "UI.h"
 #include "lights.h"
 #include "pindef.h"
+#include "constants.h"
+#include "console.h"
+#include "BPS.h"
 
-void setup() {
-    pinMode(PIN_HORN, OUTPUT);
-    pinMode(PIN_HEADLIGHTS, OUTPUT);
-    pinMode(PIN_BRAKELIGHTS, OUTPUT);
-    pinMode(PIN_STROBE_CTRL, OUTPUT);
-    pinMode(PIN_RIGHT_BLINKERS, OUTPUT);
-    pinMode(PIN_LEFT_BLINKERS, OUTPUT);
-    pinMode(PIN_GEARSHIFT_CTRL, INPUT);
-    pinMode(PIN_TURNSIG_CTRL, INPUT);
-    pinMode(PIN_HAZARD_CTRL, INPUT);
-    pinMode(PIN_HORN_CTRL, INPUT);
-    pinMode(PIN_HEADLIGHT_CTRL, INPUT);
-    Serial.begin(115200);
+FlexCAN Can0(500000, 0); // used strictly for the BMS
+FlexCAN Can1(250000, 1); // wired to both motor controllers. TODO: find a way to change the Can ID of one of them.
+
+CAN_message_t msg[2]; // 2 CAN structs to store received data
+
+
+BPS bps;
+KLS kls_l(0x05); // Left motor initialized with source address 0x05
+KLS kls_r(0x06); // Right motor initialized with source address 0x06
+
+
+void setup()
+{
+  
+  digitalWrite(PIN_BRAKE_CTRL, LOW); pinMode(PIN_BRAKE_CTRL, INPUT);
+  digitalWrite(PIN_REGEN_CTRL, LOW); pinMode(PIN_REGEN_CTRL, INPUT);
+  digitalWrite(PIN_GEARSHIFT_CTRL, LOW); pinMode(PIN_GEARSHIFT_CTRL, INPUT);
+  digitalWrite(PIN_TURNSIG_CTRL, LOW);  pinMode(PIN_TURNSIG_CTRL, INPUT);
+  digitalWrite(PIN_THROTTLE_CTRL, LOW); pinMode(PIN_THROTTLE_CTRL, INPUT);
+  digitalWrite(PIN_STEER_CTRL, LOW); pinMode(PIN_STEER_CTRL, INPUT);
+  digitalWrite(PIN_HAZARD_CTRL, LOW); pinMode(PIN_HAZARD_CTRL, INPUT);
+  digitalWrite(PIN_DOWN_CTRL, LOW); pinMode(PIN_DOWN_CTRL, INPUT);
+  digitalWrite(PIN_UP_CTRL, LOW); pinMode(PIN_UP_CTRL, INPUT);
+  digitalWrite(PIN_SEL_CTRL, LOW); pinMode(PIN_SEL_CTRL, INPUT);
+  digitalWrite(PIN_KILL_SENSE, LOW); pinMode(PIN_KILL_SENSE, INPUT);
+  digitalWrite(PIN_HAZARD_LED, LOW); pinMode(PIN_HAZARD_LED, INPUT);
+  digitalWrite(PIN_UART_1_RX, LOW); pinMode(PIN_UART_1_RX, INPUT);
+  digitalWrite(PIN_UART_1_TX, LOW); pinMode(PIN_UART_1_TX, INPUT);
+
+/******************************************/
+/* pin definitions for motor controllers  */
+/******************************************/
+  digitalWrite(PIN_MOTOR_L_REGEN_EN, LOW); pinMode(PIN_MOTOR_L_REGEN_EN, OUTPUT);
+  digitalWrite(PIN_MOTOR_L_REGEN, LOW); pinMode(PIN_MOTOR_L_REGEN, OUTPUT);
+  digitalWrite(PIN_MOTOR_L_THROTTLE, LOW); pinMode(PIN_MOTOR_L_THROTTLE, OUTPUT);
+  digitalWrite(PIN_MOTOR_L_ECO_EN, LOW); pinMode(PIN_MOTOR_L_ECO_EN, OUTPUT);
+  digitalWrite(PIN_MOTOR_L_METER, LOW); pinMode(PIN_MOTOR_L_METER, OUTPUT);
+  digitalWrite(PIN_MOTOR_L_FWD_EN, LOW); pinMode(PIN_MOTOR_L_FWD_EN, OUTPUT);
+  digitalWrite(PIN_MOTOR_L_REV_EN, LOW); pinMode(PIN_MOTOR_L_REV_EN, OUTPUT);
+
+  digitalWrite(PIN_MOTOR_R_REGEN_EN, LOW); pinMode(PIN_MOTOR_R_REGEN_EN, OUTPUT);
+  digitalWrite(PIN_MOTOR_R_REGEN, LOW); pinMode(PIN_MOTOR_R_REGEN, OUTPUT);
+  digitalWrite(PIN_MOTOR_R_THROTTLE, LOW); pinMode(PIN_MOTOR_R_THROTTLE, OUTPUT);
+  digitalWrite(PIN_MOTOR_R_ECO_EN, LOW); pinMode(PIN_MOTOR_R_ECO_EN, OUTPUT);
+  digitalWrite(PIN_MOTOR_R_METER, LOW); pinMode(PIN_MOTOR_R_METER, OUTPUT);
+  digitalWrite(PIN_MOTOR_R_FWD_EN, LOW); pinMode(PIN_MOTOR_R_FWD_EN, OUTPUT);
+  digitalWrite(PIN_MOTOR_R_REV_EN, LOW); pinMode(PIN_MOTOR_R_REV_EN, OUTPUT);
+
+
+/******************************************/
+/* pin definitions for high power devices */
+/******************************************/
+  digitalWrite(PIN_HORN , LOW); pinMode(PIN_HORN, OUTPUT);
+  digitalWrite(PIN_HEADLIGHTS , LOW); pinMode(PIN_HEADLIGHTS, OUTPUT);
+  digitalWrite(PIN_BRAKELIGHTS , LOW); pinMode(PIN_BRAKELIGHTS, OUTPUT);
+  digitalWrite(PIN_STROBE_CTRL, LOW); pinMode(PIN_STROBE_CTRL, OUTPUT);
+  digitalWrite(PIN_RIGHT_BLINKERS, LOW); pinMode(PIN_RIGHT_BLINKERS, OUTPUT);
+  digitalWrite(PIN_LEFT_BLINKERS, LOW); pinMode(PIN_LEFT_BLINKERS, OUTPUT);
+  digitalWrite(PIN_HEADLIGHT_CTRL, LOW); pinMode(PIN_HEADLIGHT_CTRL, INPUT);
+  digitalWrite(PIN_HORN_CTRL, LOW); pinMode(PIN_HORN_CTRL, INPUT);
+  digitalWrite(PIN_BRAKE_CTRL, LOW); pinMode(PIN_BRAKE_CTRL, INPUT);
+
+  Serial.begin(115200);
+  Can0.begin();
+  Can1.begin();
+  
 }
 
-void loop() {
-    /*static uint8_t t;
+void loop()
+{
+  // read CANbus busses and provide CAN packet to respective libraries
+  if (Can0.available()){
+    Can0.read(msg[0]);
+    bps.parse(msg[0]);
+  }
+  if (Can1.available()){
+    Can1.read(msg[1]);
+    kls_l.parse(msg[1]);
+    kls_r.parse(msg[1]);
+  }
 
-    static uint8_t value = 0;
-    if (!t) value = map(analogRead(PIN_MOTOR_R_METER), 400, 600, 0, 256);
-    Serial.println(analogRead(PIN_MOTOR_R_METER));
-    digitalWrite(PIN_HORN, value > t);
-    digitalWrite(PIN_HEADLIGHTS, value > t);
-    digitalWrite(PIN_BRAKELIGHTS, value > t);
-    digitalWrite(PIN_RIGHT_BLINKERS, value > t);
-    digitalWrite(PIN_LEFT_BLINKERS, value > t);
+  // set throttle for motor
+  int throttle = map(analogRead(PIN_THROTTLE_CTRL), 400, 600, 0, MAX_PWM);
+  kls_l.set_throttle(throttle);
+  kls_r.set_throttle(throttle);
 
-    delayMicroseconds(50);
-    t++;*/
+  
+  // control lights and horn
+  switch (analogRead(turn_sig_pin)) {
+    case 0 ... 255:
+      turn_state = left;
+      break;
+    case 765 ... 1023:
+      turn_state = right;
+      break;
+    default:
+      turn_state = off;
+      break;
+  }
+  
+  hazards_state = digitalRead(hazards_ctrl);
+  headlights_state = digitalRead(headlight_ctrl);
+  horn_state = digitalRead(horn_ctrl);
 
-    turn_sig_state = analogRead(turn_sig_pin);
-    hazard_button_state = digitalRead(hazards_ctrl);
-    headlight_button_state = digitalRead(headlight_ctrl);
-    horn_button_state = digitalRead(horn_ctrl);
+  // LCD UI stuff
 
-    switch (turn_sig_state) {
-        case 0 ... 255:
-            turn_state = left_turn;
-            break;
-        case 765 ... 1023:
-            turn_state = right_turn;
-            break;
-        default:
-            turn_state = turn_off;
-            break;
-    }
-    Serial.println(turn_signal());
+  
 
-    if (hazard_button_state == HIGH) {
-        hazards_state = hazards_on;
-    } else {
-        hazards_state = hazards_off;
-    }
-    Serial.println(hazards());
 
-    if (headlight_button_state == HIGH) {
-        headlights_state = headlights_on;
-    } else {
-        headlights_state = headlights_off;
-    }
-    Serial.println(headlights());
 
-    if (horn_button_state == HIGH) {
-        horn_state = horn_on;
-    } else {
-        horn_state = horn_off;
-    }
-    delay(500);
+  
 }

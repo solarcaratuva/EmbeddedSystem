@@ -3,20 +3,11 @@
 
 #include "pindef.h"
 // TURN SIGNAL ENUMERATED TYPE
-enum turn_state_t { turn_off, left_turn, right_turn };
-turn_state_t turn_state = turn_off;
+enum turn_state_t { off, left, right };
 
-// HAZARDS ENUMERATED TYPE
-enum hazards_state_t { hazards_off, hazards_on };
-hazards_state_t hazards_state = hazards_off;
+turn_state_t turn_state = off;
 
-// HEADLIGHTS ENUMERATED TYPE
-enum headlights_state_t { headlights_off, headlights_on };
-headlights_state_t headlights_state = headlights_off;
-
-// HORN ENUMERATED TYPE
-enum horn_state_t { horn_off, horn_on };
-horn_state_t horn_state = horn_off;
+bool hazards_state = 0, headlights_state = off, horn_state = 0;
 
 // PINS
 const int left_blinker_pin = PIN_LEFT_BLINKERS;
@@ -49,18 +40,18 @@ char turn_signal() {
         previousMillis = millis();
     }
     switch (turn_state) {
-        case (turn_off):
+        case (off):
             digitalWrite(left_blinker_pin, LOW);
             digitalWrite(right_blinker_pin, LOW);
             currentMillis = 0;
             previousMillis = 0;
             flash = false;
             return 'O';
-        case (left_turn):
+        case (left):
             digitalWrite(left_blinker_pin, flash);
             digitalWrite(right_blinker_pin, LOW);
             return 'L';
-        case (right_turn):
+        case (right):
             digitalWrite(left_blinker_pin, LOW);
             digitalWrite(right_blinker_pin, flash);
             return 'R';
@@ -71,51 +62,37 @@ char turn_signal() {
     }
 }
 
-bool hazards() {
-    static uint32_t previousMillis = 0;
-    uint32_t currentMillis = millis();
-    static bool flash = false;
-    if ((currentMillis - previousMillis) >= blink_interval) {
-        flash = !flash;
-        previousMillis = millis();
+void hazards() {
+  static uint32_t previousMillis = 0;
+  uint32_t currentMillis = millis();
+  static bool flash = false;
+
+  
+  if ((currentMillis - previousMillis) >= blink_interval) {
+    previousMillis = millis();
+    flash = !flash;
+
+    if(hazards_state){
+      digitalWrite(left_blinker_pin, flash);
+      digitalWrite(right_blinker_pin, flash);
+      digitalWrite(brakelights_pin, flash);
     }
-    switch (hazards_state) {
-        case (hazards_on):
-            digitalWrite(left_blinker_pin, flash);
-            digitalWrite(right_blinker_pin, flash);
-            digitalWrite(brakelights_pin, flash);
-            return true;
-        case (hazards_off):
-            currentMillis = 0;
-            previousMillis = 0;
-            flash = false;
-        default:
-            digitalWrite(left_blinker_pin, LOW);
-            digitalWrite(right_blinker_pin, LOW);
-            digitalWrite(brakelights_pin, LOW);
+    else{
+      digitalWrite(left_blinker_pin, LOW);
+      digitalWrite(right_blinker_pin, LOW);
+      digitalWrite(brakelights_pin, LOW);
     }
-    return false;
+  }
 }
 
-bool headlights() {
-    switch (headlights_state) {
-        case (headlights_on):
-            digitalWrite(headlights_pin, HIGH);
-            return true;
-        default:
-            digitalWrite(headlights_pin, LOW);
-            return false;
-    }
+void headlights() {
+  digitalWrite(headlights_pin, headlights_state);
 }
 
 bool horn() {
-    switch (horn_state) {
-        case (horn_on):
-            digitalWrite(horn_pin, HIGH);
-            return true;
-        default:
-            digitalWrite(horn_pin, LOW);
-            return false;
-    }
+  digitalWrite(horn_pin, horn_state);
 }
+
+
+
 #endif
