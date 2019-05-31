@@ -1,3 +1,0 @@
-[submodule "ECU/KLS"]
-	path = ECU/KLS
-	url = git@github.com:solarcaratuva/KLS.git

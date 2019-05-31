@@ -1,23 +1,28 @@
+#include <ArduinoJson.h>
 #include <FlexCAN.h>
 #include <kinetis_flexcan.h>
 #include "BPS.h"
-#include "KLS/KLS.h"
+#include "KLS.h"
 #include "UI.h"
 #include "console.h"
 #include "constants.h"
 #include "lights.h"
 #include "pindef.h"
 
-FlexCAN Can0(500000, 0);  // used strictly for the BMS
-FlexCAN Can1(
-    250000,
-    1);  // wired to both motor controllers. TODO: find a way to change the Can ID of one of them.
+// used strictly for BMS
+FlexCAN Can0(500000, 0);
+// wired to both motor controllers.
+// TODO: find a way to change the CAN ID of one of them.
+FlexCAN Can1(250000, 1);
 
-CAN_message_t msg[2];  // 2 CAN structs to store received data
+// 2 CAN structs to store received data
+CAN_message_t msg[2];
 
 BPS bps;
-KLS kls_l(0x05);  // Left motor initialized with source address 0x05
-KLS kls_r(0x06);  // Right motor initialized with source address 0x06
+// Left motor initialized with source address 0x05
+KLS kls_l(0x05);
+// Right motor initialized with source address 0x06
+KLS kls_r(0x06);
 
 void setup() {
     digitalWrite(PIN_BRAKE_CTRL, LOW);
@@ -142,6 +147,11 @@ void loop() {
     hazards_state = digitalRead(hazards_ctrl);
     headlights_state = digitalRead(headlight_ctrl);
     horn_state = digitalRead(horn_ctrl);
+
+    turn_signal();
+    hazards();
+    headlights();
+    horn();
 
     // LCD UI stuff
 }
