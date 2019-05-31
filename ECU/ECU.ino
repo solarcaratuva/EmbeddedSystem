@@ -116,10 +116,26 @@ void loop() {
     // read CANbus busses and provide CAN packet to respective libraries
     if (Can0.available()) {
         Can0.read(msg[0]);
+        Serial.print("CAN0 ");
+        Serial.printf("{\"id\": %d, \"ext\": %d, \"len\": %d, \"buf\": [", msg[0].id, msg[0].ext,
+                      msg[0].len);  // JSON format
+        for (int i = 0; i < msg[0].len - 1; i++) {
+            Serial.printf("%d, ", msg[0].buf[i]);
+        }
+        Serial.printf("%d}", msg[0].buf[msg[0].len]);
+
         bps.parse(msg[0]);
     }
     if (Can1.available()) {
         Can1.read(msg[1]);
+        Serial.print("CAN1 ");
+        Serial.printf("{\"id\": %d, \"ext\": %d, \"len\": %d, \"buf\": [", msg[1].id, msg[1].ext,
+                      msg[1].len);  // JSON format
+        for (int i = 0; i < msg[1].len - 1; i++) {
+            Serial.printf("%d, ", msg[1].buf[i]);
+        }
+        Serial.printf("%d}", msg[1].buf[msg[1].len]);
+
         kls_l.parse(msg[1]);
         kls_r.parse(msg[1]);
     }
@@ -152,4 +168,38 @@ void loop() {
     horn();
 
     // LCD UI stuff
+
+    // all objects are JSON objects hardcoded because I'm too lazy to learn the advanced JSON
+    // library --maxim
+    Serial.print("\"inputs\":{\n");
+    Serial.printf("\t{\"BRAKE_CTRL\": %d},\n", analogRead(PIN_BRAKE_CTRL));
+    Serial.printf("\t{\"REGEN_CTRL\": %d},\n", analogRead(PIN_REGEN_CTRL));
+    Serial.printf("\t{\"GEARSHIFT_CTRL\": %d},\n",
+                  three_way_switch(analogRead(PIN_GEARSHIFT_CTRL)));
+    Serial.printf("\t{\"TURNSIG_CTRL\": %d},\n", three_way_switch(analogRead(PIN_TURNSIG_CTRL)));
+    Serial.printf("\t{\"THROTTLE_CTRL\": %d},\n", analogRead(PIN_THROTTLE_CTRL));
+    Serial.printf("\t{\"STEER_CTRL\": %d},\n", analogRead(PIN_STEER_CTRL));
+    Serial.printf("\t{\"HAZARD_CTRL\": %d},\n", digitalRead(PIN_HAZARD_CTRL));
+    Serial.printf("\t{\"DOWN_CTRL\": %d},\n", digitalRead(PIN_DOWN_CTRL));
+    Serial.printf("\t{\"UP_CTRL\": %d},\n", digitalRead(PIN_UP_CTRL));
+    Serial.printf("\t{\"SEL_CTRL\": %d},\n", digitalRead(PIN_SEL_CTRL));
+    Serial.printf("\t{\"KILL_SENSE\": %d},\n", digitalRead(PIN_KILL_SENSE));
+    Serial.printf("\t{\"HORN_CTRL\": %d},\n", digitalRead(PIN_HORN_CTRL));
+    Serial.printf("\t{\"HEADLIGHT_CTRL\": %d},\n", digitalRead(PIN_HEADLIGHT_CTRL));
+    Serial.printf("\t{\"BRAKE_CTRL\": %d},\n", digitalRead(PIN_BRAKE_CTRL));
+    Serial.print("}\n");
+
+    delay(500);
+}
+
+// expects analogWriteResolution to be set to 14
+uint8_t three_way_switch(uint16_t analog_value) {
+    switch (analog_value) {
+        case 0 ... 255:
+            return -1;
+        case 768 ... 1023:
+            return 0;
+        default:
+            return 1;
+    }
 }
