@@ -20,8 +20,7 @@ KLS kls_r(0x06); // Right motor initialized with source address 0x06
 
 
 void setup()
-{
-  
+{  
   digitalWrite(PIN_BRAKE_CTRL, LOW); pinMode(PIN_BRAKE_CTRL, INPUT);
   digitalWrite(PIN_REGEN_CTRL, LOW); pinMode(PIN_REGEN_CTRL, INPUT);
   digitalWrite(PIN_GEARSHIFT_CTRL, LOW); pinMode(PIN_GEARSHIFT_CTRL, INPUT);
@@ -119,25 +118,6 @@ void loop()
   Serial.printf("\t{\"HEADLIGHT_CTRL\": %d},\n",digitalRead(PIN_HEADLIGHT_CTRL));
   Serial.printf("\t{\"BRAKE_CTRL\": %d},\n",digitalRead(PIN_BRAKE_CTRL));
   Serial.print("}\n");
-
-  
-  int throttle = map(analogRead(PIN_THROTTLE_CTRL), 400, 600, 0, MAX_PWM);
-  kls_l.set_throttle(throttle);
-  kls_r.set_throttle(throttle);
-
-  
-  // control lights and horn
-  
-  
-  hazards_state = digitalRead(hazards_ctrl);
-  headlights_state = digitalRead(headlight_ctrl);
-  horn_state = digitalRead(horn_ctrl);
-
-  // LCD UI stuff
-
-  
-
-
 
   delay(500);
 }
