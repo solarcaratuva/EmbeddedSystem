@@ -63,36 +63,28 @@ char turn_signal() {
 }
 
 void hazards() {
-  static uint32_t previousMillis = 0;
-  uint32_t currentMillis = millis();
-  static bool flash = false;
+    static uint32_t previousMillis = 0;
+    uint32_t currentMillis = millis();
+    static bool flash = false;
 
-  
-  if ((currentMillis - previousMillis) >= blink_interval) {
-    previousMillis = millis();
-    flash = !flash;
+    if ((currentMillis - previousMillis) >= blink_interval) {
+        previousMillis = millis();
+        flash = !flash;
 
-    if(hazards_state){
-      digitalWrite(left_blinker_pin, flash);
-      digitalWrite(right_blinker_pin, flash);
-      digitalWrite(brakelights_pin, flash);
+        if (hazards_state) {
+            digitalWrite(left_blinker_pin, flash);
+            digitalWrite(right_blinker_pin, flash);
+            digitalWrite(brakelights_pin, flash);
+        } else {
+            digitalWrite(left_blinker_pin, LOW);
+            digitalWrite(right_blinker_pin, LOW);
+            digitalWrite(brakelights_pin, LOW);
+        }
     }
-    else{
-      digitalWrite(left_blinker_pin, LOW);
-      digitalWrite(right_blinker_pin, LOW);
-      digitalWrite(brakelights_pin, LOW);
-    }
-  }
 }
 
-void headlights() {
-  digitalWrite(headlights_pin, headlights_state);
-}
+void headlights() { digitalWrite(headlights_pin, headlights_state); }
 
-bool horn() {
-  digitalWrite(horn_pin, horn_state);
-}
-
-
+bool horn() { digitalWrite(horn_pin, horn_state); }
 
 #endif
