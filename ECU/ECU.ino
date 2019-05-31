@@ -3,6 +3,7 @@
 #include "KLS.h"
 #include "UI.h"
 #include "console.h"
+#include <FlexCAN.h>
 #include "constants.h"
 #include "lights.h"
 #include "pindef.h"
@@ -10,6 +11,9 @@
 StaticJsonDocument<16> can0_json;
 StaticJsonDocument<16> can1_json;
 StaticJsonDocument<128> inputs_json;
+
+
+int three_way_switch_interpreter(int analog_read_value);
 
 // used strictly for BMS
 FlexCAN Can0(500000, 0);
@@ -142,8 +146,12 @@ void loop() {
 
     // set throttle for motor
     int throttle = map(analogRead(PIN_THROTTLE_CTRL), 400, 600, 0, MAX_PWM);
-    kls_l.set_throttle(throttle);
-    kls_r.set_throttle(throttle);
+    //kls_l.set_throttle(throttle);
+    //kls_r.set_throttle(throttle);
+
+    //pins should output a squarewave with 50% duty cycle
+    kls_l.set_throttle(2147483647);
+    kls_r.set_throttle(2147483647);
 
     // control lights and horn
     switch (analogRead(PIN_TURNSIG_CTRL)) {
@@ -169,8 +177,8 @@ void loop() {
 
     inputs_json["BRAKE_CTRL"] = analogRead(PIN_BRAKE_CTRL);
     inputs_json["REGEN_CTRL"] = analogRead(PIN_REGEN_CTRL);
-    inputs_json["GEARSHIFT_CTRL"] = three_way_switch(analogRead(PIN_GEARSHIFT_CTRL));
-    inputs_json["TURNSIG_CTRL"] = three_way_switch(analogRead(PIN_TURNSIG_CTRL));
+    inputs_json["GEARSHIFT_CTRL"] = three_way_switch_interpreter(analogRead(PIN_GEARSHIFT_CTRL));
+    inputs_json["TURNSIG_CTRL"] = three_way_switch_interpreter(analogRead(PIN_TURNSIG_CTRL));
     inputs_json["THROTTLE_CTRL"] = analogRead(PIN_THROTTLE_CTRL);
     inputs_json["STEER_CTRL"] = analogRead(PIN_STEER_CTRL);
     inputs_json["HAZARD_CTRL"] = digitalRead(PIN_HAZARD_CTRL);
@@ -185,4 +193,18 @@ void loop() {
 
     // LCD UI stuff
     delay(500);
+
+
 }
+
+    // expects analogWriteResolution to be set to 14
+    int three_way_switch_interpreter(int analog_read_value){
+     switch (analog_read_value) {
+       case 0 ... 255:
+         return -1;
+       case 765 ... 1023:
+         return 0;
+       default:
+         return 1;
+     }
+    }
