@@ -134,7 +134,7 @@ void loop() {
         case 0 ... 255:
             turn_state = left;
             break;
-        case 765 ... 1023:
+        case 768 ... 1023:
             turn_state = right;
             break;
         default:
