@@ -21,30 +21,25 @@ const int horn_ctrl = PIN_HORN_CTRL;
 const int headlight_ctrl = PIN_HEADLIGHT_CTRL;
 uint32_t blink_interval = 500;  // interval for blinking the lights
 
-byte c = 0;
-byte d = 0;
-byte e = 0;
-byte f = 0;
-
 uint16_t turn_sig_state = LOW;
 bool hazard_button_state = LOW;
 bool horn_button_state = LOW;
 bool headlight_button_state = LOW;
 
 void turn_signal() {
-    static uint32_t previousMillis = 0;
-    uint32_t currentMillis = millis();
+    static uint32_t start_time = 0;
+    uint32_t current_time = millis();
     static bool flash = false;
-    if ((currentMillis - previousMillis) >= blink_interval) {
+    if ((current_time - start_time) >= blink_interval) {
         flash = !flash;
-        previousMillis = millis();
+        start_time = millis();
     }
     switch (turn_state) {
         case (off):
             digitalWrite(left_blinker_pin, LOW);
             digitalWrite(right_blinker_pin, LOW);
-            currentMillis = 0;
-            previousMillis = 0;
+            current_time = 0;
+            start_time = 0;
             flash = false;
             return;
         case (left):
@@ -63,14 +58,13 @@ void turn_signal() {
 }
 
 void hazards() {
-    static uint32_t previousMillis = 0;
-    uint32_t currentMillis = millis();
+    static uint32_t start_time = 0;
+    uint32_t current_time = millis();
     static bool flash = false;
 
-    if ((currentMillis - previousMillis) >= blink_interval) {
-        previousMillis = millis();
+    if ((current_time - start_time) >= blink_interval) {
+        start_time = millis();
         flash = !flash;
-
         if (hazards_state) {
             digitalWrite(left_blinker_pin, flash);
             digitalWrite(right_blinker_pin, flash);
