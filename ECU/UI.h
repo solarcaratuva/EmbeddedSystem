@@ -1,3 +1,5 @@
+#ifndef __UI_H__
+#define __UI_H__
 // #include "pindef.h"
 // UI.h contains all the functions needed to retreive the state of the switches, buttons etc. from
 // the user. Pins allocated to this task have CTRL in the name.
@@ -145,3 +147,4 @@ void UI::regen_level_update(int regen_lvl) {
     Serial1.write(0xff);
     Serial1.write(0xff);
 }
+#endif

@@ -1,9 +1,4 @@
 #include "KLS.h"
-#include <FlexCAN.h>
-#include <kinetis_flexcan.h>
-#include <cstdlib>
-#include <string>
-#include "pindef.h"
 
 KLS::KLS(uint8_t addr = 0x05) {
     id = addr;

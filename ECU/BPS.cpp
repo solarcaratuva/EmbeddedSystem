@@ -1,6 +1,4 @@
 #include "BPS.h"
-#include <FlexCAN.h>
-//#include <kinetis_flexcan.h>
 
 // TODO find address (0x7E3 ?)
 BPS::BPS(uint32_t addr /* = 0x7E3*/) {

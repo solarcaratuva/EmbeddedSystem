@@ -1,6 +1,4 @@
 #include <ArduinoJson.h>
-#include <FlexCAN.h>
-#include <kinetis_flexcan.h>
 #include "BPS.h"
 #include "KLS.h"
 #include "UI.h"

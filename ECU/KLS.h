@@ -8,13 +8,13 @@
 
 #ifndef __KLS_H__
 #define __KLS_H__
-#define MAX_PWM 12500
 
 #include <FlexCAN.h>
 #include <kinetis_flexcan.h>
 #include <cstdlib>
 #include <string>
 #include "pindef.h"
+#include "constants.h"
 
 typedef struct KLS_switches {
     bool hall_a;

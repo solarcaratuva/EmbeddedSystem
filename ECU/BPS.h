@@ -2,7 +2,7 @@
  * Arslan Aziz
  * Interface with Orion standard BPS v1 over CAN
  * Updates battery & bps related fields
- * Uses pawelsky fork of FlexCan library found at
+ * Uses pawelsky fork of FlexCAN library found at
  * https://github.com/pawelsky/FlexCAN_Library
  */
 
@@ -10,7 +10,6 @@
 #define __BPS_H__
 
 #include <FlexCAN.h>
-//#include <kinetis_flexcan.h>
 
 typedef struct batt_status {
     float pack_current;
