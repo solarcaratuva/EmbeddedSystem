@@ -9,16 +9,6 @@ turn_state_t turn_state = off;
 
 bool hazards_state = 0, headlights_state = off, horn_state = 0;
 
-// PINS
-const int left_blinker_pin = PIN_LEFT_BLINKERS;
-const int right_blinker_pin = PIN_RIGHT_BLINKERS;
-const int turn_sig_pin = PIN_TURNSIG_CTRL;
-const int horn_pin = PIN_HORN;
-const int headlights_pin = PIN_HEADLIGHTS;
-const int brakelights_pin = PIN_BRAKELIGHTS;
-const int hazards_ctrl = PIN_HAZARD_CTRL;
-const int horn_ctrl = PIN_HORN_CTRL;
-const int headlight_ctrl = PIN_HEADLIGHT_CTRL;
 uint32_t blink_interval = 500;  // interval for blinking the lights
 
 uint16_t turn_sig_state = LOW;
@@ -36,23 +26,23 @@ void turn_signal() {
     }
     switch (turn_state) {
         case (off):
-            digitalWrite(left_blinker_pin, LOW);
-            digitalWrite(right_blinker_pin, LOW);
+            digitalWrite(PIN_LEFT_BLINKERS, LOW);
+            digitalWrite(PIN_RIGHT_BLINKERS, LOW);
             current_time = 0;
             start_time = 0;
             flash = false;
             return;
         case (left):
-            digitalWrite(left_blinker_pin, flash);
-            digitalWrite(right_blinker_pin, LOW);
+            digitalWrite(PIN_LEFT_BLINKERS, flash);
+            digitalWrite(PIN_RIGHT_BLINKERS, LOW);
             return;
         case (right):
-            digitalWrite(left_blinker_pin, LOW);
-            digitalWrite(right_blinker_pin, flash);
+            digitalWrite(PIN_LEFT_BLINKERS, LOW);
+            digitalWrite(PIN_RIGHT_BLINKERS, flash);
             return;
         default:
-            digitalWrite(left_blinker_pin, LOW);
-            digitalWrite(right_blinker_pin, LOW);
+            digitalWrite(PIN_LEFT_BLINKERS, LOW);
+            digitalWrite(PIN_RIGHT_BLINKERS, LOW);
             return;
     }
 }
@@ -66,19 +56,19 @@ void hazards() {
         start_time = millis();
         flash = !flash;
         if (hazards_state) {
-            digitalWrite(left_blinker_pin, flash);
-            digitalWrite(right_blinker_pin, flash);
-            digitalWrite(brakelights_pin, flash);
+            digitalWrite(PIN_LEFT_BLINKERS, flash);
+            digitalWrite(PIN_RIGHT_BLINKERS, flash);
+            digitalWrite(PIN_BRAKELIGHTS, flash);
         } else {
-            digitalWrite(left_blinker_pin, LOW);
-            digitalWrite(right_blinker_pin, LOW);
-            digitalWrite(brakelights_pin, LOW);
+            digitalWrite(PIN_LEFT_BLINKERS, LOW);
+            digitalWrite(PIN_RIGHT_BLINKERS, LOW);
+            digitalWrite(PIN_BRAKELIGHTS, LOW);
         }
     }
 }
 
-void headlights() { digitalWrite(headlights_pin, headlights_state); }
+void headlights() { digitalWrite(PIN_HEADLIGHTS, headlights_state); }
 
-void horn() { digitalWrite(horn_pin, horn_state); }
+void horn() { digitalWrite(PIN_HORN, horn_state); }
 
 #endif

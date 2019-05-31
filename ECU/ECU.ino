@@ -130,7 +130,7 @@ void loop() {
     kls_r.set_throttle(throttle);
 
     // control lights and horn
-    switch (analogRead(turn_sig_pin)) {
+    switch (analogRead(PIN_TURNSIG_CTRL)) {
         case 0 ... 255:
             turn_state = left;
             break;
@@ -142,9 +142,9 @@ void loop() {
             break;
     }
 
-    hazards_state = digitalRead(hazards_ctrl);
-    headlights_state = digitalRead(headlight_ctrl);
-    horn_state = digitalRead(horn_ctrl);
+    hazards_state = digitalRead(PIN_HAZARD_CTRL);
+    headlights_state = digitalRead(PIN_HEADLIGHT_CTRL);
+    horn_state = digitalRead(PIN_HORN_CTRL);
 
     turn_signal();
     hazards();
