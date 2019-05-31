@@ -78,35 +78,56 @@ void setup()
 
 void loop()
 {
-  // read CANbus busses and provide CAN packet to respective libraries
+  // read CANbus busses and print ones that show up on serial port
   if (Can0.available()){
     Can0.read(msg[0]);
-    bps.parse(msg[0]);
+    
+    Serial.print("CAN0 ");
+    Serial.printf("{\"id\": %d, \"ext\": %d, \"len\": %d, \"buf\": [", msg[0].id, msg[0].ext, msg[0].len); // JSON format
+    for(int i = 0; i < msg[0].len-1; i++){
+      Serial.printf("%d, ", msg[0].buf[i]);
+    }
+    Serial.printf("%d}",msg[0].buf[msg[0].len]);
+    
   }
+  
   if (Can1.available()){
     Can1.read(msg[1]);
-    kls_l.parse(msg[1]);
-    kls_r.parse(msg[1]);
+
+    Serial.print("CAN0 ");
+    Serial.printf("{\"id\": %d, \"ext\": %d, \"len\": %d, \"buf\": [", msg[1].id, msg[1].ext, msg[1].len); // JSON format
+    for(int i = 0; i < msg[1].len-1; i++){
+      Serial.printf("%d, ", msg[1].buf[i]);
+    }
+    Serial.printf("%d}",msg[1].buf[msg[1].len]);
   }
 
-  // set throttle for motor
+  // all objects are JSON objects hardcoded because I'm too lazy to learn the advanced JSON library --maxim
+  Serial.print("\"inputs\":{\n");
+  Serial.printf("\t{\"BRAKE_CTRL\": %d},\n", analogRead(PIN_BRAKE_CTRL));
+  Serial.printf("\t{\"REGEN_CTRL\": %d},\n", analogRead(PIN_REGEN_CTRL));
+  Serial.printf("\t{\"GEARSHIFT_CTRL\": %d},\n", three_way_switch_interpreter(analogRead(PIN_GEARSHIFT_CTRL)));
+  Serial.printf("\t{\"TURNSIG_CTRL\": %d},\n", three_way_switch_interpreter(analogRead(PIN_TURNSIG_CTRL)));
+  Serial.printf("\t{\"THROTTLE_CTRL\": %d},\n", analogRead(PIN_THROTTLE_CTRL));
+  Serial.printf("\t{\"STEER_CTRL\": %d},\n", analogRead(PIN_STEER_CTRL));
+  Serial.printf("\t{\"HAZARD_CTRL\": %d},\n", digitalRead(PIN_HAZARD_CTRL));
+  Serial.printf("\t{\"DOWN_CTRL\": %d},\n", digitalRead(PIN_DOWN_CTRL));
+  Serial.printf("\t{\"UP_CTRL\": %d},\n", digitalRead(PIN_UP_CTRL));
+  Serial.printf("\t{\"SEL_CTRL\": %d},\n", digitalRead(PIN_SEL_CTRL));
+  Serial.printf("\t{\"KILL_SENSE\": %d},\n", digitalRead(PIN_KILL_SENSE));
+  Serial.printf("\t{\"HORN_CTRL\": %d},\n",digitalRead(PIN_HORN_CTRL));
+  Serial.printf("\t{\"HEADLIGHT_CTRL\": %d},\n",digitalRead(PIN_HEADLIGHT_CTRL));
+  Serial.printf("\t{\"BRAKE_CTRL\": %d},\n",digitalRead(PIN_BRAKE_CTRL));
+  Serial.print("}\n");
+
+  
   int throttle = map(analogRead(PIN_THROTTLE_CTRL), 400, 600, 0, MAX_PWM);
   kls_l.set_throttle(throttle);
   kls_r.set_throttle(throttle);
 
   
   // control lights and horn
-  switch (analogRead(turn_sig_pin)) {
-    case 0 ... 255:
-      turn_state = left;
-      break;
-    case 765 ... 1023:
-      turn_state = right;
-      break;
-    default:
-      turn_state = off;
-      break;
-  }
+  
   
   hazards_state = digitalRead(hazards_ctrl);
   headlights_state = digitalRead(headlight_ctrl);
@@ -118,5 +139,17 @@ void loop()
 
 
 
-  
+  delay(500);
+}
+
+// expects analogWriteResolution to be set to 14
+int three_way_switch_interpreter(int analog_read_value){
+  switch (analog_read_value) {
+    case 0 ... 255:
+      return -1;
+    case 765 ... 1023:
+      return 0;
+    default:
+      return 1;
+  }
 }
