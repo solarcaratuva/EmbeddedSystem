@@ -24,6 +24,7 @@ These pins are used for allowing the driver to command the vehicle. All but the 
 | THROTTLE_CTRL   |  16  | 0 - 12V  |  input    | throttle potentiometer, the gas petal                                |
 | STEER_CTRL      |21(A7)| 0 - 12V  |  input    | potentiometer on steering wheel, may be used for differential throttle control |
 | HAZARD_CTRL     |  16  | 0 - 12V  |  input    | pushbutton used to activate hazard lights, toggles on changing edge  |
+| HORN_CTRL       |22(A6)| 0 - 12V  |  input    | horn button                                                          |
 | DOWN_CTRL       |  26  | 0 - 12V  |  input    | GUI navigation pushbutton                                            |
 | UP_CTRL         |  27  | 0 - 12V  |  input    | GUI navigation pushbutton                                            |
 | SEL_CTRL        |  28  | 0 - 12V  |  input    | GUI navigation pushbutton                                            |
