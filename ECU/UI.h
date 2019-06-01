@@ -1,6 +1,8 @@
 #ifndef __UI_H__
 #define __UI_H__
+
 // #include "pindef.h"
+#include "lights.h"
 // UI.h contains all the functions needed to retreive the state of the switches, buttons etc. from
 // the user. Pins allocated to this task have CTRL in the name.
 
@@ -10,6 +12,7 @@ class UI {
    public:
     static void init();
     static void update();
+    static void initialize_display();
     static void fault_condition(char* str);
     static void right_turn_signal_update(bool on);
     static void left_turn_singal_update(bool on);
@@ -20,7 +23,6 @@ class UI {
     static void bat_temp_update(int b_temp);
     static void regen_level_update(int regen_lvl);
 
-    // Functions TODO
     /*
      * Check for fault condition (with message passed as a param??)
      * Update photo for when blinkers are running
@@ -79,6 +81,8 @@ void UI::init() {
     while (!Serial1) {
         delay(1000);
     }
+
+    initialize_display();
 }
 
 void UI::update() {
@@ -96,9 +100,43 @@ void UI::fault_condition(char* str) {
     Serial1.write(0xff);
 }
 
-void UI::right_turn_signal_update(bool on) {}
+void UI::right_turn_signal_update(bool on) {
+    if(on){
+        //change picture to right turn
+    }
+    else{
+        //change picture to blank
+    }
+}
 
-void UI::left_turn_singal_update(bool on) {}
+void UI::left_turn_singal_update(bool on) {
+    if (on){
+        //change picture to left turn
+    }
+    else{
+    //change picture to blank
+    }
+}
+
+void UI::turn_signal_update(){
+    switch (turn_state) {
+        case (turn_off):
+            right_turn_signal_update(false);
+            left_turn_singal_update(false);
+            break;
+        case (left_turn):
+            right_turn_signal_update(false);
+            left_turn_singal_update(true);
+            break;
+        case (right_turn):
+            right_turn_signal_update(true);
+            left_turn_singal_update(false);
+            break;
+        default:
+            right_turn_signal_update(false);
+            left_turn_singal_update(false);
+    }
+}
 
 void UI::SOC_update(int level) {
     Serial1.print("SOC_.val=");
@@ -147,4 +185,16 @@ void UI::regen_level_update(int regen_lvl) {
     Serial1.write(0xff);
     Serial1.write(0xff);
 }
+
+static void UI::initialize_display(){
+    fault_condition("");
+    SOC_Update(0);
+    speed_update(0);
+    bat_voltage_update(0);
+    bat_current_update(0);
+    bat_temp(0);
+    regen_level_update(0);
+}
+
 #endif
+

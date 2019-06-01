@@ -22,6 +22,8 @@ KLS kls_l(0x05);
 // Right motor initialized with source address 0x06
 KLS kls_r(0x06);
 
+UI lcd;
+
 void setup() {
     digitalWrite(PIN_BRAKE_CTRL, LOW);
     pinMode(PIN_BRAKE_CTRL, INPUT);
@@ -110,6 +112,8 @@ void setup() {
     Serial.begin(115200);
     Can0.begin();
     Can1.begin();
+
+    lcd.init()
 }
 
 void loop() {
@@ -152,4 +156,17 @@ void loop() {
     horn();
 
     // LCD UI stuff
+    //if (FAULT){
+      //lcd.fault_condition(char* str); //Only if there is a fault
+    }
+    //FUN ONLY IF WANTED (STILL NEED TO BE IMPLEMENTED IN UI.h CURRENTLY DO NOTHING
+    //lcd.right_turn_signal_update(bool on);
+    //lcd.left_turn_singal_update(bool on);
+
+    lcd.SOC_update((int)bps.batt_status.pack_SOC);
+    lcd.speed_update((int) (((kls_l.KLS_status.rpm*14)+(kls_r.KLS_status.rpm*14))/2));
+    lcd.bat_voltage_update((int) bps.batt_status.pack_voltage);
+    lcd.bat_current_update((int) bps.batt_status.pack_current);
+    lcd.bat_temp_update((int) bps.batt_status.pack_avg_temp);
+    //lcd.regen_level_update((int) regen_lvl); //DO WE HAVE A REGEN LEVEL VAR??
 }
