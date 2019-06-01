@@ -13,8 +13,8 @@
 #include <kinetis_flexcan.h>
 #include <cstdlib>
 #include <string>
-#include "pindef.h"
 #include "constants.h"
+#include "pindef.h"
 
 typedef struct KLS_switches {
     bool hall_a;
