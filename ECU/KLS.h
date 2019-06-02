@@ -58,7 +58,15 @@ class KLS {
     KLS_errors parse_errors(uint8_t lsb, uint8_t msb);
 
     void set_throttle(uint32_t value);
-
+    
+    void regen_en(bool value);// untested
+    
+    void set_regen(uint32_t value);// untested
+    
+    void set_direction(uint8_t value);//untested
+    
+    static void eco_en(boolean value);// untested
+    
     void update(const KLS_status &new_status);
 
     void update(uint32_t rpm, float current, float voltage, float throttle);

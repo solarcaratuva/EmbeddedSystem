@@ -112,8 +112,7 @@ void setup() {
     Serial.begin(115200);
     Can0.begin();
     Can1.begin();
-
-    lcd.init()
+    UI::init();
 }
 
 void loop() {
@@ -157,16 +156,15 @@ void loop() {
 
     // LCD UI stuff
     //if (FAULT){
-      //lcd.fault_condition(char* str); //Only if there is a fault
-    }
+      //UI::fault_condition(char* str); //Only if there is a fault
+    //}
     //FUN ONLY IF WANTED (STILL NEED TO BE IMPLEMENTED IN UI.h CURRENTLY DO NOTHING
     //lcd.right_turn_signal_update(bool on);
     //lcd.left_turn_singal_update(bool on);
-
-    lcd.SOC_update((int)bps.batt_status.pack_SOC);
-    lcd.speed_update((int) (((kls_l.KLS_status.rpm*14)+(kls_r.KLS_status.rpm*14))/2));
-    lcd.bat_voltage_update((int) bps.batt_status.pack_voltage);
-    lcd.bat_current_update((int) bps.batt_status.pack_current);
-    lcd.bat_temp_update((int) bps.batt_status.pack_avg_temp);
-    //lcd.regen_level_update((int) regen_lvl); //DO WE HAVE A REGEN LEVEL VAR??
+    UI::SOC_update(0); //TODO: need to convert batt_status->pack_SOC from a float to an int, or better, change your function to accept float. --maxim
+    UI::speed_update((int) (((kls_l.status.rpm*14)+(kls_r.status.rpm*14))/2));
+    UI::bat_voltage_update((int) bps.batt_stat.pack_voltage);
+    UI::bat_current_update((int) bps.batt_stat.pack_current);
+    UI::bat_temp_update((int) bps.batt_stat.pack_avg_temp);
+    UI::regen_level_update( 0 ); // DO WE HAVE A REGEN LEVEL VAR?? we do now (untested). --maxim.
 }

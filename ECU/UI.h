@@ -22,7 +22,7 @@ class UI {
     static void bat_current_update(int b_curr);
     static void bat_temp_update(int b_temp);
     static void regen_level_update(int regen_lvl);
-
+    static void turn_signal_update();
     /*
      * Check for fault condition (with message passed as a param??)
      * Update photo for when blinkers are running
@@ -120,15 +120,15 @@ void UI::left_turn_singal_update(bool on) {
 
 void UI::turn_signal_update(){
     switch (turn_state) {
-        case (turn_off):
+        case (off):
             right_turn_signal_update(false);
             left_turn_singal_update(false);
             break;
-        case (left_turn):
+        case (left):
             right_turn_signal_update(false);
             left_turn_singal_update(true);
             break;
-        case (right_turn):
+        case (right):
             right_turn_signal_update(true);
             left_turn_singal_update(false);
             break;
@@ -186,15 +186,14 @@ void UI::regen_level_update(int regen_lvl) {
     Serial1.write(0xff);
 }
 
-static void UI::initialize_display(){
+void UI::initialize_display(){
     fault_condition("");
-    SOC_Update(0);
+    SOC_update(0);
     speed_update(0);
     bat_voltage_update(0);
     bat_current_update(0);
-    bat_temp(0);
+    bat_temp_update(0);
     regen_level_update(0);
 }
 
 #endif
-
