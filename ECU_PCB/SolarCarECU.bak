@@ -2135,7 +2135,7 @@ F 3 "" H 2600 3350 50  0001 C CNN
 	1    2600 3350
 	1    0    0    -1  
 $EndComp
-Text Label 2700 6950 0    50   ~ 0
+Text Label 2700 6950 2    50   ~ 0
 LV_HEADLIGHTS
 Wire Wire Line
 	2700 4400 2900 4400
@@ -2214,7 +2214,7 @@ Wire Wire Line
 	5750 3850 5400 3850
 Text Label 5750 3850 0    50   ~ 0
 HORN
-Text Label 2700 4400 0    50   ~ 0
+Text Label 2700 4400 2    50   ~ 0
 LV_HORN
 Wire Wire Line
 	11300 6900 11300 6950
@@ -2420,10 +2420,10 @@ SDA_0
 Text Label 21100 8400 2    50   ~ 0
 SCL_0
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R53
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
 U 1 1 5D96F75D
 P 20550 8200
-F 0 "R53" H 20620 8246 50  0000 L CNN
+F 0 "R?" H 20620 8246 50  0000 L CNN
 F 1 "1k" H 20620 8155 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 20480 8200 50  0001 C CNN
 F 3 "~" H 20550 8200 50  0001 C CNN
@@ -2431,10 +2431,10 @@ F 3 "~" H 20550 8200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R52
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
 U 1 1 5D96F989
 P 20300 8200
-F 0 "R52" H 20370 8246 50  0000 L CNN
+F 0 "R?" H 20370 8246 50  0000 L CNN
 F 1 "1k" H 20370 8155 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 20230 8200 50  0001 C CNN
 F 3 "~" H 20300 8200 50  0001 C CNN
@@ -2817,7 +2817,7 @@ F 3 "" H 2600 5700 50  0001 C CNN
 	1    2600 5700
 	1    0    0    -1  
 $EndComp
-Text Label 2700 6750 0    50   ~ 0
+Text Label 2700 6750 2    50   ~ 0
 LV_BRAKELIGHTS
 Wire Wire Line
 	2700 6750 2900 6750
@@ -3043,9 +3043,9 @@ Wire Wire Line
 Wire Wire Line
 	5700 5700 5550 5700
 Connection ~ 5550 5700
-Text Label 2600 9050 0    50   ~ 0
+Text Label 2600 9050 2    50   ~ 0
 LV_RIGHT_BLINKERS
-Text Label 2600 9250 0    50   ~ 0
+Text Label 2600 9250 2    50   ~ 0
 LV_LEFT_BLINKERS
 Wire Wire Line
 	2600 9250 3250 9250
@@ -3235,8 +3235,6 @@ Text Label 3150 14750 2    50   ~ 0
 LV_THROTTLE_CTRL
 Wire Wire Line
 	3150 14750 3400 14750
-Wire Wire Line
-	2200 14350 3400 14350
 Text Label 3150 14650 2    50   ~ 0
 LV_TURNSIG_CTRL
 Wire Wire Line
@@ -3343,16 +3341,16 @@ $EndComp
 Wire Wire Line
 	2000 13200 2000 13150
 Wire Wire Line
-	2200 14400 2200 14350
+	2000 14400 2000 14350
 $Comp
 L SolarCarECU-rescue:GND-power-SolarCarECU-rescue #PWR0114
 U 1 1 5C6CA23C
-P 2200 14400
-F 0 "#PWR0114" H 2200 14150 50  0001 C CNN
-F 1 "GND" H 2205 14227 50  0000 C CNN
-F 2 "" H 2200 14400 50  0001 C CNN
-F 3 "" H 2200 14400 50  0001 C CNN
-	1    2200 14400
+P 2000 14400
+F 0 "#PWR0114" H 2000 14150 50  0001 C CNN
+F 1 "GND" H 2005 14227 50  0000 C CNN
+F 2 "" H 2000 14400 50  0001 C CNN
+F 3 "" H 2000 14400 50  0001 C CNN
+	1    2000 14400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3458,7 +3456,7 @@ Text Label 5750 8500 0    50   ~ 0
 RIGHT_BLINKERS
 Text Label 5750 4300 0    50   ~ 0
 STROBE
-Text Label 2700 4600 0    50   ~ 0
+Text Label 2700 4600 2    50   ~ 0
 LV_STROBE
 Wire Wire Line
 	21250 3650 20450 3650
@@ -3479,10 +3477,10 @@ Wire Wire Line
 Wire Wire Line
 	20650 8950 20800 8950
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R57
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
 U 1 1 5E9105FF
 P 20950 9450
-F 0 "R57" V 20900 9600 50  0000 L CNN
+F 0 "R?" V 20900 9600 50  0000 L CNN
 F 1 "47" V 20900 9250 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 20880 9450 50  0001 C CNN
 F 3 "~" H 20950 9450 50  0001 C CNN
@@ -3490,10 +3488,10 @@ F 3 "~" H 20950 9450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R56
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
 U 1 1 5E9104F3
 P 20950 9350
-F 0 "R56" V 20900 9500 50  0000 L CNN
+F 0 "R?" V 20900 9500 50  0000 L CNN
 F 1 "47" V 20900 9150 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 20880 9350 50  0001 C CNN
 F 3 "~" H 20950 9350 50  0001 C CNN
@@ -3501,10 +3499,10 @@ F 3 "~" H 20950 9350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R55
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
 U 1 1 5E9103EB
 P 20950 9250
-F 0 "R55" V 20900 9400 50  0000 L CNN
+F 0 "R?" V 20900 9400 50  0000 L CNN
 F 1 "47" V 20900 9050 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 20880 9250 50  0001 C CNN
 F 3 "~" H 20950 9250 50  0001 C CNN
@@ -3512,10 +3510,10 @@ F 3 "~" H 20950 9250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R54
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
 U 1 1 5E9102E5
 P 20950 9150
-F 0 "R54" V 20900 9300 50  0000 L CNN
+F 0 "R?" V 20900 9300 50  0000 L CNN
 F 1 "47" V 20900 8950 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 20880 9150 50  0001 C CNN
 F 3 "~" H 20950 9150 50  0001 C CNN
@@ -3523,10 +3521,10 @@ F 3 "~" H 20950 9150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R42
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
 U 1 1 5E9101E1
 P 20950 9050
-F 0 "R42" V 20900 9200 50  0000 L CNN
+F 0 "R?" V 20900 9200 50  0000 L CNN
 F 1 "47" V 20900 8850 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 20880 9050 50  0001 C CNN
 F 3 "~" H 20950 9050 50  0001 C CNN
@@ -3534,10 +3532,10 @@ F 3 "~" H 20950 9050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R5
+L SolarCarECU-rescue:R-Device-SolarCarECU-rescue R?
 U 1 1 5E90FAD3
 P 20950 8950
-F 0 "R5" V 20900 9100 50  0000 L CNN
+F 0 "R?" V 20900 9100 50  0000 L CNN
 F 1 "47" V 20900 8750 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 20880 8950 50  0001 C CNN
 F 3 "~" H 20950 8950 50  0001 C CNN
@@ -5136,4 +5134,6 @@ Wire Wire Line
 	2900 12550 3400 12550
 Wire Wire Line
 	2900 12650 3400 12650
+Wire Wire Line
+	2000 14350 3400 14350
 $EndSCHEMATC
