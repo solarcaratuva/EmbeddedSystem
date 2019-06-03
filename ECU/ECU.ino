@@ -123,6 +123,7 @@ void loop() {
     // read CANbus busses and provide CAN packet to respective libraries
     if (Can0.available()) {
         Can0.read(msg[0]);
+        can0_json["type"] = "can0";
         can0_json["id"] = msg[0].id;
         can0_json["ext"] = msg[0].ext;
         can0_json["len"] = msg[0].len;
@@ -133,6 +134,7 @@ void loop() {
     }
     if (Can1.available()) {
         Can1.read(msg[1]);
+        can1_json["type"] = "can1";
         can1_json["id"] = msg[1].id;
         can1_json["ext"] = msg[1].ext;
         can1_json["len"] = msg[1].len;
@@ -174,6 +176,7 @@ void loop() {
     headlights();
     horn();
 
+    inputs_json["type"] = "inputs";
     inputs_json["BRAKE_CTRL"] = analogRead(PIN_BRAKE_CTRL);
     inputs_json["REGEN_CTRL"] = analogRead(PIN_REGEN_CTRL);
     inputs_json["GEARSHIFT_CTRL"] = three_way_switch(analogRead(PIN_GEARSHIFT_CTRL));
