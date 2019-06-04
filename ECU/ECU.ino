@@ -8,8 +8,8 @@
 #include "lights.h"
 #include "pindef.h"
 
-StaticJsonDocument<16> can0_json;
-StaticJsonDocument<16> can1_json;
+StaticJsonDocument<128> kls_l_json;
+StaticJsonDocument<128> kls_r_json;
 StaticJsonDocument<128> inputs_json;
 
 int three_way_switch_interpreter(int analog_read_value);
@@ -117,32 +117,44 @@ void setup() {
     Serial.begin(115200);
     Can0.begin();
     Can1.begin();
+
+    kls_l_json["type"] = "kls_l";
+    kls_r_json["type"] = "kls_r";
+    inputs_json["type"] = "inputs";
 }
 
 void loop() {
     // read CANbus busses and provide CAN packet to respective libraries
     if (Can0.available()) {
         Can0.read(msg[0]);
-        can0_json["type"] = "can0";
-        can0_json["id"] = msg[0].id;
-        can0_json["ext"] = msg[0].ext;
-        can0_json["len"] = msg[0].len;
-        can0_json["buf"] = msg[0].buf;
-        serializeJson(can0_json, Serial);
-
         bps.parse(msg[0]);
     }
     if (Can1.available()) {
         Can1.read(msg[1]);
-        can1_json["type"] = "can1";
-        can1_json["id"] = msg[1].id;
-        can1_json["ext"] = msg[1].ext;
-        can1_json["len"] = msg[1].len;
-        can1_json["buf"] = msg[1].buf;
-        serializeJson(can1_json, Serial);
-
         kls_l.parse(msg[1]);
         kls_r.parse(msg[1]);
+
+        kls_l_json["rpm"] = kls_l.status.rpm;
+        kls_l_json["current"] = kls_l.status.current;
+        kls_l_json["voltage"] = kls_l.status.voltage;
+        kls_l_json["throttle"] = kls_l.status.throttle;
+        kls_l_json["controller_temp"] = kls_l.status.controller_temp;
+        kls_l_json["motor_temp"] = kls_l.status.motor_temp;
+        kls_l_json["command_status"] = kls_l.status.command_status;
+        kls_l_json["feedback_status"] = kls_l.status.feedback_status;
+        kls_l_json["count"] = kls_l.status.errors.count;
+        serializeJson(kls_l_json, Serial);
+
+        kls_r_json["rpm"] = kls_r.status.rpm;
+        kls_r_json["current"] = kls_r.status.current;
+        kls_r_json["voltage"] = kls_r.status.voltage;
+        kls_r_json["throttle"] = kls_r.status.throttle;
+        kls_r_json["controller_temp"] = kls_r.status.controller_temp;
+        kls_r_json["motor_temp"] = kls_r.status.motor_temp;
+        kls_r_json["command_status"] = kls_r.status.command_status;
+        kls_r_json["feedback_status"] = kls_r.status.feedback_status;
+        kls_r_json["count"] = kls_r.status.errors.count;
+        serializeJson(kls_r_json, Serial);
     }
 
     // set throttle for motor
@@ -176,7 +188,6 @@ void loop() {
     headlights();
     horn();
 
-    inputs_json["type"] = "inputs";
     inputs_json["BRAKE_CTRL"] = analogRead(PIN_BRAKE_CTRL);
     inputs_json["REGEN_CTRL"] = analogRead(PIN_REGEN_CTRL);
     inputs_json["GEARSHIFT_CTRL"] = three_way_switch(analogRead(PIN_GEARSHIFT_CTRL));
