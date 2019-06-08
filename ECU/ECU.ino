@@ -25,6 +25,9 @@ KLS kls_r(0x06);
 UI lcd;
 
 void setup() {
+  
+    Serial.begin(115200);
+    
     digitalWrite(PIN_BRAKE_CTRL, LOW);
     pinMode(PIN_BRAKE_CTRL, INPUT);
     digitalWrite(PIN_REGEN_CTRL, LOW);
@@ -109,10 +112,10 @@ void setup() {
     digitalWrite(PIN_BRAKE_CTRL, LOW);
     pinMode(PIN_BRAKE_CTRL, INPUT);
 
-    Serial.begin(115200);
     Can0.begin();
     Can1.begin();
     UI::init();
+    while(!Serial);
 }
 
 void loop() {
@@ -161,7 +164,7 @@ void loop() {
     //FUN ONLY IF WANTED (STILL NEED TO BE IMPLEMENTED IN UI.h CURRENTLY DO NOTHING
     //lcd.right_turn_signal_update(bool on);
     //lcd.left_turn_singal_update(bool on);
-    UI::SOC_update(0); //TODO: need to convert batt_status->pack_SOC from a float to an int, or better, change your function to accept float. --maxim
+    UI::SOC_update(10); //TODO: need to convert batt_status->pack_SOC from a float to an int, or better, change your function to accept float. --maxim
     UI::speed_update((int) (((kls_l.status.rpm*14)+(kls_r.status.rpm*14))/2));
     UI::bat_voltage_update((int) bps.batt_stat.pack_voltage);
     UI::bat_current_update((int) bps.batt_stat.pack_current);
