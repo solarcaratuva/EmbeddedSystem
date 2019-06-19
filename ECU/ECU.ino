@@ -3,7 +3,6 @@
 #include "KLS.h"
 #include "UI.h"
 #include "console.h"
-#include "constants.h"
 #include "lights.h"
 #include "pindef.h"
 

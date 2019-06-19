@@ -13,9 +13,9 @@ class UI {
     static void init();
     static void update();
     static void initialize_display();
-    static void fault_condition(char* str);
+    static void fault_condition(const String& str);
     static void right_turn_signal_update(bool on);
-    static void left_turn_singal_update(bool on);
+    static void left_turn_signal_update(bool on);
     static void SOC_update(int level);
     static void speed_update(int spd);
     static void bat_voltage_update(int b_volt);
@@ -90,7 +90,7 @@ void UI::update() {
     delay(1000);
 }
 
-void UI::fault_condition(char* str) {
+void UI::fault_condition(const String& str) {
     Serial1.print("SOC_.val=");
     Serial1.write(0x22);
     Serial1.print(str);
@@ -101,40 +101,38 @@ void UI::fault_condition(char* str) {
 }
 
 void UI::right_turn_signal_update(bool on) {
-    if(on){
-        //change picture to right turn
-    }
-    else{
-        //change picture to blank
-    }
-}
-
-void UI::left_turn_singal_update(bool on) {
-    if (on){
-        //change picture to left turn
-    }
-    else{
-    //change picture to blank
+    if (on) {
+        // change picture to right turn
+    } else {
+        // change picture to blank
     }
 }
 
-void UI::turn_signal_update(){
+void UI::left_turn_signal_update(bool on) {
+    if (on) {
+        // change picture to left turn
+    } else {
+        // change picture to blank
+    }
+}
+
+void UI::turn_signal_update() {
     switch (turn_state) {
         case (off):
             right_turn_signal_update(false);
-            left_turn_singal_update(false);
+            left_turn_signal_update(false);
             break;
         case (left):
             right_turn_signal_update(false);
-            left_turn_singal_update(true);
+            left_turn_signal_update(true);
             break;
         case (right):
             right_turn_signal_update(true);
-            left_turn_singal_update(false);
+            left_turn_signal_update(false);
             break;
         default:
             right_turn_signal_update(false);
-            left_turn_singal_update(false);
+            left_turn_signal_update(false);
     }
 }
 
@@ -186,7 +184,7 @@ void UI::regen_level_update(int regen_lvl) {
     Serial1.write(0xff);
 }
 
-void UI::initialize_display(){
+void UI::initialize_display() {
     fault_condition("");
     SOC_update(0);
     speed_update(0);
