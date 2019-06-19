@@ -10,7 +10,7 @@
 #define PIN_TURNSIG_CTRL 15    // analog input
 #define PIN_THROTTLE_CTRL 16   // analog input
 #define PIN_STEER_CTRL 21      // analog input
-#define PIN_HAZARD_CTRL 16     // binary input (pushbutton switch)
+#define PIN_HAZARD_CTRL 24     // binary input (pushbutton switch)
 #define PIN_DOWN_CTRL 26       // binary input (pushbutton switch)
 #define PIN_UP_CTRL 27         // binary input (pushbutton switch)
 #define PIN_SEL_CTRL 28        // analog input (pushbutton switch)

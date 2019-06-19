@@ -2,12 +2,14 @@
 #define __LIGHTS_H__
 
 #include "pindef.h"
+
 // TURN SIGNAL ENUMERATED TYPE
 enum turn_state_t { off, left, right };
 
 turn_state_t turn_state = off;
 
 bool hazards_state = 0, headlights_state = off, horn_state = 0;
+bool hazards_toggle = 0;
 
 uint32_t blink_interval = 500;  // interval for blinking the lights
 

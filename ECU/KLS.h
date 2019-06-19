@@ -9,6 +9,9 @@
 #ifndef __KLS_H__
 #define __KLS_H__
 #define MAX_PWM 13000
+#define FWD 1
+#define NEU 0
+#define REV -1
 
 #include <FlexCAN.h>
 #include <kinetis_flexcan.h>
@@ -63,7 +66,7 @@ class KLS {
 
     void set_regen(uint32_t value);  // untested
 
-    void set_direction(uint8_t value);  // untested
+    void set_direction(int8_t value);  // untested
 
     static void eco_en(boolean value);  // untested
 

@@ -1,5 +1,6 @@
 #include <ArduinoJson.h>
 #include "BPS.h"
+#include "Chrono.h"
 #include "KLS.h"
 #include "UI.h"
 #include "console.h"
@@ -20,6 +21,8 @@ BPS bps;
 KLS kls_l(0x05);
 // Right motor initialized with source address 0x06
 KLS kls_r(0x06);
+
+Chrono timer;
 
 UI lcd;
 
@@ -127,15 +130,34 @@ void loop() {
         Can1.read(msg[1]);
         kls_l.parse(msg[1]);
         kls_r.parse(msg[1]);
+        // Serial.println("---");
+        // kls_l.print();
+        // kls_r.print();
     }
 
     // set throttle for motor
     // uint32_t throttle = map(analogRead(PIN_THROTTLE_CTRL), 400, 600, 0, MAX_PWM);
     uint32_t throttle = map(analogRead(PIN_THROTTLE_CTRL), 0, 1023, 0, MAX_PWM);
 
-    Serial.println(throttle);
     kls_l.set_throttle(throttle);
     kls_r.set_throttle(throttle);
+
+    switch (analogRead(PIN_GEARSHIFT_CTRL)) {
+        case 0 ... 255:
+            kls_l.set_direction(FWD);
+            kls_r.set_direction(FWD);
+            break;
+        case 768 ... 1023:
+            kls_l.set_direction(REV);
+            kls_r.set_direction(REV);
+            break;
+        default:
+            kls_l.set_direction(NEU);
+            kls_r.set_direction(NEU);
+            kls_l.set_throttle(0);
+            kls_r.set_throttle(0);
+            break;
+    }
 
     // control lights and horn
     switch (analogRead(PIN_TURNSIG_CTRL)) {
@@ -150,7 +172,25 @@ void loop() {
             break;
     }
 
-    hazards_state = digitalRead(PIN_HAZARD_CTRL);
+    // Serial.println(digitalRead(PIN_HAZARD_CTRL));
+    // hazards_state = digitalRead(PIN_HAZARD_CTRL);
+    /* if (digitalRead(PIN_HAZARD_CTRL) == LOW) {
+        hazards_toggle = !hazards_toggle;
+    }
+    if (hazards_toggle) {
+        if (timer.hasPassed(500)) {
+            timer.restart();
+            if (hazards_state) {
+                digitalWrite(PIN_LEFT_BLINKERS, HIGH);
+                digitalWrite(PIN_RIGHT_BLINKERS, HIGH);
+                digitalWrite(PIN_BRAKELIGHTS, HIGH);
+            } else {
+                digitalWrite(PIN_LEFT_BLINKERS, LOW);
+                digitalWrite(PIN_RIGHT_BLINKERS, LOW);
+                digitalWrite(PIN_BRAKELIGHTS, LOW);
+            }
+        }
+    } */
     headlights_state = digitalRead(PIN_HEADLIGHT_CTRL);
     horn_state = digitalRead(PIN_HORN_CTRL);
 
