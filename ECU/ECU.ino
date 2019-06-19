@@ -128,7 +128,10 @@ void loop() {
     }
 
     // set throttle for motor
-    int throttle = map(analogRead(PIN_THROTTLE_CTRL), 400, 600, 0, MAX_PWM);
+    // uint32_t throttle = map(analogRead(PIN_THROTTLE_CTRL), 400, 600, 0, MAX_PWM);
+    uint32_t throttle = map(analogRead(PIN_THROTTLE_CTRL), 0, 1023, 0, MAX_PWM);
+
+    Serial.println(throttle);
     kls_l.set_throttle(throttle);
     kls_r.set_throttle(throttle);
 
@@ -155,16 +158,17 @@ void loop() {
     horn();
 
     // LCD UI stuff
-    //if (FAULT){
-      //UI::fault_condition(char* str); //Only if there is a fault
+    // if (FAULT){
+    // UI::fault_condition(char* str); //Only if there is a fault
     //}
-    //FUN ONLY IF WANTED (STILL NEED TO BE IMPLEMENTED IN UI.h CURRENTLY DO NOTHING
-    //lcd.right_turn_signal_update(bool on);
-    //lcd.left_turn_singal_update(bool on);
-    UI::SOC_update(0); //TODO: need to convert batt_status->pack_SOC from a float to an int, or better, change your function to accept float. --maxim
-    UI::speed_update((int) (((kls_l.status.rpm*14)+(kls_r.status.rpm*14))/2));
-    UI::bat_voltage_update((int) bps.batt_stat.pack_voltage);
-    UI::bat_current_update((int) bps.batt_stat.pack_current);
-    UI::bat_temp_update((int) bps.batt_stat.pack_avg_temp);
-    UI::regen_level_update( 0 ); // DO WE HAVE A REGEN LEVEL VAR?? we do now (untested). --maxim.
+    // FUN ONLY IF WANTED (STILL NEED TO BE IMPLEMENTED IN UI.h CURRENTLY DO NOTHING
+    // lcd.right_turn_signal_update(bool on);
+    // lcd.left_turn_singal_update(bool on);
+    UI::SOC_update(0);  // TODO: need to convert batt_status->pack_SOC from a float to an int, or
+                        // better, change your function to accept float. --maxim
+    UI::speed_update((int)(((kls_l.status.rpm * 14) + (kls_r.status.rpm * 14)) / 2));
+    UI::bat_voltage_update((int)bps.batt_stat.pack_voltage);
+    UI::bat_current_update((int)bps.batt_stat.pack_current);
+    UI::bat_temp_update((int)bps.batt_stat.pack_avg_temp);
+    UI::regen_level_update(0);  // DO WE HAVE A REGEN LEVEL VAR?? we do now (untested). --maxim.
 }
