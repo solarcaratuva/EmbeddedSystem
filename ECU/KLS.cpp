@@ -79,7 +79,7 @@ uint8_t KLS::parse(const CAN_message_t &msg) {
         // rpm values range from 0-6000RPM
         status.rpm = (msg.buf[1] << 8) + msg.buf[0];
         // current values range from 0-400A
-        status.current = (msg.buf[3] << 8) + msg.buf[2];
+        status.current = ((msg.buf[3] << 8) + msg.buf[2]) / 10.0;
         // voltage values range from 0-180V
         status.voltage = ((msg.buf[5] << 8) + msg.buf[4]) / 10.0;
         status.errors = parse_errors(msg.buf[6], msg.buf[7]);
@@ -89,7 +89,7 @@ uint8_t KLS::parse(const CAN_message_t &msg) {
         parsed = 2;
         // throttle will only go from 0.8-4.2V
         // throttle values map from 0-255 to 0-5V
-        status.throttle = (msg.buf[0] * 5) / 256.0;
+        status.throttle = (msg.buf[0] * 5.0) / 255.0;
         // temperature offset of 40C
         status.controller_temp = msg.buf[1] - 40;
         // temperature offset of 30C
@@ -148,9 +148,8 @@ void KLS::set_throttle(uint32_t value) {
     }
 }
 
-
 // untested
-void KLS::regen_en(bool value){
+void KLS::regen_en(bool value) {
     const uint32_t regen_en_pin = (id & 0x01) ? PIN_MOTOR_L_REGEN_EN : PIN_MOTOR_R_REGEN_EN;
     digitalWrite(regen_en_pin, value);
 }
@@ -169,30 +168,27 @@ void KLS::set_regen(uint32_t value) {
     }
 }
 
-//untested
+// untested
 void KLS::set_direction(uint8_t value) {
-
     const uint32_t fwd_en_pin = (id & 0x01) ? PIN_MOTOR_L_FWD_EN : PIN_MOTOR_R_FWD_EN;
     const uint32_t rev_en_pin = (id & 0x01) ? PIN_MOTOR_L_REV_EN : PIN_MOTOR_R_REV_EN;
-    
-    if(value > 0){
-      digitalWrite(fwd_en_pin, HIGH);
-      digitalWrite(rev_en_pin, LOW);
-    }
-    else if(value < 0){
-      digitalWrite(fwd_en_pin, LOW);
-      digitalWrite(rev_en_pin, HIGH);
-    }
-    else{
-      digitalWrite(fwd_en_pin, LOW);
-      digitalWrite(rev_en_pin, LOW);
+
+    if (value > 0) {
+        digitalWrite(fwd_en_pin, HIGH);
+        digitalWrite(rev_en_pin, LOW);
+    } else if (value < 0) {
+        digitalWrite(fwd_en_pin, LOW);
+        digitalWrite(rev_en_pin, HIGH);
+    } else {
+        digitalWrite(fwd_en_pin, LOW);
+        digitalWrite(rev_en_pin, LOW);
     }
 }
 
 // untested
-void KLS::eco_en(boolean value){
-  digitalWrite(PIN_MOTOR_R_ECO_EN, value);
-  digitalWrite(PIN_MOTOR_L_ECO_EN, value);
+void KLS::eco_en(boolean value) {
+    digitalWrite(PIN_MOTOR_R_ECO_EN, value);
+    digitalWrite(PIN_MOTOR_L_ECO_EN, value);
 }
 
 void KLS::update(const KLS_status &new_status) {

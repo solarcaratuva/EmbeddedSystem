@@ -8,13 +8,13 @@
 
 #ifndef __KLS_H__
 #define __KLS_H__
+#define MAX_PWM 13000
 
 #include <FlexCAN.h>
 #include <kinetis_flexcan.h>
 #include <cstdlib>
 #include <string>
 #include "pindef.h"
-#include "constants.h"
 
 typedef struct KLS_switches {
     bool hall_a;
@@ -58,15 +58,15 @@ class KLS {
     KLS_errors parse_errors(uint8_t lsb, uint8_t msb);
 
     void set_throttle(uint32_t value);
-    
-    void regen_en(bool value);// untested
-    
-    void set_regen(uint32_t value);// untested
-    
-    void set_direction(uint8_t value);//untested
-    
-    static void eco_en(boolean value);// untested
-    
+
+    void regen_en(bool value);  // untested
+
+    void set_regen(uint32_t value);  // untested
+
+    void set_direction(uint8_t value);  // untested
+
+    static void eco_en(boolean value);  // untested
+
     void update(const KLS_status &new_status);
 
     void update(uint32_t rpm, float current, float voltage, float throttle);
