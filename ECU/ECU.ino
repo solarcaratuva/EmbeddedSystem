@@ -25,6 +25,8 @@ KLS kls_r(0x06);
 UI lcd;
 
 void setup() {
+    Serial.begin(115200);
+
     digitalWrite(PIN_BRAKE_CTRL, LOW);
     pinMode(PIN_BRAKE_CTRL, INPUT);
     digitalWrite(PIN_REGEN_CTRL, LOW);
@@ -109,10 +111,11 @@ void setup() {
     digitalWrite(PIN_BRAKE_CTRL, LOW);
     pinMode(PIN_BRAKE_CTRL, INPUT);
 
-    Serial.begin(115200);
     Can0.begin();
     Can1.begin();
     UI::init();
+    while (!Serial)
+        ;
 }
 
 void loop() {
