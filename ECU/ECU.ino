@@ -9,7 +9,6 @@
 // used strictly for BMS
 FlexCAN Can0(500000, 0);
 // wired to both motor controllers.
-// TODO: find a way to change the CAN ID of one of them.
 FlexCAN Can1(250000, 1);
 
 // 2 CAN structs to store received data
@@ -117,8 +116,6 @@ void setup() {
     Can0.begin();
     Can1.begin();
     // UI::init();
-    while (!Serial)
-        ;
 }
 
 void loop() {
@@ -137,7 +134,6 @@ void loop() {
     }
 
     // set throttle for motor
-    // uint32_t throttle = map(analogRead(PIN_THROTTLE_CTRL), 400, 600, 0, MAX_PWM);
     uint32_t throttle = map(analogRead(PIN_THROTTLE_CTRL), 0, 1023, 0, MAX_PWM);
 
     kls_l.set_throttle(throttle);
@@ -186,15 +182,16 @@ void loop() {
             turn_state = OFF;
             break;
     }
-    // Serial.println(turn_state);
 
     headlights_state = digitalRead(PIN_HEADLIGHT_CTRL);
-    horn_state = digitalRead(PIN_HORN_CTRL);
+    horn_state = !digitalRead(PIN_HORN_CTRL);
+    brakelights_state = !digitalRead(PIN_BRAKE_CTRL);
 
     turn_signal();
     hazards();
     headlights();
     horn();
+    brakelights();
 
     // LCD UI stuff
     // if (FAULT){

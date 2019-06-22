@@ -4,27 +4,21 @@
 #define RIGHT -1
 #define ON 1
 #define OFF 0
+// interval for blinking the lights
+#define BLINK_INTERVAL 500
 
 #include "Chrono.h"
 #include "pindef.h"
 
 Chrono light_timer;
 
-// TURN SIGNAL ENUMERATED TYPE
-// enum turn_state_t { off, left, right };
-
-// turn_state_t turn_state = off;
 int8_t turn_state = OFF;
 
-bool hazards_state = OFF, headlights_state = OFF, horn_state = OFF;
-
-uint32_t blink_interval = 500;  // interval for blinking the lights
+bool hazards_state = OFF, headlights_state = OFF, horn_state = OFF, brakelights_state = OFF;
 
 uint16_t turn_sig_state = LOW;
 bool hazards_button_state = LOW;
 bool horn_button_state = LOW;
-bool headlight_button_state = LOW;
-
 bool hazards_toggle_state = LOW;
 
 bool left_sig_state = LOW;
@@ -33,7 +27,7 @@ bool right_sig_state = LOW;
 void turn_signal() {
     if (hazards_toggle_state == LOW) {
         // Serial.println(turn_state);
-        if (light_timer.hasPassed(500)) {
+        if (light_timer.hasPassed(BLINK_INTERVAL)) {
             left_sig_state = !left_sig_state;
             right_sig_state = !right_sig_state;
             light_timer.restart();
@@ -63,7 +57,7 @@ void toggle_hazard_state() {
 
 void hazards() {
     if (hazards_toggle_state == HIGH) {
-        if (light_timer.hasPassed(500)) {
+        if (light_timer.hasPassed(BLINK_INTERVAL)) {
             hazards_state = !hazards_state;
             light_timer.restart();
         }
@@ -85,4 +79,5 @@ void headlights() { digitalWrite(PIN_HEADLIGHTS, HIGH); }
 
 void horn() { digitalWrite(PIN_HORN, horn_state); }
 
+void brakelights() { digitalWrite(PIN_BRAKELIGHTS, brakelights_state); }
 #endif
