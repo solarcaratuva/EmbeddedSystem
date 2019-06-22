@@ -1,6 +1,5 @@
 #include <ArduinoJson.h>
 #include "BPS.h"
-#include "Chrono.h"
 #include "KLS.h"
 #include "UI.h"
 #include "console.h"
@@ -22,8 +21,6 @@ KLS kls_l(0x05);
 // Right motor initialized with source address 0x06
 KLS kls_r(0x06);
 
-Chrono timer;
-
 UI lcd;
 
 void setup() {
@@ -43,6 +40,7 @@ void setup() {
     pinMode(PIN_STEER_CTRL, INPUT);
     digitalWrite(PIN_HAZARD_CTRL, LOW);
     pinMode(PIN_HAZARD_CTRL, INPUT);
+    attachInterrupt(digitalPinToInterrupt(PIN_HAZARD_CTRL), toggle_hazard_state, RISING);
     digitalWrite(PIN_DOWN_CTRL, LOW);
     pinMode(PIN_DOWN_CTRL, INPUT);
     digitalWrite(PIN_UP_CTRL, LOW);
@@ -172,29 +170,16 @@ void loop() {
             break;
     }
 
-    // Serial.println(digitalRead(PIN_HAZARD_CTRL));
-    // hazards_state = digitalRead(PIN_HAZARD_CTRL);
-    /* if (digitalRead(PIN_HAZARD_CTRL) == LOW) {
-        hazards_toggle = !hazards_toggle;
-    }
-    if (hazards_toggle) {
-        if (timer.hasPassed(500)) {
-            timer.restart();
-            if (hazards_state) {
-                digitalWrite(PIN_LEFT_BLINKERS, HIGH);
-                digitalWrite(PIN_RIGHT_BLINKERS, HIGH);
-                digitalWrite(PIN_BRAKELIGHTS, HIGH);
-            } else {
-                digitalWrite(PIN_LEFT_BLINKERS, LOW);
-                digitalWrite(PIN_RIGHT_BLINKERS, LOW);
-                digitalWrite(PIN_BRAKELIGHTS, LOW);
-            }
+    if (hazards_toggle_state == HIGH) {
+        if (light_timer.hasPassed(500)) {
+            hazards_state = !hazards_state;
+            light_timer.restart();
         }
-    } */
+    }
     headlights_state = digitalRead(PIN_HEADLIGHT_CTRL);
     horn_state = digitalRead(PIN_HORN_CTRL);
 
-    turn_signal();
+    // turn_signal();
     hazards();
     headlights();
     horn();
