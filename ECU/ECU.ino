@@ -1,7 +1,7 @@
 #include <ArduinoJson.h>
 #include "BPS.h"
 #include "KLS.h"
-#include "UI.h"
+//#include "UI.h"
 #include "console.h"
 #include "lights.h"
 #include "pindef.h"
@@ -21,7 +21,10 @@ KLS kls_l(0x05);
 // Right motor initialized with source address 0x06
 KLS kls_r(0x06);
 
-UI lcd;
+// UI lcd;
+
+char cmd = 'X';
+char buf = 'X';
 
 void setup() {
     Serial.begin(115200);
@@ -113,7 +116,7 @@ void setup() {
 
     Can0.begin();
     Can1.begin();
-    UI::init();
+    // UI::init();
     while (!Serial)
         ;
 }
@@ -157,29 +160,38 @@ void loop() {
             break;
     }
 
-    // control lights and horn
-    switch (analogRead(PIN_TURNSIG_CTRL)) {
-        case 0 ... 255:
-            turn_state = left;
-            break;
-        case 768 ... 1023:
-            turn_state = right;
-            break;
-        default:
-            turn_state = off;
-            break;
-    }
-
-    if (hazards_toggle_state == HIGH) {
-        if (light_timer.hasPassed(500)) {
-            hazards_state = !hazards_state;
-            light_timer.restart();
+    if (Serial.available() > 0) {
+        buf = Serial.read();
+        if (buf == 'L' || buf == 'R' || buf == 'X') {
+            cmd = buf;
         }
     }
+    // Serial.println(cmd);
+
+    // control lights and horn
+    // Serial.println(analogRead(PIN_TURNSIG_CTRL));
+    // uint16_t turnsig_value = analogRead(PIN_TURNSIG_CTRL);
+    // switch (turnsig_value) {
+
+    switch (cmd) {
+        // case 0 ... 255:
+        case 'L':
+            turn_state = LEFT;
+            break;
+        case 'R':
+            // case 768 ... 1023:
+            turn_state = RIGHT;
+            break;
+        default:
+            turn_state = OFF;
+            break;
+    }
+    // Serial.println(turn_state);
+
     headlights_state = digitalRead(PIN_HEADLIGHT_CTRL);
     horn_state = digitalRead(PIN_HORN_CTRL);
 
-    // turn_signal();
+    turn_signal();
     hazards();
     headlights();
     horn();
@@ -191,11 +203,12 @@ void loop() {
     // FUN ONLY IF WANTED (STILL NEED TO BE IMPLEMENTED IN UI.h CURRENTLY DO NOTHING
     // lcd.right_turn_signal_update(bool on);
     // lcd.left_turn_singal_update(bool on);
-    UI::SOC_update(0);  // TODO: need to convert batt_status->pack_SOC from a float to an int, or
+    /*UI::SOC_update(0);  // TODO: need to convert batt_status->pack_SOC from a float to an int, or
                         // better, change your function to accept float. --maxim
     UI::speed_update((int)(((kls_l.status.rpm * 14) + (kls_r.status.rpm * 14)) / 2));
     UI::bat_voltage_update((int)bps.batt_stat.pack_voltage);
     UI::bat_current_update((int)bps.batt_stat.pack_current);
     UI::bat_temp_update((int)bps.batt_stat.pack_avg_temp);
     UI::regen_level_update(0);  // DO WE HAVE A REGEN LEVEL VAR?? we do now (untested). --maxim.
+    */
 }

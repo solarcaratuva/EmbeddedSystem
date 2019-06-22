@@ -7,7 +7,7 @@
 #define PIN_BRAKE_CTRL 20      // analog input
 #define PIN_REGEN_CTRL 17      // analog input
 #define PIN_GEARSHIFT_CTRL 14  // analog input
-#define PIN_TURNSIG_CTRL 15    // analog input
+#define PIN_TURNSIG_CTRL A22   // analog input
 #define PIN_THROTTLE_CTRL 16   // analog input
 #define PIN_STEER_CTRL 21      // analog input
 #define PIN_HAZARD_CTRL 24     // binary input (pushbutton switch)
