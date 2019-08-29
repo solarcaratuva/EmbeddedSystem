@@ -3063,8 +3063,6 @@ Wire Wire Line
 	2000 13050 3400 13050
 Wire Wire Line
 	2000 13000 2000 13050
-Text Label 2650 12850 2    50   ~ 0
-UART_4_TX
 Text Label 2650 12750 2    50   ~ 0
 UART_4_RX
 Wire Wire Line
@@ -3133,8 +3131,6 @@ Wire Wire Line
 	5400 13350 6400 13350
 Text Label 6150 14450 0    50   ~ 0
 LV_BRAKE_CTRL
-Text Label 2650 12450 2    50   ~ 0
-LV_SEL_CTRL
 Text Label 2650 12350 2    50   ~ 0
 LV_UP_CTRL
 Text Label 2650 12250 2    50   ~ 0
@@ -5093,17 +5089,6 @@ F 3 "~" H 2900 12350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Polyfuse F11
-U 1 1 617A0BC0
-P 2900 12450
-F 0 "F11" V 2850 12300 50  0000 C CNN
-F 1 "Polyfuse" V 2850 12750 50  0000 C CNN
-F 2 "Fuse:Fuse_0603_1608Metric" H 2950 12250 50  0001 L CNN
-F 3 "~" H 2900 12450 50  0001 C CNN
-	1    2900 12450
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:Polyfuse F12
 U 1 1 617A0ECD
 P 2900 12550
@@ -5148,17 +5133,6 @@ F 3 "~" H 2900 13450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Polyfuse F15
-U 1 1 617A8172
-P 2900 12850
-F 0 "F15" V 2850 12700 50  0000 C CNN
-F 1 "Polyfuse" V 2850 13150 50  0000 C CNN
-F 2 "Fuse:Fuse_0603_1608Metric" H 2950 12650 50  0001 L CNN
-F 3 "~" H 2900 12850 50  0001 C CNN
-	1    2900 12850
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:Polyfuse F17
 U 1 1 617A85F6
 P 2900 13550
@@ -5193,13 +5167,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 12650 3400 12650
 Wire Wire Line
-	3050 12550 3400 12550
-Wire Wire Line
 	3050 12450 3400 12450
-Wire Wire Line
-	3050 12250 3400 12250
-Wire Wire Line
-	3050 12350 3400 12350
 Wire Wire Line
 	3050 12150 3400 12150
 Wire Wire Line
@@ -5210,8 +5178,6 @@ Wire Wire Line
 	2650 12150 2750 12150
 Wire Wire Line
 	2750 12250 2650 12250
-Wire Wire Line
-	2650 12350 2750 12350
 Wire Wire Line
 	2750 12450 2650 12450
 Wire Wire Line
@@ -5652,4 +5618,38 @@ Wire Wire Line
 	7600 13950 7700 13950
 Wire Wire Line
 	7700 13950 7700 14000
+Wire Wire Line
+	3050 12250 3400 12250
+Wire Wire Line
+	3050 12550 3400 12550
+$Comp
+L Device:Polyfuse F11
+U 1 1 617A0BC0
+P 2900 12450
+F 0 "F11" V 2850 12300 50  0000 C CNN
+F 1 "Polyfuse" V 2850 12750 50  0000 C CNN
+F 2 "Fuse:Fuse_0603_1608Metric" H 2950 12250 50  0001 L CNN
+F 3 "~" H 2900 12450 50  0001 C CNN
+	1    2900 12450
+	0    1    1    0   
+$EndComp
+Text Label 2650 12450 2    50   ~ 0
+LV_SEL_CTRL
+$Comp
+L Device:Polyfuse F15
+U 1 1 617A8172
+P 2900 12850
+F 0 "F15" V 2850 12700 50  0000 C CNN
+F 1 "Polyfuse" V 2850 13150 50  0000 C CNN
+F 2 "Fuse:Fuse_0603_1608Metric" H 2950 12650 50  0001 L CNN
+F 3 "~" H 2900 12850 50  0001 C CNN
+	1    2900 12850
+	0    1    1    0   
+$EndComp
+Text Label 2650 12850 2    50   ~ 0
+UART_4_TX
+Wire Wire Line
+	3050 12350 3400 12350
+Wire Wire Line
+	2650 12350 2750 12350
 $EndSCHEMATC
