@@ -1,0 +1,3293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/williamzhang/uva/solarcar/EmbeddedSystem/ECU_PCB/SolarCarECU.sch</source>
+    <date>Tue 24 Sep 2019 11:36:20 AM EDT</date>
+    <tool>Eeschema 5.1.4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>SolarCarECU.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U5">
+      <value>MCP2562-E-P</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="MCP2562-E-P-Interface_CAN_LIN-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C5E3276</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C5F2FAE</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C616A5C</tstamp>
+    </comp>
+    <comp ref="R41">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C634D73</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>MCP2562-E-P</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="MCP2562-E-P-Interface_CAN_LIN-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C7851F1</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C78521E</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C78522E</tstamp>
+    </comp>
+    <comp ref="R42">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C785245</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>4504</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/cd4504b.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="4504-4xxx-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CC1567F</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>4504</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/cd4504b.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="4504-4xxx-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CC22D1D</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>L7805</value>
+      <footprint>PCBDesign:PT78NR112H</footprint>
+      <datasheet>http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="L7805-Regulator_Linear-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE85049</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>QM6015D</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.jaolen.com/images/pdf/QM6015D.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="QM6015D-Transistor_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CEA1F94</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="CP-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CF96F79</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0750F4</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>470uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D13.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="CP-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D1D4AAE</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>4504</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/cd4504b.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="4504-4xxx-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D3D5BE3</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DBDAD8F</tstamp>
+    </comp>
+    <comp ref="R66">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED592E0</tstamp>
+    </comp>
+    <comp ref="R69">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED59376</tstamp>
+    </comp>
+    <comp ref="R72">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED593EC</tstamp>
+    </comp>
+    <comp ref="R74">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED59468</tstamp>
+    </comp>
+    <comp ref="R65">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED595D9</tstamp>
+    </comp>
+    <comp ref="R68">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED595E0</tstamp>
+    </comp>
+    <comp ref="R71">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED595E7</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED595EE</tstamp>
+    </comp>
+    <comp ref="R77">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EE63934</tstamp>
+    </comp>
+    <comp ref="R76">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EE63942</tstamp>
+    </comp>
+    <comp ref="C36">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F16A2A5</tstamp>
+    </comp>
+    <comp ref="C37">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B914E</tstamp>
+    </comp>
+    <comp ref="C38">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F208D80</tstamp>
+    </comp>
+    <comp ref="C39">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F28BEAA</tstamp>
+    </comp>
+    <comp ref="C40">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F344BF9</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>LM324A</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm2902-n.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="LM324A-Amplifier_Operational-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F546448</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54744B</tstamp>
+    </comp>
+    <comp ref="R33">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5BE1A7</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>36k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5FB59C</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>120k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F736000</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>8.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7560BC</tstamp>
+    </comp>
+    <comp ref="C43">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6005806B</tstamp>
+    </comp>
+    <comp ref="R34">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6021D677</tstamp>
+    </comp>
+    <comp ref="R35">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6021D682</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>36k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6021D691</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>120k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6021D69A</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>8.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6021D6A1</tstamp>
+    </comp>
+    <comp ref="C32">
+      <value>2.2n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6021D6AE</tstamp>
+    </comp>
+    <comp ref="R36">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60269EFC</tstamp>
+    </comp>
+    <comp ref="R37">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60269F07</tstamp>
+    </comp>
+    <comp ref="C28">
+      <value>6.8n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60269F0E</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>36k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60269F16</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>120k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60269F1F</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>8.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60269F26</tstamp>
+    </comp>
+    <comp ref="C33">
+      <value>2.2n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60269F33</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>3.3n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60269F46</tstamp>
+    </comp>
+    <comp ref="R38">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60295C06</tstamp>
+    </comp>
+    <comp ref="R39">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60295C11</tstamp>
+    </comp>
+    <comp ref="C29">
+      <value>6.8n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60295C18</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>36k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60295C20</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>120k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60295C29</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>8.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60295C30</tstamp>
+    </comp>
+    <comp ref="C34">
+      <value>2.2n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60295C3D</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>3.3n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60295C50</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F1FBD2</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F51E57</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>612287E9</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61294DE4</tstamp>
+    </comp>
+    <comp ref="R52">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6D04F3</tstamp>
+    </comp>
+    <comp ref="R53">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C74990B</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>MCP1403</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/el72/el7202-12-22.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="EL7202CN-Driver_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C78DD62</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>QM6015D</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.jaolen.com/images/pdf/QM6015D.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="QM6015D-Transistor_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C78E978</tstamp>
+    </comp>
+    <comp ref="Q7">
+      <value>QM6015D</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.jaolen.com/images/pdf/QM6015D.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="QM6015D-Transistor_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C907AA4</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CD7616E</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CD76177</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CD76181</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>MCP1403</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/el72/el7202-12-22.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="EL7202CN-Driver_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0CF265</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>QM6015D</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.jaolen.com/images/pdf/QM6015D.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="QM6015D-Transistor_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0CF272</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>QM6015D</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.jaolen.com/images/pdf/QM6015D.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="QM6015D-Transistor_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0CF279</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0CF296</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0CF29F</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0CF2A8</tstamp>
+    </comp>
+    <comp ref="C30">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D246BC5</tstamp>
+    </comp>
+    <comp ref="R80">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C9BA1F4</tstamp>
+    </comp>
+    <comp ref="R79">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C9BA1FB</tstamp>
+    </comp>
+    <comp ref="C41">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C9BA207</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>4.7</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD66BD</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>4.7</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD6840</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>4.7</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD694E</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>4.7</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD6A66</tstamp>
+    </comp>
+    <comp ref="R88">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D96F75D</tstamp>
+    </comp>
+    <comp ref="R87">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D96F989</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD4A0A</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD51EF</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CB356FE</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CB35824</tstamp>
+    </comp>
+    <comp ref="D14">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE4FA79</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE4FB93</tstamp>
+    </comp>
+    <comp ref="D15">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE4FCBD</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D18F9CF</tstamp>
+    </comp>
+    <comp ref="R58">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D3C00B3</tstamp>
+    </comp>
+    <comp ref="R59">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DA892CF</tstamp>
+    </comp>
+    <comp ref="C35">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DC3C253</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>MCP1403</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/el72/el7202-12-22.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="EL7202CN-Driver_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B422</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>QM6015D</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.jaolen.com/images/pdf/QM6015D.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="QM6015D-Transistor_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B42F</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>QM6015D</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.jaolen.com/images/pdf/QM6015D.pdf</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="QM6015D-Transistor_FET-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B436</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B452</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B45B</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B464</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>4.7</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B47D</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>4.7</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B484</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B48F</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B49C</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B4A3</tstamp>
+    </comp>
+    <comp ref="D13">
+      <value>D</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="D-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE7B4AA</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>Teensy3.6</value>
+      <footprint>teensy:Teensy35_36</footprint>
+      <libsource lib="SolarCarECU-rescue" part="Teensy3.6-teensy-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C5DC16B</tstamp>
+    </comp>
+    <comp ref="R94">
+      <value>47</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9105FF</tstamp>
+    </comp>
+    <comp ref="R93">
+      <value>47</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9104F3</tstamp>
+    </comp>
+    <comp ref="R92">
+      <value>47</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9103EB</tstamp>
+    </comp>
+    <comp ref="R91">
+      <value>47</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9102E5</tstamp>
+    </comp>
+    <comp ref="R90">
+      <value>47</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9101E1</tstamp>
+    </comp>
+    <comp ref="R89">
+      <value>47</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E90FAD3</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DC99B5C</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DC9C63E</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DC9D829</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DC9F4AC</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_8-G-5.08_1x08_P5.08mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DCA088D</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE2AC32</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DEB0EBA</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>599-0210</value>
+      <footprint>LED_SMD:LED_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F812276</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>599-0230</value>
+      <footprint>LED_SMD:LED_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F911BC4</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC0F9D1</tstamp>
+    </comp>
+    <comp ref="D18">
+      <value>599-0291</value>
+      <footprint>LED_SMD:LED_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FF944DC</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6009BC17</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>D_Zener</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60756C89</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>470uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D13.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="CP-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6086013F</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61DE8527</tstamp>
+    </comp>
+    <comp ref="C42">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CA5569A</tstamp>
+    </comp>
+    <comp ref="R82">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CA5568F</tstamp>
+    </comp>
+    <comp ref="R83">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CA55688</tstamp>
+    </comp>
+    <comp ref="C44">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFA1D65</tstamp>
+    </comp>
+    <comp ref="R85">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFA1D6B</tstamp>
+    </comp>
+    <comp ref="R86">
+      <value>330k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFA1D71</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFCC58A</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFCD25A</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0E0C1E</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0E12EB</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D310404</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D310AA5</tstamp>
+    </comp>
+    <comp ref="R60">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DD6413F</tstamp>
+    </comp>
+    <comp ref="R61">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE939E8</tstamp>
+    </comp>
+    <comp ref="R62">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DF2857D</tstamp>
+    </comp>
+    <comp ref="R63">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DFBD84B</tstamp>
+    </comp>
+    <comp ref="R47">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E21ABCF</tstamp>
+    </comp>
+    <comp ref="R45">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E21C990</tstamp>
+    </comp>
+    <comp ref="R43">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E21CCAC</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E21CF6A</tstamp>
+    </comp>
+    <comp ref="R48">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA01AA0</tstamp>
+    </comp>
+    <comp ref="R46">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA01AA6</tstamp>
+    </comp>
+    <comp ref="R44">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA01AAC</tstamp>
+    </comp>
+    <comp ref="R40">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA01AB2</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F106F14</tstamp>
+    </comp>
+    <comp ref="R49">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6F9DF2</tstamp>
+    </comp>
+    <comp ref="R50">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6F9DF8</tstamp>
+    </comp>
+    <comp ref="R51">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6F9DFE</tstamp>
+    </comp>
+    <comp ref="R54">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6F9E04</tstamp>
+    </comp>
+    <comp ref="R55">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6F9E19</tstamp>
+    </comp>
+    <comp ref="R56">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB09E1D</tstamp>
+    </comp>
+    <comp ref="R57">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134A37C</tstamp>
+    </comp>
+    <comp ref="R64">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134A88F</tstamp>
+    </comp>
+    <comp ref="R67">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134ABD9</tstamp>
+    </comp>
+    <comp ref="R70">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134AF93</tstamp>
+    </comp>
+    <comp ref="R73">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134B357</tstamp>
+    </comp>
+    <comp ref="R75">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134B79D</tstamp>
+    </comp>
+    <comp ref="R78">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134BBD7</tstamp>
+    </comp>
+    <comp ref="R81">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134BF65</tstamp>
+    </comp>
+    <comp ref="R84">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6134C17B</tstamp>
+    </comp>
+    <comp ref="C27">
+      <value>6.8n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6021D689</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>3.3n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6021D6C1</tstamp>
+    </comp>
+    <comp ref="C31">
+      <value>2.2n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7B6B75</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>6.8n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5FB1E5</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>3.3n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F776321</tstamp>
+    </comp>
+    <comp ref="F4">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F1B694</tstamp>
+    </comp>
+    <comp ref="F3">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6117B77E</tstamp>
+    </comp>
+    <comp ref="F5">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6148A0BA</tstamp>
+    </comp>
+    <comp ref="F6">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6148A2F0</tstamp>
+    </comp>
+    <comp ref="F7">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6179F550</tstamp>
+    </comp>
+    <comp ref="F8">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6179F8A3</tstamp>
+    </comp>
+    <comp ref="F9">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6179FAD5</tstamp>
+    </comp>
+    <comp ref="F10">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617A08C8</tstamp>
+    </comp>
+    <comp ref="F12">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617A0ECD</tstamp>
+    </comp>
+    <comp ref="F13">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617A1230</tstamp>
+    </comp>
+    <comp ref="F14">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617A151C</tstamp>
+    </comp>
+    <comp ref="F16">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617A17F0</tstamp>
+    </comp>
+    <comp ref="F17">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617A85F6</tstamp>
+    </comp>
+    <comp ref="F18">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617B5508</tstamp>
+    </comp>
+    <comp ref="F19">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C1B837</tstamp>
+    </comp>
+    <comp ref="F20">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C1BCB0</tstamp>
+    </comp>
+    <comp ref="F21">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C1BFDB</tstamp>
+    </comp>
+    <comp ref="F22">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>632859E6</tstamp>
+    </comp>
+    <comp ref="F23">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635AC374</tstamp>
+    </comp>
+    <comp ref="F24">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635AC813</tstamp>
+    </comp>
+    <comp ref="F25">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635ACBFA</tstamp>
+    </comp>
+    <comp ref="F26">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635AE813</tstamp>
+    </comp>
+    <comp ref="F27">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635AED37</tstamp>
+    </comp>
+    <comp ref="F28">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635AF17B</tstamp>
+    </comp>
+    <comp ref="F29">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635AF68D</tstamp>
+    </comp>
+    <comp ref="F30">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635AFAFB</tstamp>
+    </comp>
+    <comp ref="F31">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635AFF6A</tstamp>
+    </comp>
+    <comp ref="F32">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>635B044D</tstamp>
+    </comp>
+    <comp ref="F33">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6367CA69</tstamp>
+    </comp>
+    <comp ref="F34">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6367CFE3</tstamp>
+    </comp>
+    <comp ref="F35">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6367D473</tstamp>
+    </comp>
+    <comp ref="F36">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64406F09</tstamp>
+    </comp>
+    <comp ref="F37">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6440756C</tstamp>
+    </comp>
+    <comp ref="F38">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64A7CF29</tstamp>
+    </comp>
+    <comp ref="F39">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64B48B7E</tstamp>
+    </comp>
+    <comp ref="F40">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64B48E2C</tstamp>
+    </comp>
+    <comp ref="F41">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64B490FE</tstamp>
+    </comp>
+    <comp ref="F42">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64B49340</tstamp>
+    </comp>
+    <comp ref="F43">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64B4957E</tstamp>
+    </comp>
+    <comp ref="F44">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64B4986C</tstamp>
+    </comp>
+    <comp ref="F2">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65670941</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65670F47</tstamp>
+    </comp>
+    <comp ref="R95">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D8F8431</tstamp>
+    </comp>
+    <comp ref="F11">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617A0BC0</tstamp>
+    </comp>
+    <comp ref="F15">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>617A8172</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Screw_Terminal_01x08">
+      <description>Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x08</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener">
+      <description>Zener diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Polyfuse">
+      <description>Resettable fuse, polymeric positive temperature coefficient</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small">
+      <description>Resistor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="4504-4xxx-SolarCarECU-rescue">
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*3.9x9.9mm*P1.27mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4504-4xxx-SolarCarECU-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="Aout" type="output"/>
+        <pin num="3" name="Ain" type="input"/>
+        <pin num="4" name="Bout" type="output"/>
+        <pin num="5" name="Bin" type="input"/>
+        <pin num="6" name="Cout" type="output"/>
+        <pin num="7" name="Cin" type="input"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="Din" type="input"/>
+        <pin num="10" name="Dout" type="output"/>
+        <pin num="11" name="Ein" type="input"/>
+        <pin num="12" name="Eout" type="output"/>
+        <pin num="13" name="Select" type="input"/>
+        <pin num="14" name="Fin" type="input"/>
+        <pin num="15" name="Fout" type="output"/>
+        <pin num="16" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="C-Device-SolarCarECU-rescue">
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C-Device-SolarCarECU-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="CP-Device-SolarCarECU-rescue">
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP-Device-SolarCarECU-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="D-Device">
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="EL7202CN-Driver_FET-SolarCarECU-rescue">
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">EL7202CN-Driver_FET-SolarCarECU-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="NotConnected"/>
+        <pin num="2" name="IN_A" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="IN_B" type="input"/>
+        <pin num="5" name="OUT_B" type="output"/>
+        <pin num="6" name="V+" type="power_in"/>
+        <pin num="7" name="OUT_A" type="output"/>
+        <pin num="8" name="NC" type="NotConnected"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="L7805-Regulator_Linear-SolarCarECU-rescue">
+      <footprints>
+        <fp>TO?252*</fp>
+        <fp>TO?263*</fp>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">L7805-Regulator_Linear-SolarCarECU-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="LM324A-Amplifier_Operational-SolarCarECU-rescue">
+      <footprints>
+        <fp>SOIC*3.9x8.7mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
+        <fp>SSOP*5.3x6.2mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM324A-Amplifier_Operational-SolarCarECU-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V+" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="-" type="input"/>
+        <pin num="10" name="+" type="input"/>
+        <pin num="11" name="V-" type="power_in"/>
+        <pin num="12" name="+" type="input"/>
+        <pin num="13" name="-" type="input"/>
+        <pin num="14" name="~" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="MCP2562-E-P-Interface_CAN_LIN-SolarCarECU-rescue">
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP2562-E-P-Interface_CAN_LIN-SolarCarECU-rescue</field>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TXD" type="input"/>
+        <pin num="2" name="VSS" type="power_in"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="RXD" type="output"/>
+        <pin num="5" name="Vio" type="power_in"/>
+        <pin num="6" name="CANL" type="BiDi"/>
+        <pin num="7" name="CANH" type="BiDi"/>
+        <pin num="8" name="STBY" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="QM6015D-Transistor_FET-SolarCarECU-rescue">
+      <footprints>
+        <fp>TO*252*2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">QM6015D-Transistor_FET-SolarCarECU-rescue</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TO-252-2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="passive"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="R-Device">
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="R-Device-SolarCarECU-rescue">
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-Device-SolarCarECU-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SolarCarECU-rescue" part="Teensy3.6-teensy-SolarCarECU-rescue">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Teensy3.6-teensy-SolarCarECU-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="0_RX1_MOSI1_Touch" type="BiDi"/>
+        <pin num="3" name="1_TX1_MISO1_Touch" type="BiDi"/>
+        <pin num="4" name="2_PWM" type="BiDi"/>
+        <pin num="5" name="3_PWM_CAN0TX_SCL2" type="BiDi"/>
+        <pin num="6" name="4_PWM_CAN0RX_SDA2" type="BiDi"/>
+        <pin num="7" name="5_PWM_tx1_miso1" type="BiDi"/>
+        <pin num="8" name="6_PWM" type="BiDi"/>
+        <pin num="9" name="7_RX3_miso0_scl0" type="BiDi"/>
+        <pin num="10" name="8_TX3_miso0_sda0" type="BiDi"/>
+        <pin num="11" name="9_PWM_RX2_CS0" type="BiDi"/>
+        <pin num="12" name="10_PWM_TX2_CS0" type="BiDi"/>
+        <pin num="13" name="11_MOSI0" type="BiDi"/>
+        <pin num="14" name="12_MISO0" type="BiDi"/>
+        <pin num="15" name="3.3V" type="power_in"/>
+        <pin num="16" name="24" type="BiDi"/>
+        <pin num="17" name="25" type="BiDi"/>
+        <pin num="18" name="26_tx1" type="BiDi"/>
+        <pin num="19" name="27_rx1" type="BiDi"/>
+        <pin num="20" name="28" type="BiDi"/>
+        <pin num="21" name="29_PWM_can0tx_Touch" type="BiDi"/>
+        <pin num="22" name="30_PWM_can0rx_Touch" type="BiDi"/>
+        <pin num="23" name="31_A12_RX4_CS1" type="BiDi"/>
+        <pin num="24" name="32_A13_TX4_SCK1" type="BiDi"/>
+        <pin num="25" name="VBat" type="power_in"/>
+        <pin num="26" name="3.3V" type="power_in"/>
+        <pin num="27" name="GND" type="power_in"/>
+        <pin num="28" name="Program" type="input"/>
+        <pin num="29" name="Reset" type="input"/>
+        <pin num="30" name="33_A14_CAN1TX_scl0" type="BiDi"/>
+        <pin num="31" name="34_A15_CAN1TX_sda0" type="BiDi"/>
+        <pin num="32" name="35_A16_PWM" type="BiDi"/>
+        <pin num="33" name="36_A17_PWM" type="BiDi"/>
+        <pin num="34" name="37_A18_PWM_SCL1" type="BiDi"/>
+        <pin num="35" name="38_A19_PWM_SDA1" type="BiDi"/>
+        <pin num="36" name="39_A20" type="BiDi"/>
+        <pin num="37" name="A21_DAC0" type="BiDi"/>
+        <pin num="38" name="A22_DAC1" type="BiDi"/>
+        <pin num="39" name="GND" type="power_in"/>
+        <pin num="40" name="13_SCK0_LED" type="BiDi"/>
+        <pin num="41" name="14_A0_PWM_sck0" type="BiDi"/>
+        <pin num="42" name="15_A1_CS0_Touch" type="BiDi"/>
+        <pin num="43" name="16_A2_scl0_Touch" type="BiDi"/>
+        <pin num="44" name="17_A3_sda0_Touch" type="BiDi"/>
+        <pin num="45" name="18_A4_SDA0_Touch" type="BiDi"/>
+        <pin num="46" name="19_A5_SCL0_Touch" type="BiDi"/>
+        <pin num="47" name="20_A6_PWM_CS0_sck1" type="BiDi"/>
+        <pin num="48" name="21_A7_PWM_CS0_sck1" type="BiDi"/>
+        <pin num="49" name="22_A8_PWM_Touch" type="BiDi"/>
+        <pin num="50" name="23_A9_PWM_Touch" type="BiDi"/>
+        <pin num="51" name="3.3V_max250mA" type="power_out"/>
+        <pin num="52" name="AGND" type="power_out"/>
+        <pin num="53" name="Vin" type="power_in"/>
+        <pin num="54" name="VUSB" type="power_in"/>
+        <pin num="55" name="AREF" type="input"/>
+        <pin num="56" name="A10" type="BiDi"/>
+        <pin num="57" name="A11" type="BiDi"/>
+        <pin num="58" name="5V" type="power_in"/>
+        <pin num="59" name="A26_D-" type="BiDi"/>
+        <pin num="60" name="A25_D+" type="BiDi"/>
+        <pin num="61" name="GND" type="power_in"/>
+        <pin num="62" name="GND" type="power_in"/>
+        <pin num="63" name="G" type="power_in"/>
+        <pin num="64" name="Debug_DE" type="input"/>
+        <pin num="65" name="Debug_DC" type="input"/>
+        <pin num="66" name="Debug_DD" type="input"/>
+        <pin num="67" name="40" type="BiDi"/>
+        <pin num="68" name="41" type="BiDi"/>
+        <pin num="69" name="42" type="BiDi"/>
+        <pin num="70" name="43_CS2" type="BiDi"/>
+        <pin num="71" name="44_MOSI2" type="BiDi"/>
+        <pin num="72" name="45_MISO2" type="BiDi"/>
+        <pin num="73" name="46_SCK2" type="BiDi"/>
+        <pin num="74" name="GND" type="power_in"/>
+        <pin num="75" name="3.3V" type="power_in"/>
+        <pin num="76" name="47_RX6_SCL0" type="BiDi"/>
+        <pin num="77" name="48_TX6_SDA0" type="BiDi"/>
+        <pin num="78" name="49_A23" type="BiDi"/>
+        <pin num="79" name="50_A24" type="BiDi"/>
+        <pin num="80" name="51_MISO2" type="BiDi"/>
+        <pin num="81" name="52_MOSI2" type="BiDi"/>
+        <pin num="82" name="53_SCK2" type="BiDi"/>
+        <pin num="83" name="54_CS2" type="BiDi"/>
+        <pin num="84" name="55" type="BiDi"/>
+        <pin num="85" name="56" type="BiDi"/>
+        <pin num="86" name="57" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="SolarCarECU-rescue">
+      <uri>/home/williamzhang/uva/solarcar/EmbeddedSystem/ECU_PCB/SolarCarECU-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(D3-Pad1)">
+      <node ref="R9" pin="1"/>
+      <node ref="D3" pin="1"/>
+    </net>
+    <net code="2" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="3" name="+VDC">
+      <node ref="Q1" pin="2"/>
+      <node ref="J2" pin="1"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="4" name="/HORN">
+      <node ref="J2" pin="3"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="D4" pin="2"/>
+      <node ref="D5" pin="1"/>
+    </net>
+    <net code="5" name="+12V">
+      <node ref="U9" pin="16"/>
+      <node ref="U7" pin="1"/>
+      <node ref="C43" pin="2"/>
+      <node ref="U10" pin="4"/>
+      <node ref="D10" pin="1"/>
+      <node ref="D8" pin="1"/>
+      <node ref="U8" pin="16"/>
+      <node ref="U4" pin="1"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R81" pin="1"/>
+      <node ref="U3" pin="6"/>
+      <node ref="R57" pin="1"/>
+      <node ref="R64" pin="1"/>
+      <node ref="R67" pin="1"/>
+      <node ref="R70" pin="1"/>
+      <node ref="R73" pin="1"/>
+      <node ref="R75" pin="1"/>
+      <node ref="R78" pin="1"/>
+      <node ref="R84" pin="1"/>
+      <node ref="C12" pin="2"/>
+      <node ref="U2" pin="6"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C21" pin="2"/>
+      <node ref="U11" pin="6"/>
+      <node ref="Q6" pin="3"/>
+      <node ref="Q7" pin="3"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="Q5" pin="3"/>
+      <node ref="D14" pin="1"/>
+      <node ref="C30" pin="2"/>
+      <node ref="D4" pin="1"/>
+      <node ref="D6" pin="1"/>
+      <node ref="D12" pin="1"/>
+      <node ref="Q4" pin="3"/>
+      <node ref="J5" pin="1"/>
+      <node ref="D2" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="6" name="Net-(D2-Pad2)">
+      <node ref="R8" pin="1"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="7" name="Net-(D18-Pad1)">
+      <node ref="R28" pin="1"/>
+      <node ref="D18" pin="1"/>
+    </net>
+    <net code="8" name="/MOTOR_L_ECO_EN">
+      <node ref="J4" pin="5"/>
+      <node ref="U8" pin="6"/>
+    </net>
+    <net code="9" name="/STROBE">
+      <node ref="Q3" pin="2"/>
+      <node ref="J2" pin="4"/>
+      <node ref="D11" pin="1"/>
+      <node ref="D10" pin="2"/>
+    </net>
+    <net code="10" name="/MOTOR_R_ECO_EN">
+      <node ref="U9" pin="12"/>
+      <node ref="J3" pin="5"/>
+    </net>
+    <net code="11" name="/MOTOR_R_REGEN_EN">
+      <node ref="U9" pin="10"/>
+      <node ref="J3" pin="4"/>
+    </net>
+    <net code="12" name="/MOTOR_R_METER">
+      <node ref="R79" pin="1"/>
+      <node ref="J3" pin="3"/>
+      <node ref="R78" pin="2"/>
+    </net>
+    <net code="13" name="/MOTOR_L_REGEN_EN">
+      <node ref="U8" pin="10"/>
+      <node ref="J4" pin="4"/>
+    </net>
+    <net code="14" name="/MOTOR_L_METER">
+      <node ref="J4" pin="3"/>
+      <node ref="R82" pin="1"/>
+      <node ref="R81" pin="2"/>
+    </net>
+    <net code="15" name="/HAZARD_CTRL">
+      <node ref="R56" pin="1"/>
+      <node ref="U7" pin="3"/>
+      <node ref="J6" pin="3"/>
+    </net>
+    <net code="16" name="/DOWN_CTRL">
+      <node ref="R55" pin="1"/>
+      <node ref="U7" pin="5"/>
+      <node ref="J6" pin="4"/>
+    </net>
+    <net code="17" name="/UP_CTRL">
+      <node ref="J6" pin="5"/>
+      <node ref="R54" pin="1"/>
+      <node ref="U7" pin="7"/>
+    </net>
+    <net code="18" name="/SEL_CTRL">
+      <node ref="R51" pin="1"/>
+      <node ref="J6" pin="6"/>
+      <node ref="U7" pin="9"/>
+    </net>
+    <net code="19" name="/KILL_SENSE">
+      <node ref="J6" pin="7"/>
+      <node ref="U7" pin="11"/>
+      <node ref="R50" pin="1"/>
+    </net>
+    <net code="20" name="/HORN_CTRL">
+      <node ref="U7" pin="14"/>
+      <node ref="R49" pin="1"/>
+      <node ref="J6" pin="8"/>
+    </net>
+    <net code="21" name="/STEER_CTRL">
+      <node ref="J5" pin="3"/>
+      <node ref="R57" pin="2"/>
+      <node ref="R58" pin="1"/>
+    </net>
+    <net code="22" name="+5V">
+      <node ref="J8" pin="1"/>
+      <node ref="U1" pin="53"/>
+      <node ref="U1" pin="58"/>
+      <node ref="C13" pin="1"/>
+      <node ref="U5" pin="3"/>
+      <node ref="U6" pin="3"/>
+      <node ref="C14" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="U4" pin="3"/>
+      <node ref="R87" pin="1"/>
+      <node ref="R88" pin="1"/>
+      <node ref="D18" pin="2"/>
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="23" name="/SCK_0">
+      <node ref="U1" pin="40"/>
+    </net>
+    <net code="24" name="/LV_GEARSHIFT_CTRL">
+      <node ref="F19" pin="2"/>
+      <node ref="C40" pin="1"/>
+      <node ref="R76" pin="2"/>
+      <node ref="R77" pin="1"/>
+    </net>
+    <net code="25" name="/LV_TURNSIG_CTRL">
+      <node ref="F20" pin="2"/>
+      <node ref="R74" pin="1"/>
+      <node ref="R30" pin="2"/>
+      <node ref="C39" pin="1"/>
+    </net>
+    <net code="26" name="/LV_THROTTLE_CTRL">
+      <node ref="R71" pin="2"/>
+      <node ref="C38" pin="1"/>
+      <node ref="R72" pin="1"/>
+      <node ref="F21" pin="2"/>
+    </net>
+    <net code="27" name="/LV_DOWN_CTRL">
+      <node ref="U7" pin="4"/>
+      <node ref="F9" pin="2"/>
+    </net>
+    <net code="28" name="/LV_LEFT_BLINKERS">
+      <node ref="R7" pin="1"/>
+      <node ref="F35" pin="1"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="29" name="Net-(U1-Pad12)">
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="30" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="31" name="Net-(F6-Pad1)">
+      <node ref="U1" pin="10"/>
+      <node ref="F6" pin="1"/>
+    </net>
+    <net code="32" name="/DAC_0">
+      <node ref="U1" pin="37"/>
+    </net>
+    <net code="33" name="/DAC_1">
+      <node ref="U1" pin="38"/>
+    </net>
+    <net code="34" name="/LV_BRAKELIGHTS">
+      <node ref="R3" pin="1"/>
+      <node ref="U11" pin="2"/>
+      <node ref="F23" pin="1"/>
+    </net>
+    <net code="35" name="/CAN0_TX">
+      <node ref="U5" pin="1"/>
+      <node ref="F12" pin="2"/>
+    </net>
+    <net code="36" name="/CAN0_RX">
+      <node ref="U5" pin="4"/>
+      <node ref="F13" pin="2"/>
+    </net>
+    <net code="37" name="/LV_KILL_SENSE">
+      <node ref="F3" pin="2"/>
+      <node ref="U7" pin="12"/>
+    </net>
+    <net code="38" name="/LV_RIGHT_BLINKERS">
+      <node ref="U3" pin="2"/>
+      <node ref="F34" pin="1"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="39" name="/LV_MOTOR_L_REGEN_EN">
+      <node ref="U8" pin="9"/>
+      <node ref="F29" pin="1"/>
+      <node ref="R47" pin="1"/>
+    </net>
+    <net code="40" name="/LV_HEADLIGHTS">
+      <node ref="R6" pin="1"/>
+      <node ref="F33" pin="1"/>
+      <node ref="U11" pin="4"/>
+    </net>
+    <net code="41" name="/UART_1_RX">
+      <node ref="F1" pin="2"/>
+      <node ref="R94" pin="2"/>
+    </net>
+    <net code="42" name="/UART_1_TX">
+      <node ref="R93" pin="2"/>
+      <node ref="F2" pin="2"/>
+    </net>
+    <net code="43" name="/PWM_MOTOR_L_THROTTLE">
+      <node ref="R60" pin="1"/>
+      <node ref="U1" pin="32"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="44" name="/PWM_MOTOR_L_REGEN">
+      <node ref="R61" pin="1"/>
+      <node ref="R15" pin="2"/>
+      <node ref="U1" pin="33"/>
+    </net>
+    <net code="45" name="/PWM_MOTOR_R_THROTTLE">
+      <node ref="R62" pin="1"/>
+      <node ref="U1" pin="35"/>
+      <node ref="R16" pin="2"/>
+    </net>
+    <net code="46" name="/PWM_MOTOR_R_REGEN">
+      <node ref="U1" pin="34"/>
+      <node ref="R63" pin="1"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="47" name="/LV_HORN">
+      <node ref="U2" pin="2"/>
+      <node ref="R2" pin="1"/>
+      <node ref="F22" pin="1"/>
+    </net>
+    <net code="48" name="/LV_MOTOR_L_METER">
+      <node ref="C42" pin="1"/>
+      <node ref="R82" pin="2"/>
+      <node ref="R83" pin="1"/>
+      <node ref="F36" pin="1"/>
+    </net>
+    <net code="49" name="/LV_MOTOR_R_METER">
+      <node ref="C41" pin="1"/>
+      <node ref="R79" pin="2"/>
+      <node ref="R80" pin="1"/>
+      <node ref="F37" pin="1"/>
+    </net>
+    <net code="50" name="Net-(U1-Pad13)">
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="51" name="/LV_MOTOR_L_ECO_EN">
+      <node ref="U8" pin="7"/>
+      <node ref="R45" pin="1"/>
+      <node ref="F30" pin="1"/>
+    </net>
+    <net code="52" name="/LV_MOTOR_R_REV_EN">
+      <node ref="U9" pin="5"/>
+      <node ref="F28" pin="1"/>
+      <node ref="R40" pin="1"/>
+    </net>
+    <net code="53" name="/LV_MOTOR_L_FWD_EN">
+      <node ref="F24" pin="1"/>
+      <node ref="R43" pin="1"/>
+      <node ref="U8" pin="5"/>
+    </net>
+    <net code="54" name="/UART_3_TX">
+      <node ref="F6" pin="2"/>
+      <node ref="R91" pin="2"/>
+    </net>
+    <net code="55" name="/UART_3_RX">
+      <node ref="F5" pin="2"/>
+      <node ref="R92" pin="2"/>
+    </net>
+    <net code="56" name="/UART_6_RX">
+      <node ref="F32" pin="1"/>
+      <node ref="R90" pin="2"/>
+    </net>
+    <net code="57" name="/UART_6_TX">
+      <node ref="R89" pin="2"/>
+      <node ref="F31" pin="1"/>
+    </net>
+    <net code="58" name="/RIGHT_BLINKERS">
+      <node ref="D9" pin="1"/>
+      <node ref="J2" pin="7"/>
+      <node ref="D8" pin="2"/>
+      <node ref="Q6" pin="2"/>
+    </net>
+    <net code="59" name="/LEFT_BLINKERS">
+      <node ref="J2" pin="8"/>
+      <node ref="Q7" pin="2"/>
+      <node ref="D15" pin="1"/>
+      <node ref="D14" pin="2"/>
+    </net>
+    <net code="60" name="Net-(F5-Pad1)">
+      <node ref="U1" pin="9"/>
+      <node ref="F5" pin="1"/>
+    </net>
+    <net code="61" name="Net-(F22-Pad2)">
+      <node ref="F22" pin="2"/>
+      <node ref="U1" pin="86"/>
+    </net>
+    <net code="62" name="Net-(J8-Pad8)">
+      <node ref="R94" pin="1"/>
+      <node ref="J8" pin="8"/>
+    </net>
+    <net code="63" name="Net-(F25-Pad2)">
+      <node ref="U1" pin="83"/>
+      <node ref="F25" pin="2"/>
+    </net>
+    <net code="64" name="Net-(F26-Pad2)">
+      <node ref="U1" pin="82"/>
+      <node ref="F26" pin="2"/>
+    </net>
+    <net code="65" name="Net-(F27-Pad2)">
+      <node ref="F27" pin="2"/>
+      <node ref="U1" pin="81"/>
+    </net>
+    <net code="66" name="Net-(F28-Pad2)">
+      <node ref="U1" pin="80"/>
+      <node ref="F28" pin="2"/>
+    </net>
+    <net code="67" name="Net-(F4-Pad1)">
+      <node ref="F4" pin="1"/>
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="68" name="Net-(F29-Pad2)">
+      <node ref="F29" pin="2"/>
+      <node ref="U1" pin="79"/>
+    </net>
+    <net code="69" name="Net-(F30-Pad2)">
+      <node ref="U1" pin="78"/>
+      <node ref="F30" pin="2"/>
+    </net>
+    <net code="70" name="Net-(F31-Pad2)">
+      <node ref="U1" pin="77"/>
+      <node ref="F31" pin="2"/>
+    </net>
+    <net code="71" name="Net-(F32-Pad2)">
+      <node ref="F32" pin="2"/>
+      <node ref="U1" pin="76"/>
+    </net>
+    <net code="72" name="+3V3">
+      <node ref="C20" pin="1"/>
+      <node ref="U5" pin="5"/>
+      <node ref="C16" pin="1"/>
+      <node ref="U6" pin="5"/>
+      <node ref="U1" pin="75"/>
+      <node ref="U7" pin="16"/>
+      <node ref="C19" pin="1"/>
+      <node ref="U8" pin="1"/>
+      <node ref="C17" pin="1"/>
+      <node ref="U9" pin="1"/>
+      <node ref="U1" pin="15"/>
+      <node ref="C15" pin="1"/>
+      <node ref="U1" pin="26"/>
+      <node ref="U1" pin="51"/>
+    </net>
+    <net code="73" name="GND">
+      <node ref="C12" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="C30" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="U1" pin="61"/>
+      <node ref="C20" pin="2"/>
+      <node ref="U6" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C9" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="J7" pin="2"/>
+      <node ref="C7" pin="1"/>
+      <node ref="D7" pin="2"/>
+      <node ref="U1" pin="62"/>
+      <node ref="U10" pin="11"/>
+      <node ref="U2" pin="3"/>
+      <node ref="R42" pin="2"/>
+      <node ref="C11" pin="1"/>
+      <node ref="U8" pin="8"/>
+      <node ref="C3" pin="2"/>
+      <node ref="U8" pin="14"/>
+      <node ref="U8" pin="13"/>
+      <node ref="U8" pin="11"/>
+      <node ref="U9" pin="8"/>
+      <node ref="R8" pin="2"/>
+      <node ref="U4" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U7" pin="8"/>
+      <node ref="R9" pin="2"/>
+      <node ref="C10" pin="1"/>
+      <node ref="U7" pin="13"/>
+      <node ref="U3" pin="3"/>
+      <node ref="D11" pin="2"/>
+      <node ref="D5" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R41" pin="2"/>
+      <node ref="U1" pin="39"/>
+      <node ref="U1" pin="1"/>
+      <node ref="C16" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="C21" pin="1"/>
+      <node ref="U1" pin="27"/>
+      <node ref="R56" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="U1" pin="74"/>
+      <node ref="C13" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R45" pin="2"/>
+      <node ref="R43" pin="2"/>
+      <node ref="R31" pin="2"/>
+      <node ref="R47" pin="2"/>
+      <node ref="R48" pin="2"/>
+      <node ref="R28" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R7" pin="2"/>
+      <node ref="J8" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="C18" pin="1"/>
+      <node ref="R6" pin="2"/>
+      <node ref="U11" pin="3"/>
+      <node ref="R95" pin="1"/>
+      <node ref="R29" pin="2"/>
+      <node ref="U9" pin="13"/>
+      <node ref="R40" pin="2"/>
+      <node ref="R44" pin="2"/>
+      <node ref="D15" pin="2"/>
+      <node ref="U9" pin="14"/>
+      <node ref="R46" pin="2"/>
+      <node ref="R51" pin="2"/>
+      <node ref="D9" pin="2"/>
+      <node ref="R54" pin="2"/>
+      <node ref="R49" pin="2"/>
+      <node ref="U5" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="R50" pin="2"/>
+      <node ref="D13" pin="2"/>
+      <node ref="R55" pin="2"/>
+      <node ref="C17" pin="2"/>
+    </net>
+    <net code="74" name="Net-(U1-Pad73)">
+      <node ref="U1" pin="73"/>
+    </net>
+    <net code="75" name="Net-(U1-Pad72)">
+      <node ref="U1" pin="72"/>
+    </net>
+    <net code="76" name="Net-(U1-Pad71)">
+      <node ref="U1" pin="71"/>
+    </net>
+    <net code="77" name="Net-(U1-Pad70)">
+      <node ref="U1" pin="70"/>
+    </net>
+    <net code="78" name="Net-(J8-Pad3)">
+      <node ref="J8" pin="3"/>
+      <node ref="R89" pin="1"/>
+    </net>
+    <net code="79" name="Net-(J8-Pad4)">
+      <node ref="J8" pin="4"/>
+      <node ref="R90" pin="1"/>
+    </net>
+    <net code="80" name="Net-(J8-Pad5)">
+      <node ref="J8" pin="5"/>
+      <node ref="R91" pin="1"/>
+    </net>
+    <net code="81" name="Net-(J8-Pad6)">
+      <node ref="R92" pin="1"/>
+      <node ref="J8" pin="6"/>
+    </net>
+    <net code="82" name="Net-(J8-Pad7)">
+      <node ref="J8" pin="7"/>
+      <node ref="R93" pin="1"/>
+    </net>
+    <net code="83" name="Net-(U1-Pad28)">
+      <node ref="U1" pin="28"/>
+    </net>
+    <net code="84" name="Net-(F19-Pad1)">
+      <node ref="U1" pin="41"/>
+      <node ref="F19" pin="1"/>
+    </net>
+    <net code="85" name="Net-(F3-Pad1)">
+      <node ref="U1" pin="4"/>
+      <node ref="F3" pin="1"/>
+    </net>
+    <net code="86" name="Net-(F18-Pad1)">
+      <node ref="F18" pin="1"/>
+      <node ref="U1" pin="36"/>
+    </net>
+    <net code="87" name="Net-(F17-Pad1)">
+      <node ref="U1" pin="31"/>
+      <node ref="F17" pin="1"/>
+    </net>
+    <net code="88" name="Net-(F16-Pad1)">
+      <node ref="U1" pin="30"/>
+      <node ref="F16" pin="1"/>
+    </net>
+    <net code="89" name="Net-(F2-Pad1)">
+      <node ref="U1" pin="3"/>
+      <node ref="F2" pin="1"/>
+    </net>
+    <net code="90" name="Net-(U1-Pad29)">
+      <node ref="U1" pin="29"/>
+    </net>
+    <net code="91" name="Net-(F20-Pad1)">
+      <node ref="U1" pin="42"/>
+      <node ref="F20" pin="1"/>
+    </net>
+    <net code="92" name="Net-(U1-Pad25)">
+      <node ref="U1" pin="25"/>
+    </net>
+    <net code="93" name="Net-(F15-Pad1)">
+      <node ref="F15" pin="1"/>
+      <node ref="U1" pin="24"/>
+    </net>
+    <net code="94" name="Net-(F14-Pad1)">
+      <node ref="U1" pin="23"/>
+      <node ref="F14" pin="1"/>
+    </net>
+    <net code="95" name="Net-(F13-Pad1)">
+      <node ref="U1" pin="22"/>
+      <node ref="F13" pin="1"/>
+    </net>
+    <net code="96" name="Net-(F11-Pad1)">
+      <node ref="U1" pin="20"/>
+      <node ref="F11" pin="1"/>
+    </net>
+    <net code="97" name="Net-(F1-Pad1)">
+      <node ref="F1" pin="1"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="98" name="Net-(U1-Pad14)">
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="99" name="Net-(F37-Pad2)">
+      <node ref="F37" pin="2"/>
+      <node ref="U1" pin="56"/>
+    </net>
+    <net code="100" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="101" name="Net-(F33-Pad2)">
+      <node ref="U1" pin="69"/>
+      <node ref="F33" pin="2"/>
+    </net>
+    <net code="102" name="Net-(F34-Pad2)">
+      <node ref="U1" pin="68"/>
+      <node ref="F34" pin="2"/>
+    </net>
+    <net code="103" name="Net-(F35-Pad2)">
+      <node ref="U1" pin="67"/>
+      <node ref="F35" pin="2"/>
+    </net>
+    <net code="104" name="Net-(U1-Pad66)">
+      <node ref="U1" pin="66"/>
+    </net>
+    <net code="105" name="Net-(U1-Pad65)">
+      <node ref="U1" pin="65"/>
+    </net>
+    <net code="106" name="Net-(U1-Pad64)">
+      <node ref="U1" pin="64"/>
+    </net>
+    <net code="107" name="Net-(U1-Pad63)">
+      <node ref="U1" pin="63"/>
+    </net>
+    <net code="108" name="Net-(U1-Pad60)">
+      <node ref="U1" pin="60"/>
+    </net>
+    <net code="109" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="110" name="Net-(U1-Pad59)">
+      <node ref="U1" pin="59"/>
+    </net>
+    <net code="111" name="Net-(F36-Pad2)">
+      <node ref="U1" pin="57"/>
+      <node ref="F36" pin="2"/>
+    </net>
+    <net code="112" name="Net-(U1-Pad55)">
+      <node ref="U1" pin="55"/>
+    </net>
+    <net code="113" name="Net-(U1-Pad54)">
+      <node ref="U1" pin="54"/>
+    </net>
+    <net code="114" name="GNDA">
+      <node ref="R59" pin="2"/>
+      <node ref="C35" pin="2"/>
+      <node ref="C25" pin="2"/>
+      <node ref="C34" pin="1"/>
+      <node ref="C41" pin="2"/>
+      <node ref="J5" pin="2"/>
+      <node ref="J3" pin="8"/>
+      <node ref="J4" pin="8"/>
+      <node ref="J6" pin="1"/>
+      <node ref="R80" pin="2"/>
+      <node ref="R63" pin="2"/>
+      <node ref="R60" pin="2"/>
+      <node ref="R61" pin="2"/>
+      <node ref="R62" pin="2"/>
+      <node ref="R95" pin="2"/>
+      <node ref="C32" pin="1"/>
+      <node ref="R35" pin="2"/>
+      <node ref="R39" pin="2"/>
+      <node ref="R37" pin="2"/>
+      <node ref="C33" pin="1"/>
+      <node ref="R69" pin="2"/>
+      <node ref="R72" pin="2"/>
+      <node ref="R74" pin="2"/>
+      <node ref="R66" pin="2"/>
+      <node ref="C40" pin="2"/>
+      <node ref="R33" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="R77" pin="2"/>
+      <node ref="C39" pin="2"/>
+      <node ref="C36" pin="2"/>
+      <node ref="C37" pin="2"/>
+      <node ref="C38" pin="2"/>
+      <node ref="C43" pin="1"/>
+      <node ref="C23" pin="2"/>
+      <node ref="U1" pin="52"/>
+      <node ref="C42" pin="2"/>
+      <node ref="R83" pin="2"/>
+      <node ref="C44" pin="2"/>
+      <node ref="R86" pin="2"/>
+      <node ref="C22" pin="2"/>
+      <node ref="C31" pin="1"/>
+    </net>
+    <net code="115" name="Net-(F38-Pad2)">
+      <node ref="F38" pin="2"/>
+      <node ref="U1" pin="50"/>
+    </net>
+    <net code="116" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="117" name="Net-(F39-Pad2)">
+      <node ref="F39" pin="2"/>
+      <node ref="U1" pin="49"/>
+    </net>
+    <net code="118" name="Net-(F40-Pad2)">
+      <node ref="F40" pin="2"/>
+      <node ref="U1" pin="48"/>
+    </net>
+    <net code="119" name="Net-(F41-Pad2)">
+      <node ref="U1" pin="47"/>
+      <node ref="F41" pin="2"/>
+    </net>
+    <net code="120" name="Net-(F42-Pad2)">
+      <node ref="U1" pin="46"/>
+      <node ref="F42" pin="2"/>
+    </net>
+    <net code="121" name="Net-(F43-Pad2)">
+      <node ref="U1" pin="45"/>
+      <node ref="F43" pin="2"/>
+    </net>
+    <net code="122" name="Net-(F44-Pad2)">
+      <node ref="F44" pin="2"/>
+      <node ref="U1" pin="44"/>
+    </net>
+    <net code="123" name="Net-(F21-Pad1)">
+      <node ref="F21" pin="1"/>
+      <node ref="U1" pin="43"/>
+    </net>
+    <net code="124" name="/LV_HAZARD_LED">
+      <node ref="U9" pin="3"/>
+      <node ref="R29" pin="1"/>
+      <node ref="F8" pin="2"/>
+    </net>
+    <net code="125" name="Net-(F8-Pad1)">
+      <node ref="U1" pin="17"/>
+      <node ref="F8" pin="1"/>
+    </net>
+    <net code="126" name="/LV_HAZARD_CTRL">
+      <node ref="F7" pin="2"/>
+      <node ref="U7" pin="2"/>
+    </net>
+    <net code="127" name="Net-(F7-Pad1)">
+      <node ref="F7" pin="1"/>
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="128" name="Net-(F9-Pad1)">
+      <node ref="U1" pin="18"/>
+      <node ref="F9" pin="1"/>
+    </net>
+    <net code="129" name="/LV_MOTOR_R_ECO_EN">
+      <node ref="U9" pin="11"/>
+      <node ref="F18" pin="2"/>
+      <node ref="R48" pin="1"/>
+    </net>
+    <net code="130" name="/LV_SEL_CTRL">
+      <node ref="F11" pin="2"/>
+      <node ref="U7" pin="10"/>
+    </net>
+    <net code="131" name="/CAN1_RX">
+      <node ref="F17" pin="2"/>
+      <node ref="U6" pin="4"/>
+    </net>
+    <net code="132" name="/CAN1_TX">
+      <node ref="F16" pin="2"/>
+      <node ref="U6" pin="1"/>
+    </net>
+    <net code="133" name="/UART_4_RX">
+      <node ref="F14" pin="2"/>
+    </net>
+    <net code="134" name="Net-(F12-Pad1)">
+      <node ref="F12" pin="1"/>
+      <node ref="U1" pin="21"/>
+    </net>
+    <net code="135" name="/LV_UP_CTRL">
+      <node ref="F10" pin="2"/>
+      <node ref="U7" pin="6"/>
+    </net>
+    <net code="136" name="Net-(F10-Pad1)">
+      <node ref="U1" pin="19"/>
+      <node ref="F10" pin="1"/>
+    </net>
+    <net code="137" name="/GEARSHIFT_CTRL">
+      <node ref="R76" pin="1"/>
+      <node ref="J5" pin="6"/>
+      <node ref="R75" pin="2"/>
+    </net>
+    <net code="138" name="/TURNSIG_CTRL">
+      <node ref="J5" pin="7"/>
+      <node ref="R73" pin="2"/>
+      <node ref="R30" pin="1"/>
+    </net>
+    <net code="139" name="/THROTTLE_CTRL">
+      <node ref="R71" pin="1"/>
+      <node ref="J5" pin="8"/>
+      <node ref="R70" pin="2"/>
+    </net>
+    <net code="140" name="/REGEN_CTRL">
+      <node ref="R67" pin="2"/>
+      <node ref="R68" pin="1"/>
+      <node ref="J5" pin="5"/>
+    </net>
+    <net code="141" name="/HEADLIGHT_CTRL">
+      <node ref="J6" pin="2"/>
+      <node ref="R84" pin="2"/>
+      <node ref="R85" pin="1"/>
+    </net>
+    <net code="142" name="Net-(C31-Pad2)">
+      <node ref="R24" pin="1"/>
+      <node ref="U10" pin="3"/>
+      <node ref="C31" pin="2"/>
+    </net>
+    <net code="143" name="/LV_STEER_CTRL">
+      <node ref="F40" pin="1"/>
+      <node ref="R58" pin="2"/>
+      <node ref="R59" pin="1"/>
+      <node ref="C35" pin="1"/>
+    </net>
+    <net code="144" name="/LV_REGEN_CTRL">
+      <node ref="R69" pin="1"/>
+      <node ref="F44" pin="1"/>
+      <node ref="R68" pin="2"/>
+      <node ref="C37" pin="1"/>
+    </net>
+    <net code="145" name="/SDA_0">
+      <node ref="J7" pin="8"/>
+      <node ref="F43" pin="1"/>
+      <node ref="R87" pin="2"/>
+    </net>
+    <net code="146" name="/SCL_0">
+      <node ref="R88" pin="2"/>
+      <node ref="J7" pin="7"/>
+      <node ref="F42" pin="1"/>
+    </net>
+    <net code="147" name="/LV_BRAKE_CTRL">
+      <node ref="C36" pin="1"/>
+      <node ref="F41" pin="1"/>
+      <node ref="R66" pin="1"/>
+      <node ref="R65" pin="2"/>
+    </net>
+    <net code="148" name="/LV_HORN_CTRL">
+      <node ref="F39" pin="1"/>
+      <node ref="U7" pin="15"/>
+    </net>
+    <net code="149" name="/LV_HEADLIGHT_CTRL">
+      <node ref="F38" pin="1"/>
+      <node ref="R86" pin="1"/>
+      <node ref="C44" pin="1"/>
+      <node ref="R85" pin="2"/>
+    </net>
+    <net code="150" name="/UART_4_TX">
+      <node ref="F15" pin="2"/>
+    </net>
+    <net code="151" name="/LV_MOTOR_R_REGEN_EN">
+      <node ref="U9" pin="9"/>
+      <node ref="R46" pin="1"/>
+      <node ref="F26" pin="1"/>
+    </net>
+    <net code="152" name="/LV_MOTOR_L_REV_EN">
+      <node ref="F25" pin="1"/>
+      <node ref="U8" pin="3"/>
+      <node ref="R31" pin="1"/>
+    </net>
+    <net code="153" name="Net-(F24-Pad2)">
+      <node ref="F24" pin="2"/>
+      <node ref="U1" pin="84"/>
+    </net>
+    <net code="154" name="Net-(F23-Pad2)">
+      <node ref="F23" pin="2"/>
+      <node ref="U1" pin="85"/>
+    </net>
+    <net code="155" name="/LV_MOTOR_R_FWD_EN">
+      <node ref="U9" pin="7"/>
+      <node ref="R44" pin="1"/>
+      <node ref="F27" pin="1"/>
+    </net>
+    <net code="156" name="/LV_STROBE">
+      <node ref="F4" pin="2"/>
+      <node ref="U2" pin="4"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="157" name="/BRAKE_CTRL">
+      <node ref="J5" pin="4"/>
+      <node ref="R65" pin="1"/>
+      <node ref="R64" pin="2"/>
+    </net>
+    <net code="158" name="Net-(C26-Pad1)">
+      <node ref="R20" pin="1"/>
+      <node ref="R24" pin="2"/>
+      <node ref="C26" pin="1"/>
+    </net>
+    <net code="159" name="Net-(C28-Pad2)">
+      <node ref="R36" pin="2"/>
+      <node ref="U10" pin="9"/>
+      <node ref="C28" pin="2"/>
+      <node ref="R37" pin="1"/>
+    </net>
+    <net code="160" name="/BRAKELIGHTS">
+      <node ref="Q4" pin="2"/>
+      <node ref="D7" pin="1"/>
+      <node ref="D6" pin="2"/>
+      <node ref="J2" pin="5"/>
+    </net>
+    <net code="161" name="/HEADLIGHTS">
+      <node ref="Q5" pin="2"/>
+      <node ref="J2" pin="6"/>
+      <node ref="D12" pin="2"/>
+      <node ref="D13" pin="1"/>
+    </net>
+    <net code="162" name="Net-(U9-Pad15)">
+      <node ref="U9" pin="15"/>
+    </net>
+    <net code="163" name="Net-(C22-Pad1)">
+      <node ref="R14" pin="1"/>
+      <node ref="C22" pin="1"/>
+      <node ref="R20" pin="2"/>
+    </net>
+    <net code="164" name="Net-(C28-Pad1)">
+      <node ref="R22" pin="1"/>
+      <node ref="C28" pin="1"/>
+      <node ref="R26" pin="2"/>
+    </net>
+    <net code="165" name="Net-(C33-Pad2)">
+      <node ref="U10" pin="10"/>
+      <node ref="R26" pin="1"/>
+      <node ref="C33" pin="2"/>
+    </net>
+    <net code="166" name="Net-(C24-Pad1)">
+      <node ref="R16" pin="1"/>
+      <node ref="R22" pin="2"/>
+      <node ref="C24" pin="1"/>
+    </net>
+    <net code="167" name="Net-(C26-Pad2)">
+      <node ref="C26" pin="2"/>
+      <node ref="U10" pin="2"/>
+      <node ref="R33" pin="1"/>
+      <node ref="R32" pin="2"/>
+    </net>
+    <net code="168" name="Net-(C27-Pad2)">
+      <node ref="R35" pin="1"/>
+      <node ref="U10" pin="6"/>
+      <node ref="R34" pin="2"/>
+      <node ref="C27" pin="2"/>
+    </net>
+    <net code="169" name="Net-(C23-Pad1)">
+      <node ref="R15" pin="1"/>
+      <node ref="C23" pin="1"/>
+      <node ref="R21" pin="2"/>
+    </net>
+    <net code="170" name="Net-(C32-Pad2)">
+      <node ref="C32" pin="2"/>
+      <node ref="R25" pin="1"/>
+      <node ref="U10" pin="5"/>
+    </net>
+    <net code="171" name="Net-(C27-Pad1)">
+      <node ref="R21" pin="1"/>
+      <node ref="R25" pin="2"/>
+      <node ref="C27" pin="1"/>
+    </net>
+    <net code="172" name="Net-(R42-Pad1)">
+      <node ref="U6" pin="8"/>
+      <node ref="R42" pin="1"/>
+    </net>
+    <net code="173" name="/MOTOR_R_REV_EN">
+      <node ref="J3" pin="7"/>
+      <node ref="U9" pin="4"/>
+    </net>
+    <net code="174" name="/MOTOR_L_REV_EN">
+      <node ref="J4" pin="7"/>
+      <node ref="U8" pin="2"/>
+    </net>
+    <net code="175" name="/MOTOR_R_REGEN">
+      <node ref="J3" pin="2"/>
+      <node ref="R38" pin="1"/>
+      <node ref="U10" pin="14"/>
+    </net>
+    <net code="176" name="/MOTOR_L_REGEN">
+      <node ref="J4" pin="2"/>
+      <node ref="R34" pin="1"/>
+      <node ref="U10" pin="7"/>
+    </net>
+    <net code="177" name="/MOTOR_R_THROTTLE">
+      <node ref="J3" pin="1"/>
+      <node ref="U10" pin="8"/>
+      <node ref="R36" pin="1"/>
+    </net>
+    <net code="178" name="/MOTOR_L_THROTTLE">
+      <node ref="J4" pin="1"/>
+      <node ref="U10" pin="1"/>
+      <node ref="R32" pin="1"/>
+    </net>
+    <net code="179" name="/MOTOR_L_FWD_EN">
+      <node ref="J4" pin="6"/>
+      <node ref="U8" pin="4"/>
+    </net>
+    <net code="180" name="/MOTOR_R_FWD_EN">
+      <node ref="U9" pin="6"/>
+      <node ref="J3" pin="6"/>
+    </net>
+    <net code="181" name="/HAZARD_LED">
+      <node ref="U9" pin="2"/>
+    </net>
+    <net code="182" name="Net-(R41-Pad1)">
+      <node ref="U5" pin="8"/>
+      <node ref="R41" pin="1"/>
+    </net>
+    <net code="183" name="Net-(U8-Pad15)">
+      <node ref="U8" pin="15"/>
+    </net>
+    <net code="184" name="Net-(U8-Pad12)">
+      <node ref="U8" pin="12"/>
+    </net>
+    <net code="185" name="Net-(C29-Pad1)">
+      <node ref="R23" pin="1"/>
+      <node ref="C29" pin="1"/>
+      <node ref="R27" pin="2"/>
+    </net>
+    <net code="186" name="/CAN1_H">
+      <node ref="J7" pin="6"/>
+      <node ref="U6" pin="7"/>
+      <node ref="R52" pin="1"/>
+    </net>
+    <net code="187" name="/CAN1_L">
+      <node ref="U6" pin="6"/>
+      <node ref="J7" pin="5"/>
+      <node ref="R52" pin="2"/>
+    </net>
+    <net code="188" name="/CAN0_H">
+      <node ref="R53" pin="1"/>
+      <node ref="J7" pin="4"/>
+      <node ref="U5" pin="7"/>
+    </net>
+    <net code="189" name="Net-(Q7-Pad1)">
+      <node ref="R19" pin="1"/>
+      <node ref="Q7" pin="1"/>
+    </net>
+    <net code="190" name="/CAN0_L">
+      <node ref="R53" pin="2"/>
+      <node ref="J7" pin="3"/>
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="191" name="Net-(Q3-Pad1)">
+      <node ref="R11" pin="1"/>
+      <node ref="Q3" pin="1"/>
+    </net>
+    <net code="192" name="Net-(R11-Pad2)">
+      <node ref="U2" pin="5"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="193" name="Net-(R10-Pad2)">
+      <node ref="U2" pin="7"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="194" name="Net-(R19-Pad2)">
+      <node ref="U3" pin="5"/>
+      <node ref="R19" pin="2"/>
+    </net>
+    <net code="195" name="Net-(R18-Pad2)">
+      <node ref="U3" pin="7"/>
+      <node ref="R18" pin="2"/>
+    </net>
+    <net code="196" name="Net-(Q6-Pad1)">
+      <node ref="Q6" pin="1"/>
+      <node ref="R18" pin="1"/>
+    </net>
+    <net code="197" name="Net-(Q4-Pad1)">
+      <node ref="R12" pin="1"/>
+      <node ref="Q4" pin="1"/>
+    </net>
+    <net code="198" name="Net-(Q5-Pad1)">
+      <node ref="R13" pin="1"/>
+      <node ref="Q5" pin="1"/>
+    </net>
+    <net code="199" name="Net-(R12-Pad2)">
+      <node ref="R12" pin="2"/>
+      <node ref="U11" pin="7"/>
+    </net>
+    <net code="200" name="Net-(R13-Pad2)">
+      <node ref="U11" pin="5"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="201" name="Net-(U11-Pad8)">
+      <node ref="U11" pin="8"/>
+    </net>
+    <net code="202" name="Net-(U11-Pad1)">
+      <node ref="U11" pin="1"/>
+    </net>
+    <net code="203" name="Net-(C25-Pad1)">
+      <node ref="C25" pin="1"/>
+      <node ref="R23" pin="2"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="204" name="Net-(C29-Pad2)">
+      <node ref="U10" pin="13"/>
+      <node ref="R38" pin="2"/>
+      <node ref="R39" pin="1"/>
+      <node ref="C29" pin="2"/>
+    </net>
+    <net code="205" name="Net-(C34-Pad2)">
+      <node ref="U10" pin="12"/>
+      <node ref="R27" pin="1"/>
+      <node ref="C34" pin="2"/>
+    </net>
+    <net code="206" name="Net-(Q2-Pad1)">
+      <node ref="Q2" pin="1"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="207" name="Net-(U2-Pad8)">
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="208" name="Net-(U2-Pad1)">
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="209" name="Net-(U3-Pad1)">
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="210" name="Net-(U3-Pad8)">
+      <node ref="U3" pin="8"/>
+    </net>
+  </nets>
+</export>
